@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-24"
+lastupdated: "2019-06-29"
 
 subcollection: text-to-speech-data
 
@@ -113,7 +113,12 @@ The voices `es-LA_SofiaV3Voice` and `es-US_SofiaV3Voice` are essentially the sam
 ### Neural voices
 {: #neuralVoices}
 
-Neural voices use a deep neural network (DNN) to predict the acoustic (spectral) features of the speech. The DNN is trained on natural human speech and generates the resulting audio from the predicted acoustic features. Neural voices produce speech with a very natural-sounding and smooth audio quality. For more information about neural voice technology, see the research paper [High quality, lightweight and adaptable Text to Speech using LPCNet](https://arxiv.org/abs/1905.00590){: external}.
+Neural voice technology uses multiple deep neural networks (DNNs) to predict the acoustic (spectral) features of the speech. The DNNs are trained on natural human speech and generate the resulting audio from the predicted acoustic features. During synthesis, the DNNs predict the pitch and phoneme duration (prosody), spectral structure, and waveform of the speech. Neural voices produce speech that is crisp and clear, with a very natural-sounding and smooth audio quality.
+
+For more information about the service's neural voice technology, see
+
+-   The blog post [IBM Watson Text to Speech: Neural Voices Generally Available](https://medium.com/ibm-watson/ibm-watson-text-to-speech-neural-voices-added-to-service-e562106ff9c7){: external}
+-   The research paper [High quality, lightweight and adaptable Text to Speech using LPCNet](https://arxiv.org/abs/1905.00590){: external}
 
 ### Voice customization
 {: #customizeVoice}
