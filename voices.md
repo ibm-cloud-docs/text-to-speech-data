@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-29"
+lastupdated: "2019-07-01"
 
 subcollection: text-to-speech-data
 
@@ -113,7 +113,7 @@ The voices `es-LA_SofiaV3Voice` and `es-US_SofiaV3Voice` are essentially the sam
 ### Neural voices
 {: #neuralVoices}
 
-Neural voice technology uses multiple deep neural networks (DNNs) to predict the acoustic (spectral) features of the speech. The DNNs are trained on natural human speech and generate the resulting audio from the predicted acoustic features. During synthesis, the DNNs predict the pitch and phoneme duration (prosody), spectral structure, and waveform of the speech. Neural voices produce speech that is crisp and clear, with a very natural-sounding and smooth audio quality.
+Neural voice technology uses multiple Deep Neural Networks (DNNs) to predict the acoustic (spectral) features of the speech. The DNNs are trained on natural human speech and generate the resulting audio from the predicted acoustic features. During synthesis, the DNNs predict the pitch and phoneme duration (prosody), spectral structure, and waveform of the speech. Neural voices produce speech that is crisp and clear, with a very natural-sounding and smooth audio quality.
 
 For more information about the service's neural voice technology, see
 
