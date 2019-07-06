@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-07-01"
+lastupdated: "2019-07-06"
 
 subcollection: text-to-speech-data
 
@@ -25,7 +25,7 @@ subcollection: text-to-speech-data
 # Languages and voices
 {: #voices}
 
-{{site.data.keyword.texttospeechdatafull}} for {{site.data.keyword.icp4dfull}} supports a variety of languages, voices, and dialects. The service offers at least one male or female voice, sometimes both, for each language. Each voice uses appropriate cadence and intonation for its dialect.
+{{site.data.keyword.texttospeechdatafull}} for {{site.data.keyword.icp4dfull}} supports a variety of languages, voices, and dialects. The service offers at least one female voice for each language. For some languages the service offers multiple voices, including both male and female voices. Each voice uses appropriate cadence and intonation for its dialect.
 {: shortdesc}
 
 ## Supported languages and voices
