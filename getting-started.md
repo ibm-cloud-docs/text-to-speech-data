@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-25"
+lastupdated: "2019-07-30"
 
 subcollection: text-to-speech-data
 
@@ -103,7 +103,7 @@ You can use a browser or other tools to play the audio files that are produced b
 
 The following command uses the `GET /v1/synthesize` method to synthesize Spanish input to an audio file.
 
-1.  Issue the following command to synthesize the string "hola mundo" and produce a WAV file that is named `hola_mundo.wav`. The input text is URL-encoded. The method includes the query parameters `accept` to specify the audio format and `voice` to specify a Spanish voice, `es-ES_EnriqueVoice`.
+1.  Issue the following command to synthesize the string "hola mundo" and produce a WAV file that is named `hola_mundo.wav`. The input text is URL-encoded. The method includes the query parameters `accept` to specify the audio format and `voice` to specify a Spanish voice, `es-ES_EnriqueV3Voice`.
     -   Replace `{token}` with the access token for your service instance.
     -   Replace `{url}` with the URL for your service instance.
 
@@ -111,7 +111,7 @@ The following command uses the `GET /v1/synthesize` method to synthesize Spanish
     curl -X POST \
     --header "Authorization: Bearer {token}" \
     --output hola_mundo.wav \
-    "{url}/v1/synthesize?accept=audio%2Fwav&text=hola%20mundo&voice=es-ES_EnriqueVoice"
+    "{url}/v1/synthesize?accept=audio%2Fwav&text=hola%20mundo&voice=es-ES_EnriqueV3Voice"
     ```
     {: pre}
 
