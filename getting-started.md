@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-07-30"
+lastupdated: "2019-08-19"
 
 subcollection: text-to-speech-data
 
@@ -26,7 +26,7 @@ subcollection: text-to-speech-data
 {:url: data-credential-placeholder='url'}
 {:hide-dashboard: .hide-dashboard}
 
-# Getting started tutorial
+# Getting started with Text to Speech
 {: #gettingStarted}
 
 {{site.data.keyword.texttospeechdatafull}} for {{site.data.keyword.icp4dfull}} converts written text to natural-sounding speech to provide speech-synthesis capabilities for applications. This curl-based tutorial can help you get started quickly with the service. The examples show you how to call the service's `POST` and `GET /v1/synthesize` methods to request an audio stream.
