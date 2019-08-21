@@ -2,7 +2,9 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-08-19"
+lastupdated: "2019-08-21"
+
+keywords: text to speech,IBM cloud pak for data,getting started,tutorial,synthesize audio,speech synthesis
 
 subcollection: text-to-speech-data
 
