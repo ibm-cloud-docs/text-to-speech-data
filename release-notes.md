@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-24"
+lastupdated: "2019-08-29"
 
 subcollection: text-to-speech-data
 
@@ -31,11 +31,18 @@ The following versions of {{site.data.keyword.texttospeechdatafull}} for {{site.
 ## Known limitations
 {: #limitations}
 
-{{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} has the following known limitation:
+{{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} has no known limitation.
 
--   The neural Japanese voice `ja-JP_EmiV3Voice` is not yet available. Support is pending and will be available soon.
+## Version 1.0.1 (30 August 2019)
+{: #v101}
 
-### Version 1.0.0 (June 2019)
+{{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} version 1.0.1 is now available. The service now works with {{site.data.keyword.icp4dfull_notm}} 2.1.0.1. The release includes the following changes:
+
+-   The service now supports installing {{site.data.keyword.icp4dfull_notm}} with Red Hat OpenShift. For installation instructions, see [Installing Cloud Pak for Data on Red Hat OpenShift](https://docs-icpdata.mybluemix.net/docs/content/SSQNUZ_current/com.ibm.icpdata.doc/zen/install/openshift.html){: external} and [Installing the Watson Text to Speech add-on](https://docs-icpdata.mybluemix.net/docs/content/SSQNUZ_current/com.ibm.icpdata.doc/watson/text-to-speech-install.html){: external}.
+-   The service now offers the neural Japanese voice `ja-JP_EmiV3Voice`. For more information, see [Supported languages and voices](/docs/services/text-to-speech-data?topic=text-to-speech-data-voices#languageVoices).
+-   Federal Information Security Management Act (FISMA) support is now available for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}. The service is FISMA High Ready.
+
+## Version 1.0.0 (28 June 2019)
 {: #v100}
 
 The initial release of the service. {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} is based on the {{site.data.keyword.texttospeechfull}} service on the public {{site.data.keyword.cloud_notm}}. For more information about the public service, see [About {{site.data.keyword.texttospeechshort}}](https://{DomainName}/docs/services/text-to-speech?topic=text-to-speech-about#about){: external}.
