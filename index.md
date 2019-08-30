@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-07-07"
+lastupdated: "2019-08-29"
 
 subcollection: text-to-speech-data
 
@@ -24,6 +24,8 @@ subcollection: text-to-speech-data
 
 # About
 {: #about}
+
+> ** Service update:** *{{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} was updated on August 30, 2019. The service now offers the neural Japanese voice `ja-JP_EmiV3Voice`. The service now supports installing {{site.data.keyword.icp4dfull_notm}} with Red Hat OpenShift, and it offers FISMA support. For more information, see the [Version 1.0.1 service update](/docs/services/text-to-speech-data?topic=text-to-speech-data-release-notes#v101) in the release notes*.
 
 {{site.data.keyword.texttospeechdatafull}} for {{site.data.keyword.icp4dfull}} provides speech synthesis capabilities for your applications to convert written text to natural-sounding speech. The service streams the results back to the client with minimal delay. The service offers both [HTTP](/docs/services/text-to-speech-data?topic=text-to-speech-data-usingHTTP) and [WebSocket](/docs/services/text-to-speech-data?topic=text-to-speech-data-usingWebSocket) interfaces.
 
@@ -51,8 +53,10 @@ The service offers at least one female voice for each language. For some languag
 
 For more information about the voices that are available for each language, see [Languages and voices](/docs/services/text-to-speech-data?topic=text-to-speech-data-voices).
 
-A Japanese voice is pending and will be available soon.
-{: note}
+## FISMA support
+{: #fisma}
+
+Federal Information Security Management Act (FISMA) support is available for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} offerings purchased on or after August 30, 2019 (version 1.0.1). {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} is FISMA High Ready.
 
 ## Use cases
 {: #usecases}
