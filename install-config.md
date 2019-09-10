@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-09-04"
+lastupdated: "2019-09-10"
 
 subcollection: text-to-speech-data
 
@@ -25,5 +25,5 @@ subcollection: text-to-speech-data
 # Installing the service
 {: #install}
 
-To install and configure {{site.data.keyword.texttospeechdatafull}} for {{site.data.keyword.icp4dfull}}, see service's [README.md file](https://github.com/ibm-cloud-docs/data-readmes/blob/master/speech-README.md){: external}.
+To install and configure {{site.data.keyword.texttospeechdatafull}} for {{site.data.keyword.icp4dfull}}, see [Installing the Watson Text to Speech add-on](https://docs-icpdata.mybluemix.net/docs/content/SSQNUZ_current/com.ibm.icpdata.doc/watson/text-to-speech-install.html){: external}.
 {: shortdesc}
