@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-08-29"
+lastupdated: "2019-09-15"
 
 subcollection: text-to-speech-data
 
@@ -31,7 +31,9 @@ The following versions of {{site.data.keyword.texttospeechdatafull}} for {{site.
 ## Known limitations
 {: #limitations}
 
-{{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} has no known limitation.
+{{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} has the following known limitation:
+
+-   When you specify the `audio/ogg;codecs=opus` audio format, you can optionally specify a sampling rate other than the default 48,000 Hz. However, while the service accepts `48000`, `24000`, `16000`, `12000`, or `8000` as a valid sampling rate, it currently disregards a specified value and always returns the audio with a sampling rate of 48 kHz.
 
 ## Version 1.0.1 (30 August 2019)
 {: #v101}
