@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-07-26"
+lastupdated: "2019-10-01"
 
 subcollection: text-to-speech-data
 
@@ -31,84 +31,84 @@ subcollection: text-to-speech-data
 ## Supported languages and voices
 {: #languageVoices}
 
-Table 1 lists the voices that are available for each language and dialect, including their type and gender. All voices are [Neural voices](#neuralVoices). If you omit the optional `voice` parameter from a request, the service uses the `en-US_MichaelV3Voice` voice by default.
+Table 1 lists the voices that are available for each language and dialect. All voices are [Neural voices](#neuralVoices). If you omit the optional `voice` parameter from a request, the service uses `en-US_MichaelV3Voice` by default.
 
 <table style="width:100%">
   <caption>Table 1. Supported languages and voices</caption>
   <tr>
     <th style="text-align:left">Language</th>
-    <th style="text-align:center">Voice</th>
     <th style="text-align:center">Gender</th>
+    <th style="text-align:center">Voice</th>
   </tr>
   <tr>
     <td style="text-align:left">Brazilian Portuguese</td>
-    <td style="text-align:center"><code>pt-BR_IsabelaV3Voice</code></td>
     <td style="text-align:center">Female</td>
+    <td style="text-align:center"><code>pt-BR_IsabelaV3Voice</code></td>
   </tr>
   <tr>
-    <td style="text-align:left">Castilian Spanish</td>
-    <td style="text-align:center"><code>es-ES_EnriqueV3Voice</code></td>
-    <td style="text-align:center">Male</td>
+    <td style="text-align:left">English (United Kingdom)</td>
+    <td style="text-align:center">Female</td>
+    <td style="text-align:center"><code>en-GB_KateV3Voice</code></td>
+  </tr>
+  <tr>
+    <td style="text-align:left">English (United States)</td>
+    <td style="text-align:center">Female</td>
+    <td style="text-align:center"><code>en-US_AllisonV3Voice</code></td>
   </tr>
   <tr>
     <td></td>
-    <td style="text-align:center"><code>es-ES_LauraV3Voice</code></td>
     <td style="text-align:center">Female</td>
+    <td style="text-align:center"><code>en-US_LisaV3Voice</code></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td style="text-align:center">Male</td>
+    <td style="text-align:center"><code>en-US_MichaelV3Voice</code></td>
   </tr>
   <tr>
     <td style="text-align:left">French</td>
-    <td style="text-align:center"><code>fr-FR_ReneeV3Voice</code></td>
     <td style="text-align:center">Female</td>
+    <td style="text-align:center"><code>fr-FR_ReneeV3Voice</code></td>
   </tr>
   <tr>
     <td style="text-align:left">German</td>
-    <td style="text-align:center"><code>de-DE_BirgitV3Voice</code></td>
     <td style="text-align:center">Female</td>
+    <td style="text-align:center"><code>de-DE_BirgitV3Voice</code></td>
   </tr>
   <tr>
     <td></td>
-    <td style="text-align:center"><code>de-DE_DieterV3Voice</code></td>
     <td style="text-align:center">Male</td>
+    <td style="text-align:center"><code>de-DE_DieterV3Voice</code></td>
   </tr>
   <tr>
     <td style="text-align:left">Italian</td>
-    <td style="text-align:center"><code>it-IT_FrancescaV3Voice</code></td>
     <td style="text-align:center">Female</td>
+    <td style="text-align:center"><code>it-IT_FrancescaV3Voice</code></td>
   </tr>
   <tr>
     <td style="text-align:left">Japanese</td>
+    <td style="text-align:center">Female</td>
     <td style="text-align:center"><code>ja-JP_EmiV3Voice</code></td>
-    <td style="text-align:center">Female</td>
   </tr>
   <tr>
-    <td style="text-align:left">Latin American Spanish</td>
-    <td style="text-align:center"><code>es-LA_SofiaV3Voice</code></td>
-    <td style="text-align:center">Female</td>
-  </tr>
-  <tr>
-    <td style="text-align:left">North American Spanish</td>
-    <td style="text-align:center"><code>es-US_SofiaV3Voice</code></td>
-    <td style="text-align:center">Female</td>
-  </tr>
-  <tr>
-    <td style="text-align:left">UK English</td>
-    <td style="text-align:center"><code>en-GB_KateV3Voice</code></td>
-    <td style="text-align:center">Female</td>
-  </tr>
-  <tr>
-    <td style="text-align:left">US English</td>
-    <td style="text-align:center"><code>en-US_AllisonV3Voice</code></td>
-    <td style="text-align:center">Female</td>
-  </tr>
-  <tr>
-    <td></td>
-    <td style="text-align:center"><code>en-US_LisaV3Voice</code></td>
-    <td style="text-align:center">Female</td>
-  </tr>
-  <tr>
-    <td></td>
-    <td style="text-align:center"><code>en-US_MichaelV3Voice</code></td>
+    <td style="text-align:left">Spanish (Castilian)</td>
     <td style="text-align:center">Male</td>
+    <td style="text-align:center"><code>es-ES_EnriqueV3Voice</code></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td style="text-align:center">Female</td>
+    <td style="text-align:center"><code>es-ES_LauraV3Voice</code></td>
+  </tr>
+  <tr>
+    <td style="text-align:left">Spanish (Latin American)</td>
+    <td style="text-align:center">Female</td>
+    <td style="text-align:center"><code>es-LA_SofiaV3Voice</code></td>
+  </tr>
+  <tr>
+    <td style="text-align:left">Spanish (North American)</td>
+    <td style="text-align:center">Female</td>
+    <td style="text-align:center"><code>es-US_SofiaV3Voice</code></td>
   </tr>
 </table>
 
