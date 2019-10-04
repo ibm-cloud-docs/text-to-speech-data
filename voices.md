@@ -232,7 +232,7 @@ The following example returns information about the `en-US_LisaV3Voice` and the 
 ```bash
 curl -X GET
 --header "Authorization: Bearer {token}"
-"{url}/v1/voices/en-US_LisaV3Voice&customization_id=64f4807f-a5f1-5867-924f-7bba1a84fe97"
+"{url}/v1/voices/en-US_LisaV3Voice?customization_id=64f4807f-a5f1-5867-924f-7bba1a84fe97"
 ```
 {: pre}
 
