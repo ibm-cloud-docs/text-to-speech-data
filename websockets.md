@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-24"
+lastupdated: "2019-10-04"
 
 subcollection: text-to-speech-data
 
@@ -49,7 +49,7 @@ wss://{icp4d_cluster_host}{:port}/text-to-speech/{release}/instances/{instance_i
 ```
 {: codeblock}
 
-The examples in the documentation refer to this endpoint as `{ws_url}`.
+The examples in the documentation abbreviate `wss://{icp4d_cluster_host}{:port}/text-to-speech/{release}/instances/{instance_id}/api` to `{ws_url}`. So all WebSocket examples call the method as `{ws_url}/v1/synthesize`.
 {: note}
 
 A WebSocket client calls this method with the following query parameters to establish an authenticated connection with the service.
