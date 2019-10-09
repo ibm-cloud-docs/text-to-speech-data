@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-10-04"
+lastupdated: "2019-10-09"
 
 subcollection: text-to-speech-data
 
@@ -43,72 +43,72 @@ Table 1 lists the voices that are available for each language and dialect. All v
   <tr>
     <td style="text-align:left">Brazilian Portuguese</td>
     <td style="text-align:center">Female</td>
-    <td style="text-align:center"><code>pt-BR_IsabelaV3Voice</code></td>
+    <td style="text-align:center"><a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/IsabelaV3.wav" download="IsabelaV3.wav"><code>pt-BR_IsabelaV3Voice</code> <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a></td>
   </tr>
   <tr>
     <td style="text-align:left">English (United Kingdom)</td>
     <td style="text-align:center">Female</td>
-    <td style="text-align:center"><code>en-GB_KateV3Voice</code></td>
+    <td style="text-align:center"><a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/KateV3.wav" download="KateV3.wav"><code>en-GB_KateV3Voice</code> <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a></td>
   </tr>
   <tr>
     <td style="text-align:left">English (United States)</td>
     <td style="text-align:center">Female</td>
-    <td style="text-align:center"><code>en-US_AllisonV3Voice</code></td>
+    <td style="text-align:center"><a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/AllisonV3.wav" download="AllisonV3.wav"><code>en-US_AllisonV3Voice</code> <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a></td>
   </tr>
   <tr>
     <td></td>
     <td style="text-align:center">Female</td>
-    <td style="text-align:center"><code>en-US_LisaV3Voice</code></td>
+    <td style="text-align:center"><a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/LisaV3.wav" download="LisaV3.wav"><code>en-US_LisaV3Voice</code> <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a></td>
   </tr>
   <tr>
     <td></td>
     <td style="text-align:center">Male</td>
-    <td style="text-align:center"><code>en-US_MichaelV3Voice</code></td>
+    <td style="text-align:center"><a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/MichaelV3.wav" download="MichaelV3.wav"><code>en-US_MichaelV3Voice</code> <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a></td>
   </tr>
   <tr>
     <td style="text-align:left">French</td>
     <td style="text-align:center">Female</td>
-    <td style="text-align:center"><code>fr-FR_ReneeV3Voice</code></td>
+    <td style="text-align:center"><a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/ReneeV3.wav" download="ReneeV3.wav"><code>fr-FR_ReneeV3Voice</code> <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a></td>
   </tr>
   <tr>
     <td style="text-align:left">German</td>
     <td style="text-align:center">Female</td>
-    <td style="text-align:center"><code>de-DE_BirgitV3Voice</code></td>
+    <td style="text-align:center"><a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/BirgitV3.wav" download="BirgitV3.wav"><code>de-DE_BirgitV3Voice</code> <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a></td>
   </tr>
   <tr>
     <td></td>
     <td style="text-align:center">Male</td>
-    <td style="text-align:center"><code>de-DE_DieterV3Voice</code></td>
+    <td style="text-align:center"><a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/DieterV3.wav" download="DieterV3.wav"><code>de-DE_DieterV3Voice</code> <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a></td>
   </tr>
   <tr>
     <td style="text-align:left">Italian</td>
     <td style="text-align:center">Female</td>
-    <td style="text-align:center"><code>it-IT_FrancescaV3Voice</code></td>
+    <td style="text-align:center"><a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/FrancescaV3.wav" download="FrancescaV3.wav"><code>it-IT_FrancescaV3Voice</code> <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a></td>
   </tr>
   <tr>
     <td style="text-align:left">Japanese</td>
     <td style="text-align:center">Female</td>
-    <td style="text-align:center"><code>ja-JP_EmiV3Voice</code></td>
+    <td style="text-align:center"><a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/EmiV3.wav" download="EmiV3.wav"><code>ja-JP_EmiV3Voice</code> <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a></td>
   </tr>
   <tr>
     <td style="text-align:left">Spanish (Castilian)</td>
     <td style="text-align:center">Male</td>
-    <td style="text-align:center"><code>es-ES_EnriqueV3Voice</code></td>
+    <td style="text-align:center"><a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/EnriqueV3.wav" download="EnriqueV3.wav"><code>es-ES_EnriqueV3Voice</code> <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a></td>
   </tr>
   <tr>
     <td></td>
     <td style="text-align:center">Female</td>
-    <td style="text-align:center"><code>es-ES_LauraV3Voice</code></td>
+    <td style="text-align:center"><a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/LauraV3.wav" download="LauraV3.wav"><code>es-ES_LauraV3Voice</code> <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a></td>
   </tr>
   <tr>
     <td style="text-align:left">Spanish (Latin American)</td>
     <td style="text-align:center">Female</td>
-    <td style="text-align:center"><code>es-LA_SofiaV3Voice</code></td>
+    <td style="text-align:center"><a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/SofiaV3.wav" download="SofiaV3.wav"><code>es-LA_SofiaV3Voice</code> <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a></td>
   </tr>
   <tr>
     <td style="text-align:left">Spanish (North American)</td>
     <td style="text-align:center">Female</td>
-    <td style="text-align:center"><code>es-US_SofiaV3Voice</code></td>
+    <td style="text-align:center"><a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/SofiaV3.wav" download="SofiaV3.wav"><code>es-US_SofiaV3Voice</code> <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a></td>
   </tr>
 </table>
 
