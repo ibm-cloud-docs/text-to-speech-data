@@ -23,9 +23,11 @@ IBM Watson Text to Speech for IBM Cloud Pak for Data
     {: .navgroup id="howto"}
     {: .topicgroup}
     Installation
-        install-config.md
-        [Helm chart README.md](https://github.com/ibm-cloud-docs/data-readmes/blob/master/speech-README.md)
+        speech-install.md
         manage.md
+        speech-uninstall.md
+        [Helm chart README.md](https://github.com/ibm-cloud-docs/data-readmes/blob/master/speech-README.md)
+
 
     making-requests.md
     http.md
