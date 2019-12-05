@@ -23,9 +23,11 @@ IBM Watson Text to Speech for IBM Cloud Pak for Data
     {: .navgroup id="howto"}
     {: .topicgroup}
     Installation
-        install-config.md
-        [Helm chart README.md](https://github.com/ibm-cloud-docs/data-readmes/blob/master/speech-README.md)
+        speech-install.md
         manage.md
+        speech-uninstall.md
+        [Helm chart README.md](https://github.com/ibm-cloud-docs/data-readmes/blob/master/speech-README.md)
+
 
     making-requests.md
     http.md
@@ -51,12 +53,12 @@ IBM Watson Text to Speech for IBM Cloud Pak for Data
     IBM SPR
         SPRs.md
         pt-BR-SPRs.md
-        en-GB-SPRs.md
         fr-FR-SPRs.md
         de-DE-SPRs.md
         it-IT-SPRs.md
         ja-JP-SPRs.md
         es-ES-SPRs.md
+        en-GB-SPRs.md
         en-US-SPRs.md
 
     backup.md
