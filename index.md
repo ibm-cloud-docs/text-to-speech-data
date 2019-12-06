@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-08-29"
+lastupdated: "2019-12-06"
 
 subcollection: text-to-speech-data
 
@@ -25,11 +25,11 @@ subcollection: text-to-speech-data
 # About
 {: #about}
 
-> ** Service update:** *{{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} was updated on August 30, 2019. The service now offers the neural Japanese voice `ja-JP_EmiV3Voice`. The service now supports installing {{site.data.keyword.icp4dfull_notm}} with Red Hat OpenShift, and it offers FISMA support. For more information, see the [Version 1.0.1 service update](/docs/services/text-to-speech-data?topic=text-to-speech-data-release-notes#v101) in the release notes*.
+> ** Service update:** *{{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} was updated on November 27, 2019. For more information, see the [Version 1.1.2 service update](/docs/services/text-to-speech-data?topic=text-to-speech-data-release-notes#v112) in the release notes.*
 
 {{site.data.keyword.texttospeechdatafull}} for {{site.data.keyword.icp4dfull}} provides speech synthesis capabilities for your applications to convert written text to natural-sounding speech. The service streams the results back to the client with minimal delay. The service offers both [HTTP](/docs/services/text-to-speech-data?topic=text-to-speech-data-usingHTTP) and [WebSocket](/docs/services/text-to-speech-data?topic=text-to-speech-data-usingWebSocket) interfaces.
 
-For information about installing and configuring {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}, see [Installing the service](/docs/services/text-to-speech-data?topic=text-to-speech-data-install).
+For information about installing and configuring {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}, see [Installing the Watson Text to Speech add-on](/docs/services/text-to-speech-data?topic=text-to-speech-data-stt-installing).
 
 {{site.data.keyword.texttospeechdatafull}} for {{site.data.keyword.icp4dfull}} is based on the {{site.data.keyword.texttospeechfull}} service on the public {{site.data.keyword.cloud_notm}}. For more information about the public service, see [About {{site.data.keyword.texttospeechshort}}](https://{DomainName}/docs/services/text-to-speech?topic=text-to-speech-about#about){: external}.
 {: note}
