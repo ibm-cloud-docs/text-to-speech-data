@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-12-06"
+lastupdated: "2019-12-10"
 
 subcollection: text-to-speech-data
 
@@ -47,7 +47,15 @@ The {{site.data.keyword.texttospeechshort}} service offers the following feature
 ## Language support
 {: #languages-index}
 
-The service supports voices in the following languages: Brazilian Portuguese, English (UK and US dialects), French, German, Italian, Japanese, and Spanish (Castilian, Latin American, and North American dialects).
+The service supports voices in the following languages:
+
+-   Brazilian Portuguese
+-   English (United Kingdom and United States dialects)
+-   French
+-   German
+-   Italian
+-   Japanese
+-   Spanish (Castilian, Latin American, and North American dialects)
 
 The service offers at least one female voice for each language. For some languages the service offers multiple voices, including both male and female voices. Each voice uses appropriate cadence and intonation for its dialect.
 
