@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019
-lastupdated: "2019-06-23"
+  years: 2019, 2020
+lastupdated: "2020-02-04"
 
 subcollection: text-to-speech-data
 
@@ -207,12 +207,12 @@ The `<emphasis>` element requests that the enclosed text is spoken with emphasis
 
 This `<lexicon>` element introduces pronunciation dictionaries for the given SSML document. It is not supported.
 
-You can use the service's customization interface to define a dictionary of custom entries (word/translation pairs) for use during speech synthesis. For more information, see [Understanding customization](/docs/services/text-to-speech-data?topic=text-to-speech-data-customIntro).
+You can use the service's customization interface to define a dictionary of custom entries (word/translation pairs) for use during speech synthesis. For more information, see [Understanding customization](/docs/text-to-speech-data?topic=text-to-speech-data-customIntro).
 
 ## The mark element
 {: #mark_element}
 
-The `<mark>` element is supported only by the service's WebSocket interface, not by its HTTP interface, which ignores the element. For more information, see [Specifying an SSML mark](/docs/services/text-to-speech-data?topic=text-to-speech-data-timing#mark).
+The `<mark>` element is supported only by the service's WebSocket interface, not by its HTTP interface, which ignores the element. For more information, see [Specifying an SSML mark](/docs/text-to-speech-data?topic=text-to-speech-data-timing#mark).
 {: note}
 
 The `<mark>` element is an empty element that places a marker into the text to be synthesized. The client is notified when all of the text that precedes the `<mark>` element has been synthesized. The element accepts a single `name` attribute that specifies a string that uniquely identifies the mark; the name must begin with an alphanumeric character. The name is returned along with the time at which the mark occurs in the synthesized audio.
@@ -276,7 +276,7 @@ The `<phoneme>` element provides a phonetic pronunciation for the enclosed text.
           &lt;phoneme alphabet="ibm" ph=".0tx.1me.0Fo"&gt;tomato&lt;/phoneme&gt;
         &lt;/speak&gt;</code></pre>
 
-For more information about using SPR and IPA notations with the `<phoneme>` element, see [Using IBM SPR](/docs/services/text-to-speech-data?topic=text-to-speech-data-sprs).
+For more information about using SPR and IPA notations with the `<phoneme>` element, see [Using IBM SPR](/docs/text-to-speech-data?topic=text-to-speech-data-sprs).
 
 ## The prosody element
 {: #prosody_element}

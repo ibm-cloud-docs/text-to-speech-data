@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-06-27"
+  years: 2019, 2020
+lastupdated: "2020-02-04"
 
 subcollection: text-to-speech-data
 
@@ -31,7 +31,7 @@ To make authenticated requests to {{site.data.keyword.texttospeechdatafull}} for
 ## Provisioning an instance and obtaining credentials
 {: #making-requests-provisioning}
 
-Before using the {{site.data.keyword.texttospeechshort}} service, you must provision an instance of the service and obtain your credentials. For more information, see [Before you begin](/docs/services/text-to-speech-data?topic=text-to-speech-data-gettingStarted#before-you-begin). In the last step of that procedure, you copy the `{token}` and `{URL}` for your service instance:
+Before using the {{site.data.keyword.texttospeechshort}} service, you must provision an instance of the service and obtain your credentials. For more information, see [Before you begin](/docs/text-to-speech-data?topic=text-to-speech-data-gettingStarted#before-you-begin). In the last step of that procedure, you copy the `{token}` and `{URL}` for your service instance:
 
 -   The `{token}` provides your access token for authenticating to the service. You can use the access token displayed in the {{site.data.keyword.icp4dfull_notm}} web client. However, in a production environment, use a token that you generate programmatically for your service instance. For more information and for examples, see *Authentication* in the [API reference](https://{DomainName}/apidocs/text-to-speech-data#authentication){: external}.
 
@@ -58,9 +58,9 @@ The braces indicate variable strings that you must replace with literal values. 
 ## Making an authenticated HTTP request
 {: #httpRequest}
 
-The {{site.data.keyword.texttospeechshort}} service offers an [HTTP interface](/docs/services/text-to-speech-data?topic=text-to-speech-data-usingHTTP) that provides access to all of the service's functionality, including the customization interfaces. The HTTP interface accepts requests over the HTTP Secure protocol, which in turn relies on the Secure Sockets Layer (SSL) (or Transport Layer Security (TLS)) protocol. All URLs for requests to the HTTP interface begin with the `https` protocol specification.
+The {{site.data.keyword.texttospeechshort}} service offers an [HTTP interface](/docs/text-to-speech-data?topic=text-to-speech-data-usingHTTP) that provides access to all of the service's functionality, including the customization interfaces. The HTTP interface accepts requests over the HTTP Secure protocol, which in turn relies on the Secure Sockets Layer (SSL) (or Transport Layer Security (TLS)) protocol. All URLs for requests to the HTTP interface begin with the `https` protocol specification.
 
-The examples in this documentation use the `curl` command to call the service's HTTP interface. For more information, see [Using the curl examples](/docs/services/text-to-speech-data?topic=text-to-speech-data-gettingStarted#getting-started-curl). The basic format of an HTTP request with `curl` includes the following components:
+The examples in this documentation use the `curl` command to call the service's HTTP interface. For more information, see [Using the curl examples](/docs/text-to-speech-data?topic=text-to-speech-data-gettingStarted#getting-started-curl). The basic format of an HTTP request with `curl` includes the following components:
 
 ```bash
 curl -X {http_method}
@@ -83,7 +83,7 @@ The examples show the URL for calls to the HTTP interface as `{url}/v1/{method}`
 ## Making an authenticated WebSocket request
 {: #websocketRequest}
 
-The {{site.data.keyword.texttospeechshort}} service offers a [WebSocket interface](/docs/services/text-to-speech-data?topic=text-to-speech-data-usingWebSocket) that provides only speech synthesis. The service accepts requests over the WebSocket Secure protocol, which again relies on the Secure Sockets Layer (SSL) (or Transport Layer Security (TLS)) protocol. All URLs for requests to the WebSocket interface begin with the `wss` protocol specification.
+The {{site.data.keyword.texttospeechshort}} service offers a [WebSocket interface](/docs/text-to-speech-data?topic=text-to-speech-data-usingWebSocket) that provides only speech synthesis. The service accepts requests over the WebSocket Secure protocol, which again relies on the Secure Sockets Layer (SSL) (or Transport Layer Security (TLS)) protocol. All URLs for requests to the WebSocket interface begin with the `wss` protocol specification.
 
 You can call the WebSocket interface only from application code. You cannot call the WebSocket interface from the command line. You establish a WebSocket connection to the service at the following endpoint.
 

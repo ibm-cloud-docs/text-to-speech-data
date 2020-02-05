@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019
-lastupdated: "2019-06-23"
+  years: 2019, 2020
+lastupdated: "2020-02-04"
 
 subcollection: text-to-speech-data
 
@@ -28,7 +28,7 @@ subcollection: text-to-speech-data
 The Speech Synthesis Markup Language (SSML) is an XML-based markup language that provides annotations of text for speech-synthesis applications. It is a recommendation of the W3C Voice-Browser Working Group that has been adopted as the standard markup language for speech synthesis by the VoiceXML 2.0 specification. SSML provides developers of speech applications with a standard way to control aspects of the synthesis process by enabling them to specify pronunciation, volume, pitch, speed, and other attributes via markup.
 {: shortdesc}
 
-With {{site.data.keyword.texttospeechdatafull}} for {{site.data.keyword.icp4dfull}}, you can use SSML to control the synthesis of your text with all supported languages. This includes using the SSML `<phoneme>` element to define a word's pronunciation in either the International Phonetic Alphabet (IPA) or the {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR). The service also relies on the SSML `<phoneme>` element to define the phonetic translation for a word with its customization interface; for more information, see [Understanding customization](/docs/services/text-to-speech-data?topic=text-to-speech-data-customIntro).
+With {{site.data.keyword.texttospeechdatafull}} for {{site.data.keyword.icp4dfull}}, you can use SSML to control the synthesis of your text with all supported languages. This includes using the SSML `<phoneme>` element to define a word's pronunciation in either the International Phonetic Alphabet (IPA) or the {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR). The service also relies on the SSML `<phoneme>` element to define the phonetic translation for a word with its customization interface; for more information, see [Understanding customization](/docs/text-to-speech-data?topic=text-to-speech-data-customIntro).
 
 ## Introduction to SSML
 {: #introduction-SSML}
@@ -70,10 +70,10 @@ The {{site.data.keyword.texttospeechshort}} service bases its support on SSML Ve
 
 For more information about using SSML with the service, see the following:
 
--   For complete information about the service's level of support for all SSML elements, see [SSML elements](/docs/services/text-to-speech-data?topic=text-to-speech-data-elements). With a few exceptions, the service implements most of the W3C specification, as well as SSML fragments.
+-   For complete information about the service's level of support for all SSML elements, see [SSML elements](/docs/text-to-speech-data?topic=text-to-speech-data-elements). With a few exceptions, the service implements most of the W3C specification, as well as SSML fragments.
 -   The service's customization interface supports the use of the SSML `<phoneme>` element to specify the phonetic spelling that it uses to pronounce a word. The phonetic spelling represents the sounds of a word, how these sounds are divided into syllables, and which syllables receive stress.
-    -   For information about the customization interface, see [Understanding customization](/docs/services/text-to-speech-data?topic=text-to-speech-data-customIntro).
-    -   For information about the valid symbols that you can use in an {{site.data.keyword.IBM_notm}} SPR or IPA specification for any supported language, see [Using IBM SPR](/docs/services/text-to-speech-data?topic=text-to-speech-data-sprs).
+    -   For information about the customization interface, see [Understanding customization](/docs/text-to-speech-data?topic=text-to-speech-data-customIntro).
+    -   For information about the valid symbols that you can use in an {{site.data.keyword.IBM_notm}} SPR or IPA specification for any supported language, see [Using IBM SPR](/docs/text-to-speech-data?topic=text-to-speech-data-sprs).
 
 ## SSML validation
 {: #errors}
@@ -92,4 +92,4 @@ Specifically, the service returns an error in the following cases:
 -   *Japanese `:` symbol does not precede a vowel.* In the `ph` attribute of a `<phoneme>` element, a `:` character does not occur before a vowel (possibly with other symbols, such as syllable boundary, in between).
 -   *Invalid syllable stress.* The `ph` attribute of a `<phoneme>` element for an {{site.data.keyword.IBM_notm}} SPR includes invalid syllable stress. For French, a syllable stress symbol does not immediately precede a vowel. For Spanish or Italian, a secondary (`2`) or no stress (`0`) symbol is used. For Japanese, a secondary stress symbol (`2`) is used.
 -   *Invalid use of SSML `<prosody>` element.* You cannot use the `volume`, `contour`, `duration`, and `range` attributes of the `<prosody>` element.
--   *Unescaped XML control characters.* The input text itself contains a <code>&quot;</code>, <code>&apos;</code>, `&`, `<`, or `>` character instead of its equivalent escape string or character encoding. For more information, see [Escaping XML control characters](/docs/services/text-to-speech-data?topic=text-to-speech-data-usingHTTP#escape).
+-   *Unescaped XML control characters.* The input text itself contains a <code>&quot;</code>, <code>&apos;</code>, `&`, `<`, or `>` character instead of its equivalent escape string or character encoding. For more information, see [Escaping XML control characters](/docs/text-to-speech-data?topic=text-to-speech-data-usingHTTP#escape).

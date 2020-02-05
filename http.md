@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019
-lastupdated: "2019-06-24"
+  years: 2019, 2020
+lastupdated: "2020-02-04"
 
 subcollection: text-to-speech-data
 
@@ -58,7 +58,7 @@ The two versions of the `/v1/synthesize` method have the following parameters in
       service is to return the audio. You can also specify this value with
       the HTTP <code>Accept</code> request header. URL-encode the argument
       to the `accept` query parameter. For more information, see
-      [Audio formats](/docs/services/text-to-speech-data?topic=text-to-speech-data-audioFormats).
+      [Audio formats](/docs/text-to-speech-data?topic=text-to-speech-data-audioFormats).
     </td>
   </tr>
   <tr>
@@ -70,7 +70,7 @@ The two versions of the `/v1/synthesize` method have the following parameters in
       the audio. Use the <code>/v1/voices</code> method to get the
       current list of supported voices. The default voice is
       <code>en-US_MichaelV3Voice</code>. For more information, see
-      [Languages and voices](/docs/services/text-to-speech-data?topic=text-to-speech-data-voices).
+      [Languages and voices](/docs/text-to-speech-data?topic=text-to-speech-data-voices).
     </td>
   </tr>
   <tr>
@@ -85,12 +85,12 @@ The two versions of the `/v1/synthesize` method have the following parameters in
       ID, you must make the request with credentials for the instance of
       the service that owns the custom model. Omit the parameter to use
       the specified voice with no customization. For more information, see
-      [Understanding customization](/docs/services/text-to-speech-data?topic=text-to-speech-data-customIntro).
+      [Understanding customization](/docs/text-to-speech-data?topic=text-to-speech-data-customIntro).
     </td>
   </tr>
 </table>
 
-You can also use the `X-Watson-Metadata` request header, which associates a customer ID with data that is passed with a request. For more information, see [Information security](/docs/services/text-to-speech-data?topic=text-to-speech-data-information-security).
+You can also use the `X-Watson-Metadata` request header, which associates a customer ID with data that is passed with a request. For more information, see [Information security](/docs/text-to-speech-data?topic=text-to-speech-data-information-security).
 
 If you specify an invalid query parameter or JSON field as part of the input to the `/v1/synthesize` method, the service returns a `Warnings` response header that describes and lists each invalid argument. The request succeeds despite the warnings.
 {: note}
@@ -117,7 +117,7 @@ Although the `GET` and `POST` methods offer equivalent functionality, it is alwa
 
 The Speech Synthesis Markup Language (SSML) is an XML-based markup language that is designed to provide annotations of text for speech synthesis applications such as the {{site.data.keyword.texttospeechshort}} service. You can use SSML elements and their attributes to gain greater control over the synthesis and resulting audio output.
 
-For more information about using SSML to annotate input text, see [Using SSML](/docs/services/text-to-speech-data?topic=text-to-speech-data-ssml). The documentation inventories the SSML elements and attributes that are supported by the service.
+For more information about using SSML to annotate input text, see [Using SSML](/docs/text-to-speech-data?topic=text-to-speech-data-ssml). The documentation inventories the SSML elements and attributes that are supported by the service.
 
 ## Escaping XML control characters
 {: #escape}
@@ -158,7 +158,7 @@ Because you can submit input text that includes XML-based SSML annotations, the 
   </tr>
 </table>
 
-For more information about how the service validates input text, see [SSML validation](/docs/services/text-to-speech-data?topic=text-to-speech-data-ssml#errors).
+For more information about how the service validates input text, see [SSML validation](/docs/text-to-speech-data?topic=text-to-speech-data-ssml#errors).
 
 ## Examples of input text
 {: #httpExamples}

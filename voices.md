@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019
-lastupdated: "2019-10-15"
+  years: 2019, 2020
+lastupdated: "2020-02-04"
 
 subcollection: text-to-speech-data
 
@@ -201,14 +201,14 @@ For more information about the service's neural voice technology, see
 
 When you synthesize text, the service applies language-dependent pronunciation rules to convert the ordinary spelling of each word to a phonetic spelling. The service's pronunciation rules work well for common words, but they can yield imperfect results for unusual words, such as terms with foreign origins, personal names, and abbreviations or acronyms.
 
-If your application's lexicon includes such words, you can use the customization interface to specify how the service pronounces them. For more information, see [Understanding customization](/docs/services/text-to-speech-data?topic=text-to-speech-data-customIntro).
+If your application's lexicon includes such words, you can use the customization interface to specify how the service pronounces them. For more information, see [Understanding customization](/docs/text-to-speech-data?topic=text-to-speech-data-customIntro).
 
 You create a custom voice model for a specific language, not for a specific voice. So a custom model can be used with any voice for its specified language.
 
 ## Specifying a voice
 {: #specifyVoice}
 
-Both the HTTP `GET` and `POST /v1/synthesize` methods, as well as the WebSocket `/v1/synthesize` method, accept an optional `voice` query parameter to specify the voice for the synthesized audio. For more information, see [The HTTP interface](/docs/services/text-to-speech-data?topic=text-to-speech-data-usingHTTP) and [The WebSocket interface](/docs/services/text-to-speech-data?topic=text-to-speech-data-usingWebSocket).
+Both the HTTP `GET` and `POST /v1/synthesize` methods, as well as the WebSocket `/v1/synthesize` method, accept an optional `voice` query parameter to specify the voice for the synthesized audio. For more information, see [The HTTP interface](/docs/text-to-speech-data?topic=text-to-speech-data-usingHTTP) and [The WebSocket interface](/docs/text-to-speech-data?topic=text-to-speech-data-usingWebSocket).
 
 The service bases its understanding of the language for the input text on the specified voice. Be sure to specify a voice that matches the language of the input text. For example, if you specify the French voice (`fr-FR_ReneeV3Voice`), the service assumes that the input text is written in French. If you pass text that is not written in the language of the voice (for example, English text for the French voice), the service might not produce meaningful results.
 
