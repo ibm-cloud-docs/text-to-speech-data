@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-11-20"
+  years: 2019, 2020
+lastupdated: "2020-02-04"
 
 subcollection: text-to-speech-data
 
@@ -210,7 +210,7 @@ spec:
     storage: $CAPACITY      # for example: 100Gi
   accessModes:
     - ReadWriteOnce
-  persistentVolumeReclaimPolicy:  
+  persistentVolumeReclaimPolicy:
   nfs:
     server: $NFS_SERVER     # for example: 9.46.65.38
     path: $NFS_DIR          # for example: /NFSDataStore/speech_minio/dir0
@@ -346,7 +346,7 @@ You can also scale up the datastores on an already running solution by changing 
   1. Change the value of the `spec.replicas:` attribute.
   1. Save and close the StatefulSet object.
 
-PostgreSQL includes two deployment objects (`{release}-ibm-postgresql-proxy` and `{release}-ibm-postgresql-sentinel`) and a StatefulSet (`ibm-wc-ibm-postgresql-keeper`). The deployment objects can be scaled up by running `kubectl scale --replicas={n} {deployment_object}`, where `{n}` is the new number of replicas; for example, `kubectl scale --replicas=3 deployment ibm-wc-ibm-postgresql-proxy`. The StatefulSet object can be scaled up by following the process described previously for PostgreSQL.  
+PostgreSQL includes two deployment objects (`{release}-ibm-postgresql-proxy` and `{release}-ibm-postgresql-sentinel`) and a StatefulSet (`ibm-wc-ibm-postgresql-keeper`). The deployment objects can be scaled up by running `kubectl scale --replicas={n} {deployment_object}`, where `{n}` is the new number of replicas; for example, `kubectl scale --replicas=3 deployment ibm-wc-ibm-postgresql-proxy`. The StatefulSet object can be scaled up by following the process described previously for PostgreSQL.
 
 Note that a sufficient number of Persistent Local Volumes need to be created before scaling up the number of replicas (in the case of the StatefulSets) so the newly created pods can mount their volumes.
 
@@ -763,7 +763,7 @@ This chart also defines a custom SecurityContextConstraints that can be used to 
     - persistentVolumeClaim
     - projected
     - secret
-    ```    
+    ```
 
 - From the command line, you can run the setup scripts included under `pak_extensions`.
 

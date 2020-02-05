@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019
-lastupdated: "2019-06-24"
+  years: 2019, 2020
+lastupdated: "2020-02-04"
 
 subcollection: text-to-speech-data
 
@@ -51,7 +51,7 @@ The service allows you to associate a customer ID with data that is added or upd
 -   `POST /v1/customizations/{customization_id}/words`
 -   `PUT /v1/customizations/{customization_id}/words/{word}`
 
-If necessary, you can then delete the data associated with the customer ID by using the `DELETE /v1/user_data` method. For more information, see [Information security](/docs/services/text-to-speech-data?topic=text-to-speech-data-information-security).
+If necessary, you can then delete the data associated with the customer ID by using the `DELETE /v1/user_data` method. For more information, see [Information security](/docs/text-to-speech-data?topic=text-to-speech-data-information-security).
 
 ## Creating a custom model
 {: #cuModelsCreate}
@@ -206,7 +206,7 @@ curl -X POST
 ```
 {: pre}
 
-For information about updating the words in a model, see [Adding multiple words to a custom model](/docs/services/text-to-speech-data?topic=text-to-speech-data-customWords#cuWordsAdd).
+For information about updating the words in a model, see [Adding multiple words to a custom model](/docs/text-to-speech-data?topic=text-to-speech-data-customWords#cuWordsAdd).
 
 ## Deleting a custom model
 {: #cuModelsDelete}

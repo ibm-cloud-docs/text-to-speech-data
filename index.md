@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019
-lastupdated: "2019-12-10"
+  years: 2019, 2020
+lastupdated: "2020-02-04"
 
 subcollection: text-to-speech-data
 
@@ -25,24 +25,24 @@ subcollection: text-to-speech-data
 # About
 {: #about}
 
-> ** Service update:** *{{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} was updated on November 27, 2019. For more information, see the [Version 1.1.2 service update](/docs/services/text-to-speech-data?topic=text-to-speech-data-release-notes#v112) in the release notes.*
+> ** Service update:** *{{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} was updated on November 27, 2019. For more information, see the [Version 1.1.2 service update](/docs/text-to-speech-data?topic=text-to-speech-data-release-notes#v112) in the release notes.*
 
-{{site.data.keyword.texttospeechdatafull}} for {{site.data.keyword.icp4dfull}} provides speech synthesis capabilities for your applications to convert written text to natural-sounding speech. The service streams the results back to the client with minimal delay. The service offers both [HTTP](/docs/services/text-to-speech-data?topic=text-to-speech-data-usingHTTP) and [WebSocket](/docs/services/text-to-speech-data?topic=text-to-speech-data-usingWebSocket) interfaces.
+{{site.data.keyword.texttospeechdatafull}} for {{site.data.keyword.icp4dfull}} provides speech synthesis capabilities for your applications to convert written text to natural-sounding speech. The service streams the results back to the client with minimal delay. The service offers both [HTTP](/docs/text-to-speech-data?topic=text-to-speech-data-usingHTTP) and [WebSocket](/docs/text-to-speech-data?topic=text-to-speech-data-usingWebSocket) interfaces.
 
-For information about installing and configuring {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}, see [Installing the Watson Text to Speech add-on](/docs/services/text-to-speech-data?topic=text-to-speech-data-stt-installing).
+For information about installing and configuring {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}, see [Installing the Watson Text to Speech add-on](/docs/text-to-speech-data?topic=text-to-speech-data-stt-installing).
 
-{{site.data.keyword.texttospeechdatafull}} for {{site.data.keyword.icp4dfull}} is based on the {{site.data.keyword.texttospeechfull}} service on the public {{site.data.keyword.cloud_notm}}. For more information about the public service, see [About {{site.data.keyword.texttospeechshort}}](https://{DomainName}/docs/services/text-to-speech?topic=text-to-speech-about#about){: external}.
+{{site.data.keyword.texttospeechdatafull}} for {{site.data.keyword.icp4dfull}} is based on the {{site.data.keyword.texttospeechfull}} service on the public {{site.data.keyword.cloud_notm}}. For more information about the public service, see [About {{site.data.keyword.texttospeechshort}}](https://{DomainName}/docs/text-to-speech?topic=text-to-speech-about#about){: external}.
 {: note}
 
 ## Features and capabilities
 
 The {{site.data.keyword.texttospeechshort}} service offers the following features and capabilities:
 
--   **Audio formats** - Produces audio in Ogg or WebM with the Opus or Vorbis codec, WAV, FLAC, MP3 (MPEG), l16 (PCM), mulaw, or basic format. For more information, see [Audio formats](/docs/services/text-to-speech-data?topic=text-to-speech-data-audioFormats).
--   **Voices** - Synthesizes text to audio in various languages, voices, and dialects. For more information, see [Languages and voices](/docs/services/text-to-speech-data?topic=text-to-speech-data-voices).
--   **SSML** - Accepts plain text or text that is marked up with the XML-based Speech Synthesis Markup Language (SSML). For more information, see [Using SSML](/docs/services/text-to-speech-data?topic=text-to-speech-data-ssml).
--   **Word timings** - With the WebSocket interface, supports the SSML `<mark>` element and optional word timing information for all strings of the input text. Timing information synchronizes the input text and the resulting audio. For more information, see [Obtaining word timings](/docs/services/text-to-speech-data?topic=text-to-speech-data-timing).
--   **Customization** - Provides a customization interface that you can use to specify how the service pronounces unusual words that occur in your input. You can define pronunciations with the International Phonetic Alphabet (IPA) or {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR). For more information, see [Understanding customization](/docs/services/text-to-speech-data?topic=text-to-speech-data-customIntro).
+-   **Audio formats** - Produces audio in Ogg or WebM with the Opus or Vorbis codec, WAV, FLAC, MP3 (MPEG), l16 (PCM), mulaw, or basic format. For more information, see [Audio formats](/docs/text-to-speech-data?topic=text-to-speech-data-audioFormats).
+-   **Voices** - Synthesizes text to audio in various languages, voices, and dialects. For more information, see [Languages and voices](/docs/text-to-speech-data?topic=text-to-speech-data-voices).
+-   **SSML** - Accepts plain text or text that is marked up with the XML-based Speech Synthesis Markup Language (SSML). For more information, see [Using SSML](/docs/text-to-speech-data?topic=text-to-speech-data-ssml).
+-   **Word timings** - With the WebSocket interface, supports the SSML `<mark>` element and optional word timing information for all strings of the input text. Timing information synchronizes the input text and the resulting audio. For more information, see [Obtaining word timings](/docs/text-to-speech-data?topic=text-to-speech-data-timing).
+-   **Customization** - Provides a customization interface that you can use to specify how the service pronounces unusual words that occur in your input. You can define pronunciations with the International Phonetic Alphabet (IPA) or {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR). For more information, see [Understanding customization](/docs/text-to-speech-data?topic=text-to-speech-data-customIntro).
 
 ## Language support
 {: #languages-index}
@@ -59,7 +59,7 @@ The service supports voices in the following languages:
 
 The service offers at least one female voice for each language. For some languages the service offers multiple voices, including both male and female voices. Each voice uses appropriate cadence and intonation for its dialect.
 
-For more information about the voices that are available for each language, see [Languages and voices](/docs/services/text-to-speech-data?topic=text-to-speech-data-voices).
+For more information about the voices that are available for each language, see [Languages and voices](/docs/text-to-speech-data?topic=text-to-speech-data-voices).
 
 ## FISMA support
 {: #fisma}

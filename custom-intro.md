@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019
-lastupdated: "2019-06-23"
+  years: 2019, 2020
+lastupdated: "2020-02-04"
 
 subcollection: text-to-speech-data
 
@@ -40,7 +40,7 @@ The customization interface of the {{site.data.keyword.texttospeechshort}} servi
 
 The customization interface provides methods to create and manage your custom voice models, which the service stores permanently. After you create a custom model, you can use it during synthesis with any version of the `/v1/synthesize` method. When the service synthesizes input text, it determines the pronunciation of words that appear in the custom model by applying their translations either directly or indirectly. Because you create a custom voice model for a specific language, a custom model can be used with any voice that is available in that language.
 
-You specify the translation for a word in a custom voice model as a *sounds-like translation* or a *phonetic translation*. You can use both methods for entries in the same custom model, and you can mix the two methods within the same translation. A number of rules and guidelines apply to custom entries. For more information, see [Rules for creating custom entries](/docs/services/text-to-speech-data?topic=text-to-speech-data-rules).
+You specify the translation for a word in a custom voice model as a *sounds-like translation* or a *phonetic translation*. You can use both methods for entries in the same custom model, and you can mix the two methods within the same translation. A number of rules and guidelines apply to custom entries. For more information, see [Rules for creating custom entries](/docs/text-to-speech-data?topic=text-to-speech-data-rules).
 
 ## Sounds-like translation
 {: #soundsLike}
@@ -107,7 +107,7 @@ For example, consider the word `trinitroglycerin`. The service's regular pronunc
 
 In these examples, the phonetic translation string is composed of phoneme symbols and a single primary stress mark. The primary stress mark is represented by <code>&#712;</code> in IPA and by `1` in SPR. It is placed just before the symbol for the stressed vowel in both cases. Although the examples do not show it, you can also specify syllable boundaries and secondary stress positions in a phonetic translation. These elements are not required and normally are not needed to achieve a pronunciation. As with sounds-like translations, you can compose a phonetic translation from multiple strings that are delimited by spaces.
 
-You can also specify IPA translations as IPA Unicode values. For more information, see [Using IBM SPR](/docs/services/text-to-speech-data?topic=text-to-speech-data-sprs) and the language-specific tables on the pages that are referred to in [Supported languages](/docs/services/text-to-speech-data?topic=text-to-speech-data-sprs#supportedLanguages). For an example translation that uses IPA Unicode values, see [The phoneme element](/docs/services/text-to-speech-data?topic=text-to-speech-data-elements#phoneme_element).
+You can also specify IPA translations as IPA Unicode values. For more information, see [Using IBM SPR](/docs/text-to-speech-data?topic=text-to-speech-data-sprs) and the language-specific tables on the pages that are referred to in [Supported languages](/docs/text-to-speech-data?topic=text-to-speech-data-sprs#supportedLanguages). For an example translation that uses IPA Unicode values, see [The phoneme element](/docs/text-to-speech-data?topic=text-to-speech-data-elements#phoneme_element).
 {: note}
 
 ### Working with an existing phonetic translation
@@ -117,15 +117,15 @@ Unless you are an expert in phonology, composing phonetic translations is not an
 
 You can use the `/GET v/1/pronunciation` method to obtain an initial phonetic translation for a word. You can then modify the translation to achieve the pronunciation that you want. As with the sounds-like method, you follow a trial-and-error process. You submit your candidate translation to the service, synthesize the word as input text, listen to the resulting audio, and edit the candidate translation. You can repeat the process until you are satisfied with the pronunciation.
 
-For more information, see [Querying a word from a language](/docs/services/text-to-speech-data?topic=text-to-speech-data-customWords#cuWordsQueryLanguage).
+For more information, see [Querying a word from a language](/docs/text-to-speech-data?topic=text-to-speech-data-customWords#cuWordsQueryLanguage).
 
 ### More information about phonetic translation
 {: #phoneticInfo}
 
 The following resources provide information about phonetic translation:
 
--   For more information about using SSML and its `<phoneme>` element, see [Using SSML](/docs/services/text-to-speech-data?topic=text-to-speech-data-ssml).
--   For more information about specifying SPR translations and their equivalent IPA symbols, see [Using IBM SPR](/docs/services/text-to-speech-data?topic=text-to-speech-data-sprs).
+-   For more information about using SSML and its `<phoneme>` element, see [Using SSML](/docs/text-to-speech-data?topic=text-to-speech-data-ssml).
+-   For more information about specifying SPR translations and their equivalent IPA symbols, see [Using IBM SPR](/docs/text-to-speech-data?topic=text-to-speech-data-sprs).
 -   For more information about using IPA symbols and for audio samples of the symbols, consult sources on the web. You can find a detailed introductory discussion at [International Phonetic Alphabet](https://wikipedia.org/wiki/International_Phonetic_Alphabet){: external}.
 
 ## Mixed sounds-like and phonetic translation

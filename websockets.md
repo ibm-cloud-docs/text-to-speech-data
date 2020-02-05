@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019
-lastupdated: "2019-10-04"
+  years: 2019, 2020
+lastupdated: "2020-02-04"
 
 subcollection: text-to-speech-data
 
@@ -34,7 +34,7 @@ The synthesize request and response cycle includes the following steps:
 1.  [Send input text](#WSsend).
 1.  [Receive a response](#WSreceive).
 
-The WebSocket interface accepts identical input and produces identical results as the `GET` and `POST /v1/synthesize` methods of the HTTP interface. However, the WebSocket interface supports use of the SSML `<mark>` element to identify the location of user-specified markers in the audio. It can also return timing information for all strings of the input text. For more information, see [Obtaining word timings](/docs/services/text-to-speech-data?topic=text-to-speech-data-timing).
+The WebSocket interface accepts identical input and produces identical results as the `GET` and `POST /v1/synthesize` methods of the HTTP interface. However, the WebSocket interface supports use of the SSML `<mark>` element to identify the location of user-specified markers in the audio. It can also return timing information for all strings of the input text. For more information, see [Obtaining word timings](/docs/text-to-speech-data?topic=text-to-speech-data-timing).
 
 The snippets of example code that follow are written in JavaScript and are based on the HTML5 WebSocket API. For more information about the WebSocket protocol, see the Internet Engineering Task Force (IETF) [Request for Comment (RFC) 6455](http://tools.ietf.org/html/rfc6455){: external}.
 {: note}
@@ -42,7 +42,7 @@ The snippets of example code that follow are written in JavaScript and are based
 ## Open a connection
 {: #WSopen}
 
-{{site.data.keyword.texttospeechshort}} uses the WebSocket Secure (WSS) protocol to make the `/v1/synthesize` method available at the following endpoint. For more information about the components of the URL, see [Making requests to the service](/docs/services/text-to-speech-data?topic=text-to-speech-data-making-requests).
+{{site.data.keyword.texttospeechshort}} uses the WebSocket Secure (WSS) protocol to make the `/v1/synthesize` method available at the following endpoint. For more information about the components of the URL, see [Making requests to the service](/docs/text-to-speech-data?topic=text-to-speech-data-making-requests).
 
 ```
 wss://{icp4d_cluster_host}{:port}/text-to-speech/{release}/instances/{instance_id}/api/v1/synthesize
@@ -78,7 +78,7 @@ A WebSocket client calls this method with the following query parameters to esta
       Specifies the voice in which the text is to be spoken in the audio.
       Omit the parameter to use the default voice, `en-US_MichaelV3Voice`.
       For more information, see
-      [Languages and voices](/docs/services/text-to-speech-data?topic=text-to-speech-data-voices).
+      [Languages and voices](/docs/text-to-speech-data?topic=text-to-speech-data-voices).
     </td>
   </tr>
   <tr>
@@ -92,7 +92,7 @@ A WebSocket client calls this method with the following query parameters to esta
       make the request with credentials for the instance of the service that
       owns the custom model. Omit the parameter to use the specified voice
       with no customization. For more information, see
-      [Understanding customization](/docs/services/text-to-speech-data?topic=text-to-speech-data-customIntro).
+      [Understanding customization](/docs/text-to-speech-data?topic=text-to-speech-data-customIntro).
     </td>
   </tr>
   <tr>
@@ -107,7 +107,7 @@ A WebSocket client calls this method with the following query parameters to esta
       URL-encode the argument to the parameter, for example,
       `customer_id%3dmy_ID`. By default, no customer ID is associated
       with the data. For more information, see
-      [Information security](/docs/services/text-to-speech-data?topic=text-to-speech-data-information-security).
+      [Information security](/docs/text-to-speech-data?topic=text-to-speech-data-information-security).
     </td>
   </tr>
 </table>
@@ -149,11 +149,11 @@ To synthesize text, the client passes a simple JSON text message to the service 
       Markup Language (SSML). The client can pass a maximum of 5 KB of
       input text with the request. The limit includes any SSML that you
       specify. For more information, see
-      [Specifying input text](/docs/services/text-to-speech-data?topic=text-to-speech-data-usingHTTP#input)
+      [Specifying input text](/docs/text-to-speech-data?topic=text-to-speech-data-usingHTTP#input)
       and the sections that follow it.<br/><br/>
       SSML input can also include the <code>&lt;mark&gt;</code> element.
       For more information, see
-      [Specifying an SSML mark](/docs/services/text-to-speech-data?topic=text-to-speech-data-timing#mark).
+      [Specifying an SSML mark](/docs/text-to-speech-data?topic=text-to-speech-data-timing#mark).
     </td>
   </tr>
   <tr>
@@ -163,7 +163,7 @@ To synthesize text, the client passes a simple JSON text message to the service 
       Specifies the requested format (MIME type) of the audio. Use
       `*/*` to request the default audio format,
       <code>audio/ogg;codecs=opus</code>. For more information, see
-      [Audio formats](/docs/services/text-to-speech-data?topic=text-to-speech-data-audioFormats).
+      [Audio formats](/docs/text-to-speech-data?topic=text-to-speech-data-audioFormats).
     </td>
   </tr>
   <tr>
@@ -176,7 +176,7 @@ To synthesize text, the client passes a simple JSON text message to the service 
       as the lone element of the array to request word timings. Specify
       an empty array or omit the parameter to receive no word timings.
       For more information, see
-      [Obtaining word timings](/docs/services/text-to-speech-data?topic=text-to-speech-data-timing#timing). <em>Not supported for Japanese input text.</em>
+      [Obtaining word timings](/docs/text-to-speech-data?topic=text-to-speech-data-timing#timing). <em>Not supported for Japanese input text.</em>
     </td>
   </tr>
 </table>
