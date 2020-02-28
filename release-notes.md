@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-02-04"
+lastupdated: "2020-02-27"
 
 subcollection: text-to-speech-data
 
@@ -35,10 +35,15 @@ The following versions of {{site.data.keyword.texttospeechdatafull}} for {{site.
 
 -   When you specify the `audio/ogg;codecs=opus` audio format, you can optionally specify a sampling rate other than the default 48,000 Hz. However, while the service accepts `48000`, `24000`, `16000`, `12000`, or `8000` as a valid sampling rate, it currently disregards a specified value and always returns the audio with a sampling rate of 48 kHz.
 
+## Version 1.1.3 (28 February 2020)
+{: #v113}
+
+{{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} version 1.1.3 is now available. For more information about installing the new version of the service, see [Installing the Watson Text to Speech add-on](/docs/text-to-speech-data?topic=text-to-speech-data-tts-installing).
+
 ## Version 1.1.2 (27 November 2019)
 {: #v112}
 
-{{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} version 1.1.2 is now available. For more information about installing the new version of the service, see [Installing the Watson Text to Speech add-on](/docs/text-to-speech-data?topic=text-to-speech-data-stt-installing).
+{{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} version 1.1.2 is now available. For more information about installing the new version of the service, see [Installing the Watson Text to Speech add-on](/docs/text-to-speech-data?topic=text-to-speech-data-tts-installing).
 
 ## Version 1.0.1 (30 August 2019)
 {: #v101}
