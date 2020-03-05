@@ -2,12 +2,14 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-02-04"
+lastupdated: "2020-03-05"
 
 subcollection: text-to-speech-data
 
 ---
 
+{:help: data-hd-content-type='help'}
+{:support: data-reuse='support'}
 {:shortdesc: .shortdesc}
 {:external: target="_blank" .external}
 {:tip: .tip}
@@ -151,6 +153,8 @@ To learn more, see the following:
 
 ## Supported languages
 {: #supportedLanguages}
+{: help}
+{: support}
 
 The following pages document the SPR symbols, IPA symbols, and equivalent IPA Unicode values for each language. They show examples of each symbol in words from the language. Because of dialectal differences, the examples might not always match your pronunciation.
 
