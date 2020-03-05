@@ -2,12 +2,14 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-02-27"
+lastupdated: "2020-03-05"
 
 subcollection: text-to-speech-data
 
 ---
 
+{:help: data-hd-content-type='help'}
+{:support: data-reuse='support'}
 {:shortdesc: .shortdesc}
 {:external: target="_blank" .external}
 {:tip: .tip}
@@ -35,6 +37,7 @@ For information about installing and configuring {{site.data.keyword.texttospeec
 {: note}
 
 ## Features and capabilities
+{: #features-index}
 
 The {{site.data.keyword.texttospeechshort}} service offers the following features and capabilities:
 
@@ -46,6 +49,8 @@ The {{site.data.keyword.texttospeechshort}} service offers the following feature
 
 ## Language support
 {: #languages-index}
+{: help}
+{: support}
 
 The service supports voices in the following languages:
 
