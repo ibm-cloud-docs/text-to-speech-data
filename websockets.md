@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-03-05"
+lastupdated: "2020-04-01"
 
 subcollection: text-to-speech-data
 
@@ -91,8 +91,8 @@ A WebSocket client calls this method with the following query parameters to esta
     <td style="text-align:center">String</td>
     <td>
       Specifies the globally unique identifier (GUID) for a custom voice
-      model that is to be used for the synthesis. A custom voice model is
-      guaranteed to work only if it matches the language of the voice that
+      model that is to be used for the synthesis. A specified custom voice
+      model must match the language of the voice that
       is used for the synthesis. If you include a customization ID, you must
       make the request with credentials for the instance of the service that
       owns the custom model. Omit the parameter to use the specified voice
