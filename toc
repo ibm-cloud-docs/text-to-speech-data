@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="text-to-speech-data" category="ai" audience="service" href="/docs/text-to-speech-data?topic=text-to-speech-data-gettingStarted" path="text-to-speech-data"}
+{: .toc subcollection="text-to-speech-data" category="cloud_pak" audience="service" href="/docs/text-to-speech-data?topic=text-to-speech-data-gettingStarted" path="text-to-speech-data"}
 Text to Speech for IBM Cloud Pak for Data
 
     {: .navgroup id="learn"}
