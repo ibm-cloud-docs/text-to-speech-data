@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-03-05"
+lastupdated: "2020-04-21"
 
 subcollection: text-to-speech-data
 
@@ -80,7 +80,7 @@ For more information about using SSML with the service, see the following:
 -   For complete information about the service's level of support for all SSML elements, see [SSML elements](/docs/text-to-speech-data?topic=text-to-speech-data-elements). With a few exceptions, the service implements most of the W3C specification, as well as SSML fragments.
 -   The service's customization interface supports the use of the SSML `<phoneme>` element to specify the phonetic spelling that it uses to pronounce a word. The phonetic spelling represents the sounds of a word, how these sounds are divided into syllables, and which syllables receive stress.
     -   For information about the customization interface, see [Understanding customization](/docs/text-to-speech-data?topic=text-to-speech-data-customIntro).
-    -   For information about the valid symbols that you can use in an {{site.data.keyword.IBM_notm}} SPR or IPA specification for any supported language, see [Using IBM SPR](/docs/text-to-speech-data?topic=text-to-speech-data-sprs).
+    -   For information about the valid symbols that you can use in an {{site.data.keyword.IBM_notm}} SPR or IPA specification for any supported language, see [Using phonetic symbols](/docs/text-to-speech-data?topic=text-to-speech-data-sprs).
 
 ## SSML validation
 {: #errors}

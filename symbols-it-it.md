@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019
-lastupdated: "2019-06-04"
+  years: 2019, 2020
+lastupdated: "2020-04-23"
 
 subcollection: text-to-speech-data
 
@@ -22,19 +22,19 @@ subcollection: text-to-speech-data
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-# Brazilian Portuguese symbols
-{: #ptSymbols}
+# Italian symbols
+{: #itSymbols}
 
-The following sections describe the valid symbols for Brazilian Portuguese.
+The following sections describe the valid symbols for Italian.
 
 ## Regular vowels
-{: #ptRegularVowels}
+{: #itRegularVowels}
 
 <table style="width:90%">
-  <caption>Table 1. Regular vowels (Brazilian Portuguese)</caption>
+  <caption>Table 1. Regular vowels (Italian)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Brazilian Portuguese<br/>SPR symbol
+      SPR symbol
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       IPA symbol
@@ -48,19 +48,16 @@ The following sections describe the valid symbols for Brazilian Portuguese.
   </tr>
   <tr>
     <td style="text-align:center">
-      a [<strong>1</strong>]
+      a
     </td>
     <td style="text-align:center">
-      a<br/><br/>
-      &#592;
+      a
     </td>
     <td style="text-align:center">
-      0061<br/><br/>
-      0250
+      0061
     </td>
     <td>
-      vir<u>ar</u>, m<u>a</u>r<br/><br/>
-      Terr<u>a</u>, muit<u>a</u>
+      l<u>a</u>s<u>a</u>gn<u>a</u>, <u>a</u>llegro
     </td>
   </tr>
   <tr>
@@ -74,7 +71,7 @@ The following sections describe the valid symbols for Brazilian Portuguese.
       0065
     </td>
     <td>
-      d<u>e</u>do, portugu<u>&ecirc;</u>s
+      n<u>e</u>ro, du<u>e</u>tto
     </td>
   </tr>
   <tr>
@@ -88,7 +85,7 @@ The following sections describe the valid symbols for Brazilian Portuguese.
       025B
     </td>
     <td>
-      <u>&eacute;</u>s, b<u>e</u>lo, <u>e</u>co
+      <u>e</u>cco, lic<u>e</u>o
     </td>
   </tr>
   <tr>
@@ -102,7 +99,7 @@ The following sections describe the valid symbols for Brazilian Portuguese.
       0069
     </td>
     <td>
-      l<u>i</u>gar, bod<u>e</u>
+      <u>i</u>sola, form<u>i</u>ca
     </td>
   </tr>
   <tr>
@@ -116,7 +113,7 @@ The following sections describe the valid symbols for Brazilian Portuguese.
       006F
     </td>
     <td>
-      c<u>o</u>r, b<u>o</u>lha
+      padr<u>o</u>ne, att<u>o</u>re
     </td>
   </tr>
   <tr>
@@ -130,7 +127,7 @@ The following sections describe the valid symbols for Brazilian Portuguese.
       0254
     </td>
     <td>
-      pr<u>&oacute;</u>ximo, p<u>o</u>rta
+      c<u>o</u>sta, m<u>o</u>sse
     </td>
   </tr>
   <tr>
@@ -144,174 +141,19 @@ The following sections describe the valid symbols for Brazilian Portuguese.
       0075
     </td>
     <td>
-      l<u>u</u>gar, per<u>u</u>
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      'a~'
-    </td>
-    <td style="text-align:center">
-      &#592;&#771;
-    </td>
-    <td style="text-align:center">
-      0250+0303
-    </td>
-    <td>
-      b<u>a</u>nco, l<u>&atilde;</u>
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      'e~'
-    </td>
-    <td style="text-align:center">
-      &#101;&#771;
-    </td>
-    <td style="text-align:center">
-      0065+0303<br/>
-      1EBD
-    </td>
-    <td>
-      inc<u>en</u>so, ag<u>en</u>te
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      'i~'
-    </td>
-    <td style="text-align:center">
-      &#105;&#771;
-    </td>
-    <td style="text-align:center">
-      0069+0303<br>
-      0129
-    </td>
-    <td>
-      ass<u>im</u>, <u>in</u>censo
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      'o~'
-    </td>
-    <td style="text-align:center">
-      &#111;&#771;
-    </td>
-    <td style="text-align:center">
-      006F+0303<br/>
-      00F5
-    </td>
-    <td>
-      c<u>&ocirc;n</u>sul, t<u>om</u>
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      'u~'
-    </td>
-    <td style="text-align:center">
-      &#117;&#771;
-    </td>
-    <td style="text-align:center">
-      0075+0303<br/>
-      0169
-    </td>
-    <td>
-      alg<u>un</u>s, <u>um</u>
-    </td>
-  </tr>
-</table>
-
-**Note:**
-
-1.  The SPR symbol `a` maps to two different IPA symbols with different pronunciations: `a` and <code>&#592;</code>. In general, the SPR symbol maps to `a` for synthesis of stressed syllables and to <code>&#592;</code> for synthesis of unstressed syllables.
-
-## Semi-vowels
-{: #ptSemiVowels}
-
-<table style="width:90%">
-  <caption>Table 2. Semi-vowels (Brazilian Portuguese)</caption>
-  <tr>
-    <th style="width:20%; text-align:center; vertical-align:bottom">
-      Brazilian Portuguese<br/>SPR symbol
-    </th>
-    <th style="width:20%; text-align:center; vertical-align:bottom">
-      IPA symbol
-    </th>
-    <th style="width:20%; text-align:center; vertical-align:bottom">
-      IPA Unicode
-    </th>
-    <th style="text-align:left; vertical-align:bottom">
-      Example words
-    </th>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      y
-    </td>
-    <td style="text-align:center">
-      j
-    </td>
-    <td style="text-align:center">
-      006A
-    </td>
-    <td>
-      do<u>i</u>s, no<u>i</u>va
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      Y
-    </td>
-    <td style="text-align:center">
-      j&#771;
-    </td>
-    <td style="text-align:center">
-      006A+0303
-    </td>
-    <td>
-      m&atilde;<u>e</u>, mu<u>i</u>to
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      w
-    </td>
-    <td style="text-align:center">
-      w
-    </td>
-    <td style="text-align:center">
-      0077
-    </td>
-    <td>
-      me<u>u</u>, q<u>u</u>arto
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      W
-    </td>
-    <td style="text-align:center">
-      w&#771;
-    </td>
-    <td style="text-align:center">
-      0077+0303
-    </td>
-    <td>
-      capit&atilde;<u>o</u>, S&atilde;<u>o</u>
+      l<u>u</u>na, <u>u</u>fficio
     </td>
   </tr>
 </table>
 
 ## Consonants
-{: #ptConsonants}
+{: #itConsonants}
 
 <table style="width:90%">
-  <caption>Table 3. Consonants (Brazilian Portuguese)</caption>
+  <caption>Table 2. Consonants (Italian)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Brazilian Portuguese<br/>SPR symbol
+      SPR symbol
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       IPA symbol
@@ -334,7 +176,7 @@ The following sections describe the valid symbols for Brazilian Portuguese.
       0062
     </td>
     <td>
-      a<u>b</u>ra&ccedil;o, <u>B</u>rasil
+      <u>b</u>occa, <u>b</u>ere
     </td>
   </tr>
   <tr>
@@ -348,7 +190,7 @@ The following sections describe the valid symbols for Brazilian Portuguese.
       0070
     </td>
     <td>
-      <u>p</u>luma, <u>p</u>rimo
+      <u>p</u>artire, <u>p</u>oco
     </td>
   </tr>
   <tr>
@@ -362,7 +204,7 @@ The following sections describe the valid symbols for Brazilian Portuguese.
       0064
     </td>
     <td>
-      <u>d</u>ar, <u>d</u>ente
+      <u>d</u>are, <u>d</u>ata
     </td>
   </tr>
   <tr>
@@ -376,7 +218,7 @@ The following sections describe the valid symbols for Brazilian Portuguese.
       0074
     </td>
     <td>
-      <u>t</u>rono, por<u>t</u>a
+      <u>t</u>occare, len<u>t</u>o
     </td>
   </tr>
   <tr>
@@ -391,7 +233,7 @@ The following sections describe the valid symbols for Brazilian Portuguese.
       0261
     </td>
     <td>
-      <u>g</u>ato, <u>g</u>uarda
+      <u>g</u>rande, re<u>g</u>alo
     </td>
   </tr>
   <tr>
@@ -405,7 +247,7 @@ The following sections describe the valid symbols for Brazilian Portuguese.
       006B
     </td>
     <td>
-      <u>c</u>ama, <u>qu</u>eda
+      <u>c</u>asa, ve<u>cch</u>io
     </td>
   </tr>
   <tr>
@@ -419,7 +261,7 @@ The following sections describe the valid symbols for Brazilian Portuguese.
       0076
     </td>
     <td>
-      <u>v</u>ila, bre<u>v</u>e
+      <u>v</u>ano, <u>v</u>i<u>v</u>ere
     </td>
   </tr>
   <tr>
@@ -433,7 +275,7 @@ The following sections describe the valid symbols for Brazilian Portuguese.
       0066
     </td>
     <td>
-      <u>f</u>lauta, <u>f</u>aixa
+      <u>f</u>are, <u>f</u>orte
     </td>
   </tr>
   <tr>
@@ -447,7 +289,7 @@ The following sections describe the valid symbols for Brazilian Portuguese.
       007A
     </td>
     <td>
-      <u>z</u>ero, ca<u>s</u>o
+      pae<u>s</u>e, <u>s</u>baglio
     </td>
   </tr>
   <tr>
@@ -461,21 +303,7 @@ The following sections describe the valid symbols for Brazilian Portuguese.
       0073
     </td>
     <td>
-      <u>c</u>erto, avan<u>&ccedil</u>ar, <u>s</u>ete
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      Z
-    </td>
-    <td style="text-align:center">
-      &#658;
-    </td>
-    <td style="text-align:center">
-      0292
-    </td>
-    <td>
-      <u>g</u>eral, <u>j</u>ogo
+      pe<u>s</u>to, <u>s</u>tare
     </td>
   </tr>
   <tr>
@@ -489,7 +317,7 @@ The following sections describe the valid symbols for Brazilian Portuguese.
       0283
     </td>
     <td>
-      <u>ch</u>ave, bai<u>x</u>a
+      <u>sc</u>egliere, la<u>sc</u>iare
     </td>
   </tr>
   <tr>
@@ -497,7 +325,7 @@ The following sections describe the valid symbols for Brazilian Portuguese.
       J
     </td>
     <td style="text-align:center">
-      &#100;&#658;<br/><br/>
+      d&#658;<br/><br/>
       &#676;
     </td>
     <td style="text-align:center">
@@ -505,7 +333,7 @@ The following sections describe the valid symbols for Brazilian Portuguese.
       02A4
     </td>
     <td>
-      bo<u>d</u>e, <u>d</u>iz
+      <u>Gi</u>ovanni, con<u>g</u>elare
     </td>
   </tr>
   <tr>
@@ -513,7 +341,7 @@ The following sections describe the valid symbols for Brazilian Portuguese.
       C
     </td>
     <td style="text-align:center">
-      &#116;&#643;<br/><br/>
+      t&#643;<br/><br/>
       &#679;
     </td>
     <td style="text-align:center">
@@ -521,7 +349,39 @@ The following sections describe the valid symbols for Brazilian Portuguese.
       02A7
     </td>
     <td>
-      se<u>t</u>e, bo<u>t</u>e
+      <u>c</u>e<u>c</u>e, <u>c</u>iao
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      D
+    </td>
+    <td style="text-align:center">
+      dz<br/><br/>
+      &#675;
+    </td>
+    <td style="text-align:center">
+      0064+007A<br/><br/>
+      02A3
+    </td>
+    <td>
+      <u>z</u>abaione, <u>z</u>ero, <u>z</u>ona
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      T
+    </td>
+    <td style="text-align:center">
+      ts<br/><br/>
+      &#678;
+    </td>
+    <td style="text-align:center">
+      0074+0073<br/><br/>
+      02A6
+    </td>
+    <td>
+      <u>z</u>ampa, <u>z</u>uppa
     </td>
   </tr>
   <tr>
@@ -535,7 +395,7 @@ The following sections describe the valid symbols for Brazilian Portuguese.
       006D
     </td>
     <td>
-      for<u>m</u>a, <u>m</u>acaco
+      <u>m</u>a<u>mm</u>a, <u>m</u>ano
     </td>
   </tr>
   <tr>
@@ -549,7 +409,7 @@ The following sections describe the valid symbols for Brazilian Portuguese.
       006E
     </td>
     <td>
-      do<u>n</u>o, <u>n</u>ovo
+      <u>n</u>ie<u>n</u>te, <u>n</u>otte
     </td>
   </tr>
   <tr>
@@ -563,7 +423,7 @@ The following sections describe the valid symbols for Brazilian Portuguese.
       0272
     </td>
     <td>
-      cu<u>nh</u>a, ni<u>nh</u>o
+      <u>gn</u>occhi, lasa<u>gn</u>a
     </td>
   </tr>
   <tr>
@@ -571,13 +431,15 @@ The following sections describe the valid symbols for Brazilian Portuguese.
       r
     </td>
     <td style="text-align:center">
+      r<br/><br/>
       &#638;
     </td>
     <td style="text-align:center">
+      0072<br/><br/>
       027E
     </td>
     <td>
-      ca<u>r</u>o, t<u>r</u>em
+      ca<u>r</u>o, se<u>r</u>eno
     </td>
   </tr>
   <tr>
@@ -585,13 +447,15 @@ The following sections describe the valid symbols for Brazilian Portuguese.
       R
     </td>
     <td style="text-align:center">
-      &#641;
+      rr<br/><br/>
+      r&#720;
     </td>
     <td style="text-align:center">
-      0281
+      0072+0072<br/><br/>
+      0072+02D0
     </td>
     <td>
-      ca<u>rr</u>o, <u>r</u>io
+      te<u>rr</u>a, to<u>rr</u>e
     </td>
   </tr>
   <tr>
@@ -605,12 +469,12 @@ The following sections describe the valid symbols for Brazilian Portuguese.
       006C
     </td>
     <td>
-      <u>l</u>eite, cava<u>l</u>o
+      <u>l</u>ento, pa<u>l</u>ma
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      'ly'
+      L
     </td>
     <td style="text-align:center">
       &#654;
@@ -619,7 +483,176 @@ The following sections describe the valid symbols for Brazilian Portuguese.
       028E
     </td>
     <td>
-      <u>lh</u>e, bagu<u>lh</u>o
+      <u>gl</u>ielo, <u>gl</u>i
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      y
+    </td>
+    <td style="text-align:center">
+      j
+    </td>
+    <td style="text-align:center">
+      006A
+    </td>
+    <td>
+      <u>i</u>eri, raso<u>i</u>o
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      w
+    </td>
+    <td style="text-align:center">
+      w
+    </td>
+    <td style="text-align:center">
+      0077
+    </td>
+    <td>
+      n<u>u</u>ovo, q<u>u</u>ando
     </td>
   </tr>
 </table>
+
+## Geminates
+{: #itGeminates}
+
+<table style="width:90%">
+  <caption>Table 3. Geminates (Italian)</caption>
+  <tr>
+    <th style="width:20%; text-align:center; vertical-align:bottom">
+      SPR symbol
+    </th>
+    <th style="width:20%; text-align:center; vertical-align:bottom">
+      IPA symbol
+    </th>
+    <th style="width:20%; text-align:center; vertical-align:bottom">
+      IPA Unicode
+    </th>
+    <th style="text-align:left; vertical-align:bottom">
+      Example words
+    </th>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      DD
+    </td>
+    <td style="text-align:center">
+      d&#675;<br/><br/>
+      ddz
+    </td>
+    <td style="text-align:center">
+      0064+02A3<br/><br/>
+      0064+0064+007A
+    </td>
+    <td>
+      a<u>zz</u>urro, me<u>zz</u>o
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      JJ
+    </td>
+    <td style="text-align:center">
+      dd&#658;<br/><br/>
+      d&#676;
+    </td>
+    <td style="text-align:center">
+      0064+0064+0292<br/><br/>
+      0064+02A4
+    </td>
+    <td>
+      Chio<u>gg</u>ia, ma<u>gg</u>io
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      TT
+    </td>
+    <td style="text-align:center">
+      tts<br/><br/>
+      t&#678;
+    </td>
+    <td style="text-align:center">
+      0074+0074+0073<br/><br/>
+      0074+02A6
+    </td>
+    <td>
+      ta<u>zz</u>a, chia<u>zz</u>a
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      CC
+    </td>
+    <td style="text-align:center">
+      t&#679;<br/><br/>
+      tt&#643;
+    </td>
+    <td style="text-align:center">
+      0074+02A7<br/><br/>
+      0074+0074+0283
+    </td>
+    <td>
+      ghia<u>cc</u>io, fe<u>cc</u>ia
+    </td>
+  </tr>
+</table>
+
+## Allophones
+{: #itAllophones}
+
+If an allophone is not used in SPR, the {{site.data.keyword.texttospeechshort}} service automatically generates the appropriate variant for the given context.
+
+<table style="width:90%">
+  <caption>Table 4. Allophones (Italian)</caption>
+  <tr>
+    <th style="width:20%; text-align:center; vertical-align:bottom">
+      SPR symbol
+    </th>
+    <th style="width:20%; text-align:center; vertical-align:bottom">
+      IPA symbol
+    </th>
+    <th style="width:20%; text-align:center; vertical-align:bottom">
+      IPA Unicode
+    </th>
+    <th style="text-align:left; vertical-align:bottom">
+      Example words
+    </th>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      'ng' [<strong>1</strong>]
+    </td>
+    <td style="text-align:center">
+      &#331;g
+    </td>
+    <td style="text-align:center">
+      014B+0067<br/>
+      014B+0261
+    </td>
+    <td>
+      a<u>ng</u>olo, lu<u>ng</u>o
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      'nk' [<strong>1</strong>]
+    </td>
+    <td style="text-align:center">
+      &#331;k
+    </td>
+    <td style="text-align:center">
+      014B+006B
+    </td>
+    <td>
+      a<u>nc</u>ora, bia<u>nc</u>o
+    </td>
+  </tr>
+</table>
+
+**Note:**
+
+1.  The `ng` and `nk` allophones are supported in the IPA specification but cannot be used in SPR.

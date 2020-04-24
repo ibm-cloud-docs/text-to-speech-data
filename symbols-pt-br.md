@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019
-lastupdated: "2019-10-01"
+  years: 2019, 2020
+lastupdated: "2020-04-23"
 
 subcollection: text-to-speech-data
 
@@ -22,19 +22,19 @@ subcollection: text-to-speech-data
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-# UK English symbols
-{: #gbSymbols}
+# Brazilian Portuguese symbols
+{: #ptSymbols}
 
-The following sections describe the valid symbols for UK English.
+The following sections describe the valid symbols for Brazilian Portuguese.
 
 ## Regular vowels
-{: #gbRegularVowels}
+{: #ptRegularVowels}
 
 <table style="width:90%">
-  <caption>Table 1. Regular vowels (UK English)</caption>
+  <caption>Table 1. Regular vowels (Brazilian Portuguese)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      UK English<br/>SPR symbol
+      SPR symbol
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       IPA symbol
@@ -48,38 +48,19 @@ The following sections describe the valid symbols for UK English.
   </tr>
   <tr>
     <td style="text-align:center">
-      a
+      a [<strong>1</strong>]
     </td>
     <td style="text-align:center">
       a<br/><br/>
-      &#97;&#720;<br/><br/>
-      &#593;<br/><br/>
-      &#593;&#720;<br/><br/>
       &#592;
     </td>
     <td style="text-align:center">
       0061<br/><br/>
-      0061+02D0<br/><br/>
-      0251<br/><br/>
-      0251+02D0<br/><br/>
       0250
     </td>
     <td>
-      p<u>a</u>th, f<u>a</u>ther, ch<u>a</u>nt
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      A
-    </td>
-    <td style="text-align:center">
-      &#230;
-    </td>
-    <td style="text-align:center">
-      00E6
-    </td>
-    <td>
-      b<u>a</u>ck, h<u>a</u>d
+      vir<u>ar</u>, m<u>a</u>r<br/><br/>
+      Terr<u>a</u>, muit<u>a</u>
     </td>
   </tr>
   <tr>
@@ -87,15 +68,13 @@ The following sections describe the valid symbols for UK English.
       e
     </td>
     <td style="text-align:center">
-      e<br/><br/>
-      &#101;&#618;
+      e
     </td>
     <td style="text-align:center">
-      0065<br/><br/>
-      0065+026A
+      0065
     </td>
     <td>
-      c<u>a</u>ke, p<u>ai</u>n
+      d<u>e</u>do, portugu<u>&ecirc;</u>s
     </td>
   </tr>
   <tr>
@@ -109,7 +88,7 @@ The following sections describe the valid symbols for UK English.
       025B
     </td>
     <td>
-      h<u>e</u>dge, l<u>e</u>t
+      <u>&eacute;</u>s, b<u>e</u>lo, <u>e</u>co
     </td>
   </tr>
   <tr>
@@ -117,27 +96,13 @@ The following sections describe the valid symbols for UK English.
       i
     </td>
     <td style="text-align:center">
-      &#105;&#720;
+      i
     </td>
     <td style="text-align:center">
-      0069+02D0
+      0069
     </td>
     <td>
-      s<u>ee</u>, sp<u>ea</u>k, bel<u>ie</u>ve
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      I
-    </td>
-    <td style="text-align:center">
-      &#618;
-    </td>
-    <td style="text-align:center">
-      026A
-    </td>
-    <td>
-      p<u>i</u>ck, <u>i</u>ll
+      l<u>i</u>gar, bod<u>e</u>
     </td>
   </tr>
   <tr>
@@ -145,17 +110,13 @@ The following sections describe the valid symbols for UK English.
       o
     </td>
     <td style="text-align:center">
-      o<br/><br/>
-      &#111;&#650;<br/><br/>
-      &#601;&#650;
+      o
     </td>
     <td style="text-align:center">
-      006F<br/><br/>
-      006F+028A<br/><br/>
-      0259+028A
+      006F
     </td>
     <td>
-      b<u>o</u>th, <u>oa</u>k
+      c<u>o</u>r, b<u>o</u>lha
     </td>
   </tr>
   <tr>
@@ -163,28 +124,13 @@ The following sections describe the valid symbols for UK English.
       c
     </td>
     <td style="text-align:center">
-      &#596;<br/><br/>
-      &#596;&#720;
+      &#596;
     </td>
     <td style="text-align:center">
-      0254<br/><br/>
-      0254+02D0
+      0254
     </td>
     <td>
-      l<u>a</u>w, c<u>ou</u>rt, h<u>a</u>ll, w<u>a</u>ter
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      @
-    </td>
-    <td style="text-align:center">
-      &#594;
-    </td>
-    <td style="text-align:center">
-      0252
-    </td>
-    <td>r<u>o</u>d, c<u>ou</u>gh
+      pr<u>&oacute;</u>ximo, p<u>o</u>rta
     </td>
   </tr>
   <tr>
@@ -192,75 +138,103 @@ The following sections describe the valid symbols for UK English.
       u
     </td>
     <td style="text-align:center">
-      u<br/><br/>
-      &#117;&#720;
+      u
     </td>
     <td style="text-align:center">
-      0075<br/><br/>
-      0075+02D0
+      0075
     </td>
     <td>
-      z<u>oo</u>, tr<u>u</u>th
+      l<u>u</u>gar, per<u>u</u>
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      U
+      'a~'
     </td>
     <td style="text-align:center">
-      &#650;
+      &#592;&#771;
     </td>
     <td style="text-align:center">
-      028A
+      0250+0303
     </td>
     <td>
-      t<u>oo</u>k, p<u>u</u>t
+      b<u>a</u>nco, l<u>&atilde;</u>
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      H
+      'e~'
     </td>
     <td style="text-align:center">
-      &#652;
+      &#101;&#771;
     </td>
     <td style="text-align:center">
-      028C
+      0065+0303<br/>
+      1EBD
     </td>
     <td>
-      b<u>u</u>t, m<u>u</u>g, s<u>o</u>n
+      inc<u>en</u>so, ag<u>en</u>te
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      R
+      'i~'
     </td>
     <td style="text-align:center">
-      &#604;<br/><br/>
-      &#604;&#720;<br/><br/>
-      &#602;<br/><br/>
-      &#605;
+      &#105;&#771;
     </td>
     <td style="text-align:center">
-      025C<br/><br/>
-      025C+02D0<br/><br/>
-      025A<br/><br/>
-      025D
+      0069+0303<br>
+      0129
     </td>
     <td>
-      butt<u>er</u>, h<u>u</u>rt
+      ass<u>im</u>, <u>in</u>censo
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      'o~'
+    </td>
+    <td style="text-align:center">
+      &#111;&#771;
+    </td>
+    <td style="text-align:center">
+      006F+0303<br/>
+      00F5
+    </td>
+    <td>
+      c<u>&ocirc;n</u>sul, t<u>om</u>
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      'u~'
+    </td>
+    <td style="text-align:center">
+      &#117;&#771;
+    </td>
+    <td style="text-align:center">
+      0075+0303<br/>
+      0169
+    </td>
+    <td>
+      alg<u>un</u>s, <u>um</u>
     </td>
   </tr>
 </table>
 
-## Diphthongs
-{: #gbDiphthongs}
+**Note:**
+
+1.  The SPR symbol `a` maps to two different IPA symbols with different pronunciations: `a` and <code>&#592;</code>. In general, the SPR symbol maps to `a` for synthesis of stressed syllables and to <code>&#592;</code> for synthesis of unstressed syllables.
+
+## Semi-vowels
+{: #ptSemiVowels}
 
 <table style="width:90%">
-  <caption>Table 2. Diphthongs (UK English)</caption>
+  <caption>Table 2. Semi-vowels (Brazilian Portuguese)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      UK English<br/>SPR symbol
+      SPR symbol
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       IPA symbol
@@ -274,30 +248,16 @@ The following sections describe the valid symbols for UK English.
   </tr>
   <tr>
     <td style="text-align:center">
-      O
+      y
     </td>
     <td style="text-align:center">
-      &#596;&#618;
+      j
     </td>
     <td style="text-align:center">
-      0254+026A
+      006A
     </td>
     <td>
-      t<u>oi</u>l, b<u>oy</u>
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      W
-    </td>
-    <td style="text-align:center">
-      &#97;&#650;
-    </td>
-    <td style="text-align:center">
-      0061+028A
-    </td>
-    <td>
-      <u>ou</u>t, c<u>ow</u>
+      do<u>i</u>s, no<u>i</u>va
     </td>
   </tr>
   <tr>
@@ -305,76 +265,53 @@ The following sections describe the valid symbols for UK English.
       Y
     </td>
     <td style="text-align:center">
-      &#97;&#618;
+      j&#771;
     </td>
     <td style="text-align:center">
-      0061+026A
+      006A+0303
     </td>
     <td>
-      l<u>i</u>fe, f<u>i</u>ne
-    </td>
-  </tr>
-</table>
-
-## Reduced vowels
-{: #gbReducedVowels}
-
-<table style="width:90%">
-  <caption>Table 3. Reduced vowels (UK English)</caption>
-  <tr>
-    <th style="width:20%; text-align:center; vertical-align:bottom">
-      UK English<br/>SPR symbol
-    </th>
-    <th style="width:20%; text-align:center; vertical-align:bottom">
-      IPA symbol
-    </th>
-    <th style="width:20%; text-align:center; vertical-align:bottom">
-      IPA Unicode
-    </th>
-    <th style="text-align:left; vertical-align:bottom">
-      Example words
-    </th>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      x
-    </td>
-    <td style="text-align:center">
-      &#601;
-    </td>
-    <td style="text-align:center">
-      0259
-    </td>
-    <td>
-      sof<u>a</u>, <u>a</u>lone, s<u>u</u>ppose, <u>A</u>meric<u>a</u>
+      m&atilde;<u>e</u>, mu<u>i</u>to
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      X
+      w
     </td>
     <td style="text-align:center">
-      i<br/><br/>
-      &#616;
+      w
     </td>
     <td style="text-align:center">
-      0069<br/><br/>
-      0268
+      0077
     </td>
     <td>
-      ros<u>e</u>s, hint<u>e</u>d
+      me<u>u</u>, q<u>u</u>arto
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      W
+    </td>
+    <td style="text-align:center">
+      w&#771;
+    </td>
+    <td style="text-align:center">
+      0077+0303
+    </td>
+    <td>
+      capit&atilde;<u>o</u>, S&atilde;<u>o</u>
     </td>
   </tr>
 </table>
 
 ## Consonants
-{: #gbConsonants}
+{: #ptConsonants}
 
 <table style="width:90%">
-  <caption>Table 4. Consonants (UK English)</caption>
+  <caption>Table 3. Consonants (Brazilian Portuguese)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      UK English<br/>SPR symbol
+      SPR symbol
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       IPA symbol
@@ -397,7 +334,7 @@ The following sections describe the valid symbols for UK English.
       0062
     </td>
     <td>
-      <u>b</u>ad, so<u>b</u>
+      a<u>b</u>ra&ccedil;o, <u>B</u>rasil
     </td>
   </tr>
   <tr>
@@ -411,7 +348,7 @@ The following sections describe the valid symbols for UK English.
       0070
     </td>
     <td>
-      <u>p</u>it, ri<u>p</u>
+      <u>p</u>luma, <u>p</u>rimo
     </td>
   </tr>
   <tr>
@@ -425,7 +362,7 @@ The following sections describe the valid symbols for UK English.
       0064
     </td>
     <td>
-      <u>d</u>ip, ha<u>d</u>
+      <u>d</u>ar, <u>d</u>ente
     </td>
   </tr>
   <tr>
@@ -439,7 +376,7 @@ The following sections describe the valid symbols for UK English.
       0074
     </td>
     <td>
-      <u>t</u>ip, pe<u>t</u>
+      <u>t</u>rono, por<u>t</u>a
     </td>
   </tr>
   <tr>
@@ -447,15 +384,14 @@ The following sections describe the valid symbols for UK English.
       g
     </td>
     <td style="text-align:center">
-      g<br/><br/>
-      &#609;
+      g
     </td>
     <td style="text-align:center">
-      0067<br/><br/>
+      0067<br/>
       0261
     </td>
     <td>
-      <u>g</u>ood, bu<u>g</u>
+      <u>g</u>ato, <u>g</u>uarda
     </td>
   </tr>
   <tr>
@@ -469,35 +405,7 @@ The following sections describe the valid symbols for UK English.
       006B
     </td>
     <td>
-      <u>k</u>ill, ma<u>k</u>e, ba<u>ck</u>
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      D
-    </td>
-    <td style="text-align:center">
-      &#240;
-    </td>
-    <td style="text-align:center">
-      00F0
-    </td>
-    <td>
-      <u>th</u>is, brea<u>th</u>e
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      T
-    </td>
-    <td style="text-align:center">
-      &#952;
-    </td>
-    <td style="text-align:center">
-      03B8
-    </td>
-    <td>
-      <u>th</u>ing, Be<u>th</u>
+      <u>c</u>ama, <u>qu</u>eda
     </td>
   </tr>
   <tr>
@@ -511,7 +419,7 @@ The following sections describe the valid symbols for UK English.
       0076
     </td>
     <td>
-      <u>v</u>ase, sa<u>v</u>e
+      <u>v</u>ila, bre<u>v</u>e
     </td>
   </tr>
   <tr>
@@ -525,7 +433,7 @@ The following sections describe the valid symbols for UK English.
       0066
     </td>
     <td>
-      <u>f</u>ield, i<u>f</u>, gra<u>ph</u>
+      <u>f</u>lauta, <u>f</u>aixa
     </td>
   </tr>
   <tr>
@@ -539,7 +447,7 @@ The following sections describe the valid symbols for UK English.
       007A
     </td>
     <td>
-      <u>z</u>ip, pha<u>s</u>e
+      <u>z</u>ero, ca<u>s</u>o
     </td>
   </tr>
   <tr>
@@ -553,7 +461,7 @@ The following sections describe the valid symbols for UK English.
       0073
     </td>
     <td>
-      <u>s</u>eal, mi<u>ss</u>, <u>c</u>eiling
+      <u>c</u>erto, avan<u>&ccedil;</u>ar, <u>s</u>ete
     </td>
   </tr>
   <tr>
@@ -567,7 +475,7 @@ The following sections describe the valid symbols for UK English.
       0292
     </td>
     <td>
-      trea<u>s</u>ure, gara<u>g</u>e
+      <u>g</u>eral, <u>j</u>ogo
     </td>
   </tr>
   <tr>
@@ -581,7 +489,7 @@ The following sections describe the valid symbols for UK English.
       0283
     </td>
     <td>
-      <u>sh</u>ip, wi<u>sh</u>
+      <u>ch</u>ave, bai<u>x</u>a
     </td>
   </tr>
   <tr>
@@ -597,7 +505,7 @@ The following sections describe the valid symbols for UK English.
       02A4
     </td>
     <td>
-      <u>J</u>ane, hu<u>g</u>e
+      bo<u>d</u>e, <u>d</u>iz
     </td>
   </tr>
   <tr>
@@ -613,27 +521,7 @@ The following sections describe the valid symbols for UK English.
       02A7
     </td>
     <td>
-      <u>ch</u>ip, wit<u>ch</u>, na<u>t</u>ure
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      h
-    </td>
-    <td style="text-align:center">
-      h<br/><br/>
-      x<br/><br/>
-      &#967;<br/><br/>
-      &#614;
-    </td>
-    <td style="text-align:center">
-      0068<br/><br/>
-      0078<br/><br/>
-      03C7<br/><br/>
-      0266
-    </td>
-    <td>
-      <u>h</u>ot, <u>h</u>ero
+      se<u>t</u>e, bo<u>t</u>e
     </td>
   </tr>
   <tr>
@@ -647,7 +535,7 @@ The following sections describe the valid symbols for UK English.
       006D
     </td>
     <td>
-      <u>m</u>an, hu<u>m</u>, su<u>mm</u>er
+      for<u>m</u>a, <u>m</u>acaco
     </td>
   </tr>
   <tr>
@@ -661,21 +549,21 @@ The following sections describe the valid symbols for UK English.
       006E
     </td>
     <td>
-      <u>n</u>ever, su<u>n</u>, wi<u>nn</u>er
+      do<u>n</u>o, <u>n</u>ovo
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      G
+      N
     </td>
     <td style="text-align:center">
-      &#331;
+      &#626;
     </td>
     <td style="text-align:center">
-      014B
+      0272
     </td>
     <td>
-      si<u>ng</u>, fi<u>ng</u>er
+      cu<u>nh</u>a, ni<u>nh</u>o
     </td>
   </tr>
   <tr>
@@ -683,17 +571,27 @@ The following sections describe the valid symbols for UK English.
       r
     </td>
     <td style="text-align:center">
-      r<br/><br/>
-      &#633;<br/><br/>
       &#638;
     </td>
     <td style="text-align:center">
-      0072<br/><br/>
-      0279<br/><br/>
       027E
     </td>
     <td>
-      bo<u>rr</u>ow, <u>r</u>ake
+      ca<u>r</u>o, t<u>r</u>em
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      R
+    </td>
+    <td style="text-align:center">
+      &#641;
+    </td>
+    <td style="text-align:center">
+      0281
+    </td>
+    <td>
+      ca<u>rr</u>o, <u>r</u>io
     </td>
   </tr>
   <tr>
@@ -707,49 +605,21 @@ The following sections describe the valid symbols for UK English.
       006C
     </td>
     <td>
-      <u>l</u>ow, ha<u>ll</u>
+      <u>l</u>eite, cava<u>l</u>o
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      L
+      'ly'
     </td>
     <td style="text-align:center">
-      &#108;&#809;
+      &#654;
     </td>
     <td style="text-align:center">
-      006C+0329
+      028E
     </td>
     <td>
-      cand<u>l</u>e
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      w
-    </td>
-    <td style="text-align:center">
-      w
-    </td>
-    <td style="text-align:center">
-      0077
-    </td>
-    <td>
-      <u>w</u>ear, q<u>u</u>ick
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      y
-    </td>
-    <td style="text-align:center">
-      j
-    </td>
-    <td style="text-align:center">
-      006A
-    </td>
-    <td>
-      <u>y</u>es, Virgin<u>i</u>a
+      <u>lh</u>e, bagu<u>lh</u>o
     </td>
   </tr>
 </table>

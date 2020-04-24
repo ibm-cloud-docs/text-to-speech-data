@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-02-04"
+lastupdated: "2020-04-21"
 
 subcollection: text-to-speech-data
 
@@ -276,7 +276,7 @@ The `<phoneme>` element provides a phonetic pronunciation for the enclosed text.
           &lt;phoneme alphabet="ibm" ph=".0tx.1me.0Fo"&gt;tomato&lt;/phoneme&gt;
         &lt;/speak&gt;</code></pre>
 
-For more information about using SPR and IPA notations with the `<phoneme>` element, see [Using IBM SPR](/docs/text-to-speech-data?topic=text-to-speech-data-sprs).
+For more information about using SPR and IPA notations with the `<phoneme>` element, see [Using phonetic symbols](/docs/text-to-speech-data?topic=text-to-speech-data-sprs).
 
 ## The prosody element
 {: #prosody_element}
