@@ -28,7 +28,6 @@ Text to Speech for IBM Cloud Pak for Data
         speech-uninstall.md
         [Helm chart README.md](https://github.com/ibm-cloud-docs/data-readmes/blob/master/speech-1.1.3-README.md)
 
-
     making-requests.md
     http.md
     websockets.md
@@ -50,16 +49,16 @@ Text to Speech for IBM Cloud Pak for Data
         SSML-elements.md
 
     {: topicgroup}
-    IBM SPR
-        SPRs.md
-        pt-BR-SPRs.md
-        fr-FR-SPRs.md
-        de-DE-SPRs.md
-        it-IT-SPRs.md
-        ja-JP-SPRs.md
-        es-ES-SPRs.md
-        en-GB-SPRs.md
-        en-US-SPRs.md
+    Phonetic symbols
+        symbols.md
+        symbols-pt-br.md
+        symbols-fr-fr.md
+        symbols-de-de.md
+        symbols-it-it.md
+        symbols-ja-jp.md
+        symbols-es-es.md
+        symbols-en-gb.md
+        symbols-en-us.md
 
     backup.md
 

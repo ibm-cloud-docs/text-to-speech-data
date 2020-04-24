@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019
-lastupdated: "2019-06-11"
+  years: 2019, 2020
+lastupdated: "2020-04-23"
 
 subcollection: text-to-speech-data
 
@@ -22,19 +22,19 @@ subcollection: text-to-speech-data
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-# Italian symbols
-{: #itSymbols}
+# Spanish symbols
+{: #esSymbols}
 
-The following sections describe the valid symbols for Italian.
+The following sections describe the valid symbols for Spanish. The information applies to the Castilian, Latin American, and North American dialects. Except where noted, the dialects are identical.
 
 ## Regular vowels
-{: #itRegularVowels}
+{: #esRegularVowels}
 
 <table style="width:90%">
-  <caption>Table 1. Regular vowels (Italian)</caption>
+  <caption>Table 1. Regular vowels (Spanish)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Italian<br/>SPR symbol
+      SPR symbol
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       IPA symbol
@@ -57,7 +57,7 @@ The following sections describe the valid symbols for Italian.
       0061
     </td>
     <td>
-      l<u>a</u>s<u>a</u>gn<u>a</u>, <u>a</u>llegro
+      <u>a</u>gua, c<u>a</u>s<u>a</u>
     </td>
   </tr>
   <tr>
@@ -71,21 +71,7 @@ The following sections describe the valid symbols for Italian.
       0065
     </td>
     <td>
-      n<u>e</u>ro, du<u>e</u>tto
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      E
-    </td>
-    <td style="text-align:center">
-      &#603;
-    </td>
-    <td style="text-align:center">
-      025B
-    </td>
-    <td>
-      <u>e</u>cco, lic<u>e</u>o
+      <u>e</u>st<u>e</u>, b<u>e</u>so
     </td>
   </tr>
   <tr>
@@ -99,7 +85,7 @@ The following sections describe the valid symbols for Italian.
       0069
     </td>
     <td>
-      <u>i</u>sola, form<u>i</u>ca
+      <u>i</u>gual, h<u>i</u>jo
     </td>
   </tr>
   <tr>
@@ -113,21 +99,7 @@ The following sections describe the valid symbols for Italian.
       006F
     </td>
     <td>
-      padr<u>o</u>ne, att<u>o</u>re
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      c
-    </td>
-    <td style="text-align:center">
-      &#596;
-    </td>
-    <td style="text-align:center">
-      0254
-    </td>
-    <td>
-      c<u>o</u>sta, m<u>o</u>sse
+      <u>o</u>s<u>o</u>, cant<u>o</u>
     </td>
   </tr>
   <tr>
@@ -141,19 +113,19 @@ The following sections describe the valid symbols for Italian.
       0075
     </td>
     <td>
-      l<u>u</u>na, <u>u</u>fficio
+      <u>u</u>va, l<u>u</u>gar
     </td>
   </tr>
 </table>
 
 ## Consonants
-{: #itConsonants}
+{: #esConsonants}
 
 <table style="width:90%">
-  <caption>Table 2. Consonants (Italian)</caption>
+  <caption>Table 2. Consonants (Spanish)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Italian<br/>SPR symbol
+      SPR symbol
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       IPA symbol
@@ -176,7 +148,7 @@ The following sections describe the valid symbols for Italian.
       0062
     </td>
     <td>
-      <u>b</u>occa, <u>b</u>ere
+      <u>b</u>asta, <u>b</u>eber, <u>v</u>aca
     </td>
   </tr>
   <tr>
@@ -190,7 +162,7 @@ The following sections describe the valid symbols for Italian.
       0070
     </td>
     <td>
-      <u>p</u>artire, <u>p</u>oco
+      <u>p</u>arte, a<u>p</u>agar
     </td>
   </tr>
   <tr>
@@ -204,7 +176,7 @@ The following sections describe the valid symbols for Italian.
       0064
     </td>
     <td>
-      <u>d</u>are, <u>d</u>ata
+      <u>d</u>ar, <u>d</u>edo
     </td>
   </tr>
   <tr>
@@ -218,7 +190,7 @@ The following sections describe the valid symbols for Italian.
       0074
     </td>
     <td>
-      <u>t</u>occare, len<u>t</u>o
+      <u>t</u>oma, a<u>t</u>ar
     </td>
   </tr>
   <tr>
@@ -233,7 +205,7 @@ The following sections describe the valid symbols for Italian.
       0261
     </td>
     <td>
-      <u>g</u>rande, re<u>g</u>alo
+      <u>g</u>oma, <u>g</u>orra
     </td>
   </tr>
   <tr>
@@ -247,21 +219,7 @@ The following sections describe the valid symbols for Italian.
       006B
     </td>
     <td>
-      <u>c</u>asa, ve<u>cch</u>io
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      v
-    </td>
-    <td style="text-align:center">
-      v
-    </td>
-    <td style="text-align:center">
-      0076
-    </td>
-    <td>
-      <u>v</u>ano, <u>v</u>i<u>v</u>ere
+      <u>c</u>uen<u>c</u>o, <u>c</u>anto
     </td>
   </tr>
   <tr>
@@ -275,21 +233,7 @@ The following sections describe the valid symbols for Italian.
       0066
     </td>
     <td>
-      <u>f</u>are, <u>f</u>orte
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      z
-    </td>
-    <td style="text-align:center">
-      z
-    </td>
-    <td style="text-align:center">
-      007A
-    </td>
-    <td>
-      pae<u>s</u>e, <u>s</u>baglio
+      <u>f</u>laco, a<u>f</u>uera
     </td>
   </tr>
   <tr>
@@ -303,37 +247,35 @@ The following sections describe the valid symbols for Italian.
       0073
     </td>
     <td>
-      pe<u>s</u>to, <u>s</u>tare
+      <u>s</u>illa, ca<u>s</u>a
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      S
+      R
     </td>
     <td style="text-align:center">
-      &#643;
+      r
     </td>
     <td style="text-align:center">
-      0283
+      0072
     </td>
     <td>
-      <u>sc</u>egliere, la<u>sc</u>iare
+      <u>r</u>opa, pe<u>rr</u>o
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      J
+      T [<strong>1</strong>]
     </td>
     <td style="text-align:center">
-      d&#658;<br/><br/>
-      &#676;
+      &#952;
     </td>
     <td style="text-align:center">
-      0064+0292<br/><br/>
-      02A4
+      03B8
     </td>
     <td>
-      <u>Gi</u>ovanni, con<u>g</u>elare
+      <u>z</u>apato, so<u>c</u>io
     </td>
   </tr>
   <tr>
@@ -341,47 +283,31 @@ The following sections describe the valid symbols for Italian.
       C
     </td>
     <td style="text-align:center">
-      t&#643;<br/><br/>
-      &#679;
+      &#679;<br/></br>
+      t&#643;
     </td>
     <td style="text-align:center">
-      0074+0283<br/><br/>
-      02A7
+      02A7<br/></br>
+      0074+0283
     </td>
     <td>
-      <u>c</u>e<u>c</u>e, <u>c</u>iao
+      <u>ch</u>alupa, mu<u>ch</u>o
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      D
+      j
     </td>
     <td style="text-align:center">
-      dz<br/><br/>
-      &#675;
+      h [<strong>2</strong>]<br/><br/>
+      x [<strong>3</strong>]
     </td>
     <td style="text-align:center">
-      0064+007A<br/><br/>
-      02A3
+      0068<br/><br/>
+      0078
     </td>
     <td>
-      <u>z</u>abaione, <u>z</u>ero, <u>z</u>ona
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      T
-    </td>
-    <td style="text-align:center">
-      ts<br/><br/>
-      &#678;
-    </td>
-    <td style="text-align:center">
-      0074+0073<br/><br/>
-      02A6
-    </td>
-    <td>
-      <u>z</u>ampa, <u>z</u>uppa
+      <u>j</u>unco, re<u>j</u>a, <u>g</u>ente
     </td>
   </tr>
   <tr>
@@ -395,7 +321,7 @@ The following sections describe the valid symbols for Italian.
       006D
     </td>
     <td>
-      <u>m</u>a<u>mm</u>a, <u>m</u>ano
+      <u>m</u>ano, a<u>m</u>or
     </td>
   </tr>
   <tr>
@@ -409,7 +335,7 @@ The following sections describe the valid symbols for Italian.
       006E
     </td>
     <td>
-      <u>n</u>ie<u>n</u>te, <u>n</u>otte
+      <u>n</u>ada, ma<u>n</u>o
     </td>
   </tr>
   <tr>
@@ -423,7 +349,7 @@ The following sections describe the valid symbols for Italian.
       0272
     </td>
     <td>
-      <u>gn</u>occhi, lasa<u>gn</u>a
+      pi<u>&ntilde;</u>a, ni<u>&ntilde;</u>o
     </td>
   </tr>
   <tr>
@@ -431,31 +357,13 @@ The following sections describe the valid symbols for Italian.
       r
     </td>
     <td style="text-align:center">
-      r<br/><br/>
       &#638;
     </td>
     <td style="text-align:center">
-      0072<br/><br/>
       027E
     </td>
     <td>
-      ca<u>r</u>o, se<u>r</u>eno
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      R
-    </td>
-    <td style="text-align:center">
-      rr<br/><br/>
-      r&#720;
-    </td>
-    <td style="text-align:center">
-      0072+0072<br/><br/>
-      0072+02D0
-    </td>
-    <td>
-      te<u>rr</u>a, to<u>rr</u>e
+      pa<u>r</u>a, pe<u>r</u>o
     </td>
   </tr>
   <tr>
@@ -469,21 +377,38 @@ The following sections describe the valid symbols for Italian.
       006C
     </td>
     <td>
-      <u>l</u>ento, pa<u>l</u>ma
+      <u>l</u>oco, a<u>l</u>go
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      L
+      L [<strong>4</strong>]
     </td>
     <td style="text-align:center">
-      &#654;
+      &#654;<br/><br/>
+      &#669; [<strong>5</strong>]
     </td>
     <td style="text-align:center">
-      028E
+      028E<br/><br/>
+      029D
     </td>
     <td>
-      <u>gl</u>ielo, <u>gl</u>i
+      <u>ll</u>over, po<u>ll</u>o<br/><br/>
+      <u>y</u>egua, pla<u>y</u>a
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      Y
+    </td>
+    <td style="text-align:center">
+      &#669; [<strong>6</strong>]
+    </td>
+    <td style="text-align:center">
+      029D
+    </td>
+    <td>
+      <u>y</u>egua, pla<u>y</u>a
     </td>
   </tr>
   <tr>
@@ -497,7 +422,7 @@ The following sections describe the valid symbols for Italian.
       006A
     </td>
     <td>
-      <u>i</u>eri, raso<u>i</u>o
+      med<u>i</u>o, o<u>i</u>go
     </td>
   </tr>
   <tr>
@@ -511,106 +436,30 @@ The following sections describe the valid symbols for Italian.
       0077
     </td>
     <td>
-      n<u>u</u>ovo, q<u>u</u>ando
+      f<u>u</u>era, de<u>u</u>da
     </td>
   </tr>
 </table>
 
-## Geminates
-{: #itGeminates}
+**Notes:**
 
-<table style="width:90%">
-  <caption>Table 3. Geminates (Italian)</caption>
-  <tr>
-    <th style="width:20%; text-align:center; vertical-align:bottom">
-      Italian<br/>SPR symbol
-    </th>
-    <th style="width:20%; text-align:center; vertical-align:bottom">
-      IPA symbol
-    </th>
-    <th style="width:20%; text-align:center; vertical-align:bottom">
-      IPA Unicode
-    </th>
-    <th style="text-align:left; vertical-align:bottom">
-      Example words
-    </th>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      DD
-    </td>
-    <td style="text-align:center">
-      d&#675;<br/><br/>
-      ddz
-    </td>
-    <td style="text-align:center">
-      0064+02A3<br/><br/>
-      0064+0064+007A
-    </td>
-    <td>
-      a<u>zz</u>urro, me<u>zz</u>o
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      JJ
-    </td>
-    <td style="text-align:center">
-      dd&#658;<br/><br/>
-      d&#676;
-    </td>
-    <td style="text-align:center">
-      0064+0064+0292<br/><br/>
-      0064+02A4
-    </td>
-    <td>
-      Chio<u>gg</u>ia, ma<u>gg</u>io
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      TT
-    </td>
-    <td style="text-align:center">
-      tts<br/><br/>
-      t&#678;
-    </td>
-    <td style="text-align:center">
-      0074+0074+0073<br/><br/>
-      0074+02A6
-    </td>
-    <td>
-      ta<u>zz</u>a, chia<u>zz</u>a
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      CC
-    </td>
-    <td style="text-align:center">
-      t&#679;<br/><br/>
-      tt&#643;
-    </td>
-    <td style="text-align:center">
-      0074+02A7<br/><br/>
-      0074+0074+0283
-    </td>
-    <td>
-      ghia<u>cc</u>io, fe<u>cc</u>ia
-    </td>
-  </tr>
-</table>
+1.  The SPR symbol `T` is realized only in Castilian Spanish. It is replaced internally with the phonetic symbol `s` in North American and Latin American Spanish, even when present in the SPR input.
+1.  The IPA symbol `h` applies to North American and Latin American Spanish only.
+1.  The IPA symbol `x` applies to Castilian Spanish only.
+1.  The SPR symbol `L` maps to two different IPA symbols with different pronunciations for both North American and Latin American Spanish: <code>&#654;</code> and <code>&#669;</code>. Specifying this SPR symbol with these dialects might yield either of the two variants. The difference between the pronunciations is often indistinguishable to native speakers.
+1.  The IPA symbol <code>&#669;</code> maps to the SPR symbol `L` in North American and Latin American Spanish.
+1.  The IPA symbol <code>&#669;</code> maps to the SPR symbol `Y` in Castilian Spanish.
 
 ## Allophones
-{: #itAllophones}
+{: #esAllophones}
 
-If an allophone is not used in SPR, the {{site.data.keyword.texttospeechshort}} service automatically generates the appropriate variant for the given context.
+Each allophone is a variation of the phoneme indicated in parentheses. If an allophone is not used in SPR, the {{site.data.keyword.texttospeechshort}} service automatically generates the appropriate variant for the given context.
 
 <table style="width:90%">
-  <caption>Table 4. Allophones (Italian)</caption>
+  <caption>Table 3. Allophones (Spanish)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Italian allophone<br/>SPR symbol
+      SPR symbol
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       IPA symbol
@@ -621,6 +470,62 @@ If an allophone is not used in SPR, the {{site.data.keyword.texttospeechshort}} 
     <th style="text-align:left; vertical-align:bottom">
       Example words
     </th>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      B (b)
+    </td>
+    <td style="text-align:center">
+      &#946;
+    </td>
+    <td style="text-align:center">
+      03B2
+    </td>
+    <td>
+      bo<u>b</u>o, nue<u>v</u>e
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      D (d)
+    </td>
+    <td style="text-align:center">
+      &#240;
+    </td>
+    <td style="text-align:center">
+      00F0
+    </td>
+    <td>
+      ha<u>d</u>a, de<u>d</u>o
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      G (g)
+    </td>
+    <td style="text-align:center">
+      &#611;
+    </td>
+    <td style="text-align:center">
+      0263
+    </td>
+    <td>
+      se<u>g</u>ar, lu<u>g</u>ar
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      z (s)
+    </td>
+    <td style="text-align:center">
+      z
+    </td>
+    <td style="text-align:center">
+      007A
+    </td>
+    <td>
+      mi<u>s</u>mo, de<u>s</u>de
+    </td>
   </tr>
   <tr>
     <td style="text-align:center">
@@ -630,11 +535,10 @@ If an allophone is not used in SPR, the {{site.data.keyword.texttospeechshort}} 
       &#331;g
     </td>
     <td style="text-align:center">
-      014B+0067<br/>
-      014B+0261
+      014B+0067
     </td>
     <td>
-      a<u>ng</u>olo, lu<u>ng</u>o
+      ta<u>n</u>go, e<u>n</u>ga&ntilde;o
     </td>
   </tr>
   <tr>
@@ -648,7 +552,7 @@ If an allophone is not used in SPR, the {{site.data.keyword.texttospeechshort}} 
       014B+006B
     </td>
     <td>
-      a<u>nc</u>ora, bia<u>nc</u>o
+      a<u>n</u>cla, ci<u>n</u>co
     </td>
   </tr>
 </table>

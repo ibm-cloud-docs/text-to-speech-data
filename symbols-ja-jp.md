@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019
-lastupdated: "2019-06-04"
+  years: 2019, 2020
+lastupdated: "2020-04-23"
 
 subcollection: text-to-speech-data
 
@@ -34,7 +34,7 @@ The following sections describe the valid symbols for Japanese.
   <caption>Table 1. Vowels and marks (Japanese)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Japanese<br/>SPR symbol
+      SPR symbol
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       IPA symbol
@@ -189,7 +189,7 @@ The following sections describe the valid symbols for Japanese.
   <caption>Table 2. Consonants (Japanese)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      Japanese<br/>SPR symbol
+      SPR symbol
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       IPA symbol

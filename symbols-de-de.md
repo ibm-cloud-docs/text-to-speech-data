@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019
-lastupdated: "2019-06-04"
+  years: 2019, 2020
+lastupdated: "2020-04-23"
 
 subcollection: text-to-speech-data
 
@@ -22,19 +22,19 @@ subcollection: text-to-speech-data
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-# US English symbols
-{: #usSymbols}
+# German symbols
+{: #deSymbols}
 
-The following sections describe the valid symbols for US English.
+The following sections describe the valid symbols for German.
 
 ## Regular vowels
-{: #usRegularVowels}
+{: #deRegularVowels}
 
 <table style="width:90%">
-  <caption>Table 1. Regular vowels (US English)</caption>
+  <caption>Table 1. Regular vowels (German)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      US English<br/>SPR symbol
+      SPR symbol
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       IPA symbol
@@ -45,71 +45,6 @@ The following sections describe the valid symbols for US English.
     <th style="text-align:left; vertical-align:bottom">
       Example words
     </th>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      a
-    </td>
-    <td style="text-align:center">
-      a<br/><br/>
-      &#97;&#720;<br/><br/>
-      &#593;<br/><br/>
-      &#593;&#720;<br/><br/>
-      &#592;
-    </td>
-    <td style="text-align:center">
-      0061<br/><br/>
-      0061+02D0<br/><br/>
-      0251<br/><br/>
-      0251+02D0<br/><br/>
-      0250
-    </td>
-    <td>
-      f<u>a</u>ther, l<u>o</u>t
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      A
-    </td>
-    <td style="text-align:center">
-      &#230;
-    </td>
-    <td style="text-align:center">
-      00E6
-    </td>
-    <td>b<u>a</u>ck, h<u>a</u>d
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      e
-    </td>
-    <td style="text-align:center">
-      e<br/><br/>
-      &#101;&#618;
-    </td>
-    <td style="text-align:center">
-      0065<br/><br/>
-      0065+026A
-    </td>
-    <td>
-      c<u>a</u>ke, p<u>ai</u>n
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      E
-    </td>
-    <td style="text-align:center">
-      &#603;
-    </td>
-    <td style="text-align:center">
-      025B
-    </td>
-    <td>
-      h<u>e</u>dge, l<u>e</u>t
-    </td>
   </tr>
   <tr>
     <td style="text-align:center">
@@ -124,7 +59,7 @@ The following sections describe the valid symbols for US English.
       0069+02D0
     </td>
     <td>
-      s<u>ee</u>, sp<u>ea</u>k, bel<u>ie</u>ve
+      l<u>ie</u>ben, T<u>i</u>tel, t<u>ie</u>f
     </td>
   </tr>
   <tr>
@@ -138,41 +73,81 @@ The following sections describe the valid symbols for US English.
       026A
     </td>
     <td>
-      p<u>i</u>ck, <u>i</u>ll
+      b<u>i</u>tte, T<u>i</u>sch, L<u>i</u>cht
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      o
+      e
     </td>
     <td style="text-align:center">
-      o<br/><br/>
-      &#111;&#650;
+      e<br/><br/>
+      &#101;&#720;
     </td>
     <td style="text-align:center">
-      006F<br/><br/>
-      006F+028A
+      0065<br/><br/>
+      0065+02D0
     </td>
     <td>
-      b<u>o</u>th, <u>o</u>ak
+      g<u>e</u>ben, <u>Eh</u>re, S<u>ee</u>
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      c
+      E
     </td>
     <td style="text-align:center">
-      &#596;<br/><br/>
-      &#596;&#720;<br/><br/>
-      &#594;
+      &#603;
     </td>
     <td style="text-align:center">
-      0254<br/><br/>
-      0254+02D0<br/><br/>
-      0252
+      025B
     </td>
     <td>
-      l<u>a</u>w, c<u>ou</u>gh
+      tr<u>e</u>ffen, G<u>e</u>ld, k<u>&auml;</u>mmen
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      'E:'
+    </td>
+    <td style="text-align:center">
+      &#603;&#720;
+    </td>
+    <td style="text-align:center">
+      025B+02D0
+    </td>
+    <td>
+      K<u>&auml;</u>se, M<u>&auml;</u>dchen, w<u>&auml;</u>gen
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      a
+    </td>
+    <td style="text-align:center">
+      &#97;&#720;<br/><br/>
+      &#593;
+    </td>
+    <td style="text-align:center">
+      0061+02D0<br/><br/>
+      0251
+    </td>
+    <td>
+      H<u>aa</u>r, h<u>a</u>ben, f<u>a</u>hren
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      A
+    </td>
+    <td style="text-align:center">
+      a
+    </td>
+    <td style="text-align:center">
+      0061
+    </td>
+    <td>
+      l<u>a</u>ssen, m<u>a</u>tt, <u>A</u>pfel
     </td>
   </tr>
   <tr>
@@ -188,7 +163,7 @@ The following sections describe the valid symbols for US English.
       0075+02D0
     </td>
     <td>
-      z<u>oo</u>, tr<u>u</u>th
+      g<u>u</u>t, <u>Uh</u>r, <u>U</u>we
     </td>
   </tr>
   <tr>
@@ -196,98 +171,60 @@ The following sections describe the valid symbols for US English.
       U
     </td>
     <td style="text-align:center">
-      &#650;<br/><br/>
-      &#623;
+      &#650;
     </td>
     <td style="text-align:center">
-      028A<br/><br/>
-      026F
+      028A
     </td>
     <td>
-      t<u>oo</u>k, p<u>u</u>t
+      H<u>u</u>nd, Fl<u>u</u>ss, M<u>u</u>tter
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      H
+      o
     </td>
     <td style="text-align:center">
-      &#652;
+      o<br/><br/>
+      &#111;&#720;
     </td>
     <td style="text-align:center">
-      028C
+      006F<br/><br/>
+      006F+02D0
     </td>
     <td>
-      b<u>u</u>t, m<u>u</u>g, s<u>o</u>n
+      <u>O</u>ber, <u>oh</u>ne, B<u>oo</u>t
     </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      R
-    </td>
-    <td style="text-align:center">
-      &#601;&#734;<br/><br/>
-      &#602;<br/><br/>
-      &#604;&#720;<br/><br/>
-      &#605;
-    </td>
-    <td style="text-align:center">
-      0259+02DE<br/><br/>
-      025A<br/><br/>
-      025C+02D0<br/><br/>
-      025D
-    </td>
-    <td>
-      butt<u>er</u>, h<u>ur</u>t
-    </td>
-  </tr>
-</table>
-
-## Diphthongs
-{: #usDiphthongs}
-
-<table style="width:90%">
-  <caption>Table 2. Diphthongs (US English)</caption>
-  <tr>
-    <th style="width:20%; text-align:center; vertical-align:bottom">
-      US English<br/>SPR symbol
-    </th>
-    <th style="width:20%; text-align:center; vertical-align:bottom">
-      IPA symbol
-    </th>
-    <th style="width:20%; text-align:center; vertical-align:bottom">
-      IPA Unicode
-    </th>
-    <th style="text-align:left; vertical-align:bottom">
-      Example words
-    </th>
   </tr>
   <tr>
     <td style="text-align:center">
       O
     </td>
     <td style="text-align:center">
-      &#596;&#618;
+      &#596;
     </td>
     <td style="text-align:center">
-      0254+026A
+      0254
     </td>
     <td>
-      t<u>oi</u>l, b<u>oy</u>
+      K<u>o</u>pf, St<u>o</u>pp
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      W
+      y
     </td>
     <td style="text-align:center">
-      &#97;&#650;
+      y<br/><br/>
+      &#121;&#720;
     </td>
     <td style="text-align:center">
-      0061+028A
+      0079<br/><br/>
+      0079+02D0
     </td>
     <td>
-      <u>ou</u>t, c<u>ow</u>
+      B<u>&uuml;</u>cher, f<u>&uuml;h</u>len, T<u>&uuml;</u>r,
+      k<u>&uuml;</u>hn
     </td>
   </tr>
   <tr>
@@ -295,25 +232,57 @@ The following sections describe the valid symbols for US English.
       Y
     </td>
     <td style="text-align:center">
-      &#97;&#618;
+      &#655;
     </td>
     <td style="text-align:center">
-      0061+026A
+      028F
     </td>
     <td>
-      l<u>i</u>fe, f<u>i</u>ne
+      f<u>&uuml;</u>nf, f<u>&uuml;</u>llen, K<u>&uuml;</u>nstler
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      'oe'
+    </td>
+    <td style="text-align:center">
+      &#248;<br/><br/>
+      &#248;&#720;
+    </td>
+    <td style="text-align:center">
+      00F8<br/><br/>
+      00F8+02D0
+    </td>
+    <td>
+      L<u>&ouml;</u>we, h<u>&ouml;</u>ren, S<u>&ouml;h</u>ne
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      'OE'
+    </td>
+    <td style="text-align:center">
+      &#339;<br/><br/>
+      &#630;
+    </td>
+    <td style="text-align:center">
+      0153<br/><br/>
+      0276
+    </td>
+    <td>
+      k<u>&ouml;</u>nnen, h<u>&ouml;</u>lzern, <u>&ouml;</u>stlich
     </td>
   </tr>
 </table>
 
 ## Reduced vowels
-{: #usReducedVowels}
+{: #deReducedVowels}
 
 <table style="width:90%">
-  <caption>Table 3. Reduced vowels (US English)</caption>
+  <caption>Table 2. Reduced vowels (German)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      US English<br/>SPR symbol
+      SPR symbol
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       IPA symbol
@@ -327,46 +296,192 @@ The following sections describe the valid symbols for US English.
   </tr>
   <tr>
     <td style="text-align:center">
-      x
+      @
     </td>
     <td style="text-align:center">
-      &#601;
+      &#601;<br/><br/>
+      &#629;<br/><br/>
+      &#600;
     </td>
     <td style="text-align:center">
-      0259
+      0259<br/><br/>
+      0275<br/><br/>
+      0258
     </td>
     <td>
-      sof<u>a</u>, <u>a</u>lone, s<u>u</u>ppose, tedi<u>ou</u>s,
-      <u>A</u>meric<u>a</u>
+      bitt<u>e</u>, Kam<u>e</u>ra, Bod<u>e</u>n
+    </td>
+  </tr>
+</table>
+
+## Diphthongs
+{: #deDiphthongs}
+
+<table style="width:90%">
+  <caption>Table 3. Diphthongs (German)</caption>
+  <tr>
+    <th style="width:20%; text-align:center; vertical-align:bottom">
+      SPR symbol
+    </th>
+    <th style="width:20%; text-align:center; vertical-align:bottom">
+      IPA symbol
+    </th>
+    <th style="width:20%; text-align:center; vertical-align:bottom">
+      IPA Unicode
+    </th>
+    <th style="text-align:left; vertical-align:bottom">
+      Example words
+    </th>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      'aj'
+    </td>
+    <td style="text-align:center">
+      &#97;&#105;<br/><br/>
+      &#97;&#618;
+    </td>
+    <td style="text-align:center">
+      0061+0069<br/><br/>
+      0061+026A
+    </td>
+    <td>
+      h<u>ei</u>m, W<u>ai</u>se, M<u>ai</u>
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      X
+      'aw'
     </td>
     <td style="text-align:center">
-      &#616;<br/><br/>
-      &#305;
+      &#97;&#117;<br/><br/>
+      &#97;&#650;
     </td>
     <td style="text-align:center">
-      0268<br/><br/>
-      0131
+      0061+0075<br/><br/>
+      0061+028A
     </td>
     <td>
-      ros<u>e</u>s, c<u>o</u>nnect, mel<u>o</u>dy, symph<u>o</u>ny,
-      hint<u>e</u>d
+      H<u>au</u>s, M<u>au</u>l, Fr<u>au</u>
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      'oj'
+    </td>
+    <td style="text-align:center">
+      &#596;&#105;<br/><br/>
+      &#596;&#121;<br/><br/>
+      &#596;&#618;<br/><br/>
+      &#596;&#655;
+    </td>
+    <td style="text-align:center">
+      0254+0069<br/><br/>
+      0254+0079<br/><br/>
+      0254+026A<br/><br/>
+      0254+028F
+    </td>
+    <td>
+      h<u>eu</u>te, Geb<u>&auml;u</u>de, H<u>&auml;u</u>ser
+    </td>
+  </tr>
+</table>
+
+## Nasalized vowels
+{: #deNasalizedVowels}
+
+Nasalized vowels in French occur mostly in foreign loan words.
+
+<table style="width:90%">
+  <caption>Table 4. Nasalized vowels (German)</caption>
+  <tr>
+    <th style="width:20%; text-align:center; vertical-align:bottom">
+      SPR symbol
+    </th>
+    <th style="width:20%; text-align:center; vertical-align:bottom">
+      IPA symbol
+    </th>
+    <th style="width:20%; text-align:center; vertical-align:bottom">
+      IPA Unicode
+    </th>
+    <th style="text-align:left; vertical-align:bottom">
+      Example words
+    </th>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      'a~'
+    </td>
+    <td style="text-align:center">
+      &#97;&#771;<br/><br/>
+      &#592;&#771;
+    </td>
+    <td style="text-align:center">
+      0061+0303<br/><br/>
+      0250+0303
+    </td>
+    <td>
+      Ch<u>an</u>ce
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      'E~'
+    </td>
+    <td style="text-align:center">
+      &#101;&#771;<br/><br/>
+      &#603;&#771;
+    </td>
+    <td style="text-align:center">
+      0065+0303<br/><br/>
+      025B+0303
+    </td>
+    <td>
+      T<u>ein</u>t
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      'o~'
+    </td>
+    <td style="text-align:center">
+      &#111;&#771;<br/><br/>
+      &#596;&#771;
+    </td>
+    <td style="text-align:center">
+      006F+0303<br/><br/>
+      0254+0303
+    </td>
+    <td>
+      Pard<u>on</u>
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      'oe~'
+    </td>
+    <td style="text-align:center">
+      &#248;&#771;<br/><br/>
+      &#339;&#771;
+    </td>
+    <td style="text-align:center">
+      00F8+0303<br/><br/>
+      0153+0303
+    </td>
+    <td>
+      Parf<u>um</u>
     </td>
   </tr>
 </table>
 
 ## Consonants
-{: #usConsonants}
+{: #deConsonants}
 
 <table style="width:90%">
-  <caption>Table 4. Consonants (US English)</caption>
+  <caption>Table 5. Consonants (German)</caption>
   <tr>
     <th style="width:20%; text-align:center; vertical-align:bottom">
-      US English<br/>SPR symbol
+      SPR symbol
     </th>
     <th style="width:20%; text-align:center; vertical-align:bottom">
       IPA symbol
@@ -389,7 +504,7 @@ The following sections describe the valid symbols for US English.
         0062
     </td>
     <td>
-      <u>b</u>ad, so<u>b</u>
+      <u>B</u>oden, <u>B</u>ett, o<u>b</u>en
     </td>
   </tr>
   <tr>
@@ -403,7 +518,7 @@ The following sections describe the valid symbols for US English.
       0070
     </td>
     <td>
-      <u>p</u>it, ri<u>p</u>
+      <u>P</u>apier, Li<u>pp</u>e, Gra<u>b</u>
     </td>
   </tr>
   <tr>
@@ -411,13 +526,15 @@ The following sections describe the valid symbols for US English.
       d
     </td>
     <td style="text-align:center">
-      d
+      d<br/><br/>
+      &#240; [<strong>1</strong>]
     </td>
     <td style="text-align:center">
-      0064
+      0064<br/><br/>
+      00F0
     </td>
     <td>
-      <u>d</u>ip, ha<u>d</u>
+      <u>d</u>unkel, kin<u>d</u>isch, Hel<u>d</u>en
     </td>
   </tr>
   <tr>
@@ -431,7 +548,7 @@ The following sections describe the valid symbols for US English.
       0074
     </td>
     <td>
-      <u>t</u>ip, pe<u>t</u>
+      <u>T</u>ag, bi<u>tt</u>e, Ra<u>d</u>
     </td>
   </tr>
   <tr>
@@ -440,14 +557,16 @@ The following sections describe the valid symbols for US English.
     </td>
     <td style="text-align:center">
       g<br/><br/>
-      &#609;
+      &#609;<br/><br/>
+      &#611;
     </td>
     <td style="text-align:center">
       0067<br/><br/>
-      0261
+      0261<br/><br/>
+      0263
     </td>
     <td>
-      <u>g</u>ood, bu<u>g</u>
+      <u>g</u>eben, <u>g</u>rau, Ta<u>g</u>e
     </td>
   </tr>
   <tr>
@@ -461,35 +580,8 @@ The following sections describe the valid symbols for US English.
       006B
     </td>
     <td>
-      <u>k</u>ill, <u>c</u>at, ma<u>k</u>e, ba<u>ck</u>
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      D
-    </td>
-    <td style="text-align:center">
-      &#240;
-    </td>
-    <td style="text-align:center">
-      00F0
-    </td>
-    <td>
-      <u>th</u>is, brea<u>th</u>e
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      T
-    </td>
-    <td style="text-align:center">
-      &#952;
-    </td>
-    <td style="text-align:center">
-      03B8
-    </td>
-    <td>
-      <u>th</u>ing, Be<u>th</u>
+      <u>K</u>atze, E<u>ck</u>e, S<u>k</u>ulptur, la<u>g</u>,
+      <u>q</u>uitt
     </td>
   </tr>
   <tr>
@@ -503,7 +595,7 @@ The following sections describe the valid symbols for US English.
       0076
     </td>
     <td>
-      <u>v</u>ase, sa<u>v</u>e
+      <u>W</u>agen, <u>v</u>isk&ouml;s, <u>V</u>olum, o<u>v</u>al
     </td>
   </tr>
   <tr>
@@ -517,7 +609,7 @@ The following sections describe the valid symbols for US English.
       0066
     </td>
     <td>
-      <u>f</u>ield, i<u>f</u>, gra<u>ph</u>
+      <u>f</u>ast, ho<u>ff</u>en, <u>V</u>ater
     </td>
   </tr>
   <tr>
@@ -531,7 +623,7 @@ The following sections describe the valid symbols for US English.
       007A
     </td>
     <td>
-      <u>z</u>ip, pha<u>s</u>e
+      <u>S</u>ee, <u>S</u>atz, le<u>s</u>en
     </td>
   </tr>
   <tr>
@@ -545,7 +637,7 @@ The following sections describe the valid symbols for US English.
       0073
     </td>
     <td>
-      <u>s</u>eal, mi<u>ss</u>, <u>c</u>eiling
+      Ma<u>&szlig;</u>, la<u>ss</u>en, La<u>s</u>t, H<u>au</u>s
     </td>
   </tr>
   <tr>
@@ -559,7 +651,7 @@ The following sections describe the valid symbols for US English.
       0292
     </td>
     <td>
-      trea<u>s</u>ure, gara<u>g</u>e
+      Gara<u>g</u>e, <u>G</u>enie
     </td>
   </tr>
   <tr>
@@ -573,7 +665,89 @@ The following sections describe the valid symbols for US English.
       0283
     </td>
     <td>
-      <u>sh</u>ip, wi<u>sh</u>
+      <u>sch</u>on, <u>s</u>pielen, <u>S</u>til, w&auml;<u>sch</u>t
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      X
+    </td>
+    <td style="text-align:center">
+      &#231;
+    </td>
+    <td style="text-align:center">
+      00E7
+    </td>
+    <td>
+      i<u>ch</u>, <u>Ch</u>emie, Kel<u>ch</u>, man<u>ch</u>er
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      x
+    </td>
+    <td style="text-align:center">
+      x<br/><br/>
+      &#967;
+    </td>
+    <td style="text-align:center">
+      0078<br/><br/>
+      03C7
+    </td>
+    <td>
+      Bu<u>ch</u>, Ba<u>ch</u>, Wo<u>ch</u>en
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      P
+    </td>
+    <td style="text-align:center">
+      &#112;&#102;
+    </td>
+    <td style="text-align:center">
+      0070+0066
+    </td>
+    <td>
+      <u>Pf</u>lanze, Stum<u>pf</u>en
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      R
+    </td>
+    <td style="text-align:center">
+      &#592;<br/><br/>
+      &#652;<br/><br/>
+      &#602;<br/><br/>
+      &#605;
+    </td>
+    <td style="text-align:center">
+      0250<br/><br/>
+      028C<br/><br/>
+      025A<br/><br/>
+      025D
+    </td>
+    <td>
+      Wied<u>er</u>, &uuml;b<u>er</u>
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      T
+    </td>
+    <td style="text-align:center">
+      &#116;&#115;<br/><br/>
+      &#678;<br/><br/>
+      &#952; [<strong>2</strong>]
+    </td>
+    <td style="text-align:center">
+      0074+0073<br/><br/>
+      02A6<br/><br/>
+      03B8
+    </td>
+    <td>
+      <u>Z</u>auber, Poli<u>z</u>ei, Glan<u>z</u>
     </td>
   </tr>
   <tr>
@@ -589,7 +763,7 @@ The following sections describe the valid symbols for US English.
       02A4
     </td>
     <td>
-      <u>J</u>ane, hu<u>g</u>e
+      <u>J</u>ob, <u>Dsch</u>ungel
     </td>
   </tr>
   <tr>
@@ -598,34 +772,14 @@ The following sections describe the valid symbols for US English.
     </td>
     <td style="text-align:center">
       &#116;&#643;<br/><br/>
-      &#679;
+      &#116;&#643;
     </td>
     <td style="text-align:center">
       0074+0283<br/><br/>
       02A7
     </td>
     <td>
-      <u>ch</u>ip, wit<u>ch</u>, na<u>t</u>ure
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      h
-    </td>
-    <td style="text-align:center">
-      h<br/><br/>
-      &#614;<br/><br/>
-      x<br/><br/>
-      &#967;
-    </td>
-    <td style="text-align:center">
-      0068<br/><br/>
-      0266<br/><br/>
-      0078<br/><br/>
-      03C7
-    </td>
-    <td>
-      <u>h</u>ot, <u>h</u>ero, <u>ch</u>allah
+      deuts<u>ch</u>, <u>Ch</u>ile, <u>C</u>ello
     </td>
   </tr>
   <tr>
@@ -639,7 +793,7 @@ The following sections describe the valid symbols for US English.
       006D
     </td>
     <td>
-      <u>m</u>an, hu<u>m</u>, su<u>mm</u>er
+      <u>M</u>ann, ko<u>mm</u>en, Ate<u>m</u>
     </td>
   </tr>
   <tr>
@@ -653,7 +807,7 @@ The following sections describe the valid symbols for US English.
       006E
     </td>
     <td>
-      <u>n</u>ever, su<u>n</u>, wi<u>nn</u>er
+      <u>N</u>acht, k&ouml;<u>nn</u>en, Ki<u>n</u>d
     </td>
   </tr>
   <tr>
@@ -667,23 +821,7 @@ The following sections describe the valid symbols for US English.
       014B
     </td>
     <td>
-      si<u>ng</u>, fi<u>ng</u>er
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      r
-    </td>
-    <td style="text-align:center">
-      r<br/><br/>
-      &#633;
-    </td>
-    <td style="text-align:center">
-      0072<br/><br/>
-      0279
-    </td>
-    <td>
-      bo<u>rr</u>ow, <u>r</u>ake
+      Fi<u>ng</u>er, l&auml;<u>ng</u>s, Anfa<u>ng</u>
     </td>
   </tr>
   <tr>
@@ -697,7 +835,45 @@ The following sections describe the valid symbols for US English.
       006C
     </td>
     <td>
-      <u>l</u>ow, ha<u>ll</u>
+      <u>l</u>esen, fa<u>ll</u>en, Pu<u>l</u>t
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      r
+    </td>
+    <td style="text-align:center">
+      r<br/><br/>
+      &#633;<br/><br/>
+      &#640;<br/><br/>
+      &#641;<br/><br/>
+      &#638;
+    </td>
+    <td style="text-align:center">
+      0072<br/><br/>
+      0279<br/><br/>
+      0280<br/><br/>
+      0281<br/><br/>
+      027E
+    </td>
+    <td>
+      <u>R</u>ad, f&uuml;h<u>r</u>en
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      j
+    </td>
+    <td style="text-align:center">
+      j<br/><br/>
+      &#669;
+    </td>
+    <td style="text-align:center">
+      006A<br/><br/>
+      029D
+    </td>
+    <td>
+      <u>J</u>unge, <u>j</u>a, <u>J</u>ahr, Minister<u>i</u>um
     </td>
   </tr>
   <tr>
@@ -706,42 +882,30 @@ The following sections describe the valid symbols for US English.
     </td>
     <td style="text-align:center">
       w<br/><br/>
-      &#653;
+      &#651;
     </td>
     <td style="text-align:center">
       0077<br/><br/>
-      028D
+      028B
     </td>
     <td>
-      <u>w</u>ear, q<u>ui</u>ck
+      Ed<u>u</u>ard, akt<u>u</u>ell, Jan<u>u</u>ar
     </td>
   </tr>
   <tr>
     <td style="text-align:center">
-      y
+      h
     </td>
     <td style="text-align:center">
-      j
+      h<br/><br/>
+      &#614;
     </td>
     <td style="text-align:center">
-      006A
+      0068<br/><br/>
+      0266
     </td>
     <td>
-      <u>y</u>es, Virgin<u>i</u>a
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      M
-    </td>
-    <td style="text-align:center">
-      &#109;&#809;
-    </td>
-    <td style="text-align:center">
-      006D+0329
-    </td>
-    <td>
-      h<u>mmm</u>
+      <u>h</u>och, <u>H</u>and, A<u>h</u>orn
     </td>
   </tr>
   <tr>
@@ -755,35 +919,15 @@ The following sections describe the valid symbols for US English.
       0294
     </td>
     <td>
-      ki<u>tt</u>en, La<u>t</u>in
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      F (flap)
-    </td>
-    <td style="text-align:center">
-      &#638;
-    </td>
-    <td style="text-align:center">
-      027E
-    </td>
-    <td>
-      wri<u>t</u>er, fi<u>dd</u>le
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      N (syllabic nasal)
-    </td>
-    <td style="text-align:center">
-      &#110;&#809;
-    </td>
-    <td style="text-align:center">
-      006E+0329
-    </td>
-    <td>
-      butt<u>on</u>, sat<u>in</u>, eat<u>en</u>, burd<u>en</u>
+      _er_obern (IPA <code>&#660;&#603;&#592;&#712;&#660;&#111;&#720;&#98;&#592;&#110;</code>)<br/>_erinnern (IPA <code>&#660;&#603;&#592;&#712;&#641;&#618;&#110;&#592;&#110;</code>)
+<!--
+      <u>e</u>r<u>o</u>bern (IPA &#660;&#603;&#592;&#712;&#660;&#111;&#720;&#98;&#592;&#110;)<br/><u>e</u>rinnern (IPA &#660;&#603;&#592;&#712;&#641;&#618;&#110;&#592;&#110;)
+-->
     </td>
   </tr>
 </table>
+
+**Notes:**
+
+1.  The IPA symbol <code>&#240;</code> (IPA Unicode `00F0`) occurs only in loanwords from foreign languages, mostly English (for example, *The New York Times*). However, the service realizes that sound as IPA symbol `d` (IPA Unicode `0064`).
+1.  The IPA symbol <code>&#952;</code> (IPA Unicode `03B8`) occurs only in loanwords from foreign languages, mostly English (for example, *thriller*). However, the service realizes that sound as IPA symbol <code>&#678;</code> (IPA Unicode `02A6`).
