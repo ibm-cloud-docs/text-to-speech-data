@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-04-28"
+lastupdated: "2020-04-29"
 
 subcollection: text-to-speech-data
 
@@ -187,10 +187,10 @@ The following language-specific considerations apply to specifying syllable stre
 All of the service's voices support both SPR and IPA symbols. The following pages document the supported SPR symbols, IPA symbols, and equivalent IPA Unicode values that can be used with all voices for each language. The pages provide examples of each symbol in words from the language. Because of dialectal differences, the examples might not always match your pronunciation.
 
 -   [Brazilian Portuguese symbols](/docs/text-to-speech-data?topic=text-to-speech-data-ptSymbols)
+-   [English (United Kingdom) symbols](/docs/text-to-speech-data?topic=text-to-speech-data-gbSymbols)
+-   [English (United States) symbols](/docs/text-to-speech-data?topic=text-to-speech-data-usSymbols)
 -   [French symbols](/docs/text-to-speech-data?topic=text-to-speech-data-frSymbols)
 -   [German symbols](/docs/text-to-speech-data?topic=text-to-speech-data-deSymbols)
 -   [Italian symbols](/docs/text-to-speech-data?topic=text-to-speech-data-itSymbols)
 -   [Japanese symbols](/docs/text-to-speech-data?topic=text-to-speech-data-jaSymbols)
 -   [Spanish symbols](/docs/text-to-speech-data?topic=text-to-speech-data-esSymbols)
--   [UK English symbols](/docs/text-to-speech-data?topic=text-to-speech-data-gbSymbols)
--   [US English symbols](/docs/text-to-speech-data?topic=text-to-speech-data-usSymbols)

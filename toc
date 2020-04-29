@@ -52,13 +52,13 @@ Text to Speech for IBM Cloud Pak for Data
     Phonetic symbols
         symbols.md
         symbols-pt-br.md
+        symbols-en-gb.md
+        symbols-en-us.md
         symbols-fr-fr.md
         symbols-de-de.md
         symbols-it-it.md
         symbols-ja-jp.md
         symbols-es-es.md
-        symbols-en-gb.md
-        symbols-en-us.md
 
     backup.md
 
