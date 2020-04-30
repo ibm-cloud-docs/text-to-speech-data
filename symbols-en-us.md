@@ -25,7 +25,7 @@ subcollection: text-to-speech-data
 # US English symbols
 {: #usSymbols}
 
-The following sections describe the valid symbols for US English.
+The following sections describe the valid symbols for (United States) US English.
 
 ## Regular vowels
 {: #usRegularVowels}

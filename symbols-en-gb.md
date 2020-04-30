@@ -25,7 +25,7 @@ subcollection: text-to-speech-data
 # UK English symbols
 {: #gbSymbols}
 
-The following sections describe the valid symbols for UK English.
+The following sections describe the valid symbols for United Kingdom (UK) English.
 
 ## Regular vowels
 {: #gbRegularVowels}
