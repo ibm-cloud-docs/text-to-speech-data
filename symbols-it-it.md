@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-04-23"
+lastupdated: "2020-04-30"
 
 subcollection: text-to-speech-data
 
@@ -57,7 +57,7 @@ The following sections describe the valid symbols for Italian.
       0061
     </td>
     <td>
-      l<u>a</u>s<u>a</u>gn<u>a</u>, <u>a</u>llegro
+      l**a**s**a**gn**a**, **a**llegro
     </td>
   </tr>
   <tr>
@@ -71,7 +71,7 @@ The following sections describe the valid symbols for Italian.
       0065
     </td>
     <td>
-      n<u>e</u>ro, du<u>e</u>tto
+      n**e**ro, du**e**tto
     </td>
   </tr>
   <tr>
@@ -85,7 +85,7 @@ The following sections describe the valid symbols for Italian.
       025B
     </td>
     <td>
-      <u>e</u>cco, lic<u>e</u>o
+      **e**cco, lic**e**o
     </td>
   </tr>
   <tr>
@@ -99,7 +99,7 @@ The following sections describe the valid symbols for Italian.
       0069
     </td>
     <td>
-      <u>i</u>sola, form<u>i</u>ca
+      **i**sola, form**i**ca
     </td>
   </tr>
   <tr>
@@ -113,7 +113,7 @@ The following sections describe the valid symbols for Italian.
       006F
     </td>
     <td>
-      padr<u>o</u>ne, att<u>o</u>re
+      padr**o**ne, att**o**re
     </td>
   </tr>
   <tr>
@@ -127,7 +127,7 @@ The following sections describe the valid symbols for Italian.
       0254
     </td>
     <td>
-      c<u>o</u>sta, m<u>o</u>sse
+      c**o**sta, m**o**sse
     </td>
   </tr>
   <tr>
@@ -141,7 +141,7 @@ The following sections describe the valid symbols for Italian.
       0075
     </td>
     <td>
-      l<u>u</u>na, <u>u</u>fficio
+      l**u**na, **u**fficio
     </td>
   </tr>
 </table>
@@ -176,7 +176,7 @@ The following sections describe the valid symbols for Italian.
       0062
     </td>
     <td>
-      <u>b</u>occa, <u>b</u>ere
+      **b**occa, **b**ere
     </td>
   </tr>
   <tr>
@@ -190,7 +190,7 @@ The following sections describe the valid symbols for Italian.
       0070
     </td>
     <td>
-      <u>p</u>artire, <u>p</u>oco
+      **p**artire, **p**oco
     </td>
   </tr>
   <tr>
@@ -204,7 +204,7 @@ The following sections describe the valid symbols for Italian.
       0064
     </td>
     <td>
-      <u>d</u>are, <u>d</u>ata
+      **d**are, **d**ata
     </td>
   </tr>
   <tr>
@@ -218,7 +218,7 @@ The following sections describe the valid symbols for Italian.
       0074
     </td>
     <td>
-      <u>t</u>occare, len<u>t</u>o
+      **t**occare, len**t**o
     </td>
   </tr>
   <tr>
@@ -233,7 +233,7 @@ The following sections describe the valid symbols for Italian.
       0261
     </td>
     <td>
-      <u>g</u>rande, re<u>g</u>alo
+      **g**rande, re**g**alo
     </td>
   </tr>
   <tr>
@@ -247,7 +247,7 @@ The following sections describe the valid symbols for Italian.
       006B
     </td>
     <td>
-      <u>c</u>asa, ve<u>cch</u>io
+      **c**asa, ve**cch**io
     </td>
   </tr>
   <tr>
@@ -261,7 +261,7 @@ The following sections describe the valid symbols for Italian.
       0076
     </td>
     <td>
-      <u>v</u>ano, <u>v</u>i<u>v</u>ere
+      **v**ano, **v**i**v**ere
     </td>
   </tr>
   <tr>
@@ -275,7 +275,7 @@ The following sections describe the valid symbols for Italian.
       0066
     </td>
     <td>
-      <u>f</u>are, <u>f</u>orte
+      **f**are, **f**orte
     </td>
   </tr>
   <tr>
@@ -289,7 +289,7 @@ The following sections describe the valid symbols for Italian.
       007A
     </td>
     <td>
-      pae<u>s</u>e, <u>s</u>baglio
+      pae**s**e, **s**baglio
     </td>
   </tr>
   <tr>
@@ -303,7 +303,7 @@ The following sections describe the valid symbols for Italian.
       0073
     </td>
     <td>
-      pe<u>s</u>to, <u>s</u>tare
+      pe**s**to, **s**tare
     </td>
   </tr>
   <tr>
@@ -317,7 +317,7 @@ The following sections describe the valid symbols for Italian.
       0283
     </td>
     <td>
-      <u>sc</u>egliere, la<u>sc</u>iare
+      **sc**egliere, la**sc**iare
     </td>
   </tr>
   <tr>
@@ -333,7 +333,7 @@ The following sections describe the valid symbols for Italian.
       02A4
     </td>
     <td>
-      <u>Gi</u>ovanni, con<u>g</u>elare
+      **Gi**ovanni, con**g**elare
     </td>
   </tr>
   <tr>
@@ -349,7 +349,7 @@ The following sections describe the valid symbols for Italian.
       02A7
     </td>
     <td>
-      <u>c</u>e<u>c</u>e, <u>c</u>iao
+      **c**e**c**e, **c**iao
     </td>
   </tr>
   <tr>
@@ -365,7 +365,7 @@ The following sections describe the valid symbols for Italian.
       02A3
     </td>
     <td>
-      <u>z</u>abaione, <u>z</u>ero, <u>z</u>ona
+      **z**abaione, **z**ero, **z**ona
     </td>
   </tr>
   <tr>
@@ -381,7 +381,7 @@ The following sections describe the valid symbols for Italian.
       02A6
     </td>
     <td>
-      <u>z</u>ampa, <u>z</u>uppa
+      **z**ampa, **z**uppa
     </td>
   </tr>
   <tr>
@@ -395,7 +395,7 @@ The following sections describe the valid symbols for Italian.
       006D
     </td>
     <td>
-      <u>m</u>a<u>mm</u>a, <u>m</u>ano
+      **m**a**mm**a, **m**ano
     </td>
   </tr>
   <tr>
@@ -409,7 +409,7 @@ The following sections describe the valid symbols for Italian.
       006E
     </td>
     <td>
-      <u>n</u>ie<u>n</u>te, <u>n</u>otte
+      **n**ie**n**te, **n**otte
     </td>
   </tr>
   <tr>
@@ -423,7 +423,7 @@ The following sections describe the valid symbols for Italian.
       0272
     </td>
     <td>
-      <u>gn</u>occhi, lasa<u>gn</u>a
+      **gn**occhi, lasa**gn**a
     </td>
   </tr>
   <tr>
@@ -439,7 +439,7 @@ The following sections describe the valid symbols for Italian.
       027E
     </td>
     <td>
-      ca<u>r</u>o, se<u>r</u>eno
+      ca**r**o, se**r**eno
     </td>
   </tr>
   <tr>
@@ -455,7 +455,7 @@ The following sections describe the valid symbols for Italian.
       0072+02D0
     </td>
     <td>
-      te<u>rr</u>a, to<u>rr</u>e
+      te**rr**a, to**rr**e
     </td>
   </tr>
   <tr>
@@ -469,7 +469,7 @@ The following sections describe the valid symbols for Italian.
       006C
     </td>
     <td>
-      <u>l</u>ento, pa<u>l</u>ma
+      **l**ento, pa**l**ma
     </td>
   </tr>
   <tr>
@@ -483,7 +483,7 @@ The following sections describe the valid symbols for Italian.
       028E
     </td>
     <td>
-      <u>gl</u>ielo, <u>gl</u>i
+      **gl**ielo, **gl**i
     </td>
   </tr>
   <tr>
@@ -497,7 +497,7 @@ The following sections describe the valid symbols for Italian.
       006A
     </td>
     <td>
-      <u>i</u>eri, raso<u>i</u>o
+      **i**eri, raso**i**o
     </td>
   </tr>
   <tr>
@@ -511,7 +511,7 @@ The following sections describe the valid symbols for Italian.
       0077
     </td>
     <td>
-      n<u>u</u>ovo, q<u>u</u>ando
+      n**u**ovo, q**u**ando
     </td>
   </tr>
 </table>
@@ -548,7 +548,7 @@ The following sections describe the valid symbols for Italian.
       0064+0064+007A
     </td>
     <td>
-      a<u>zz</u>urro, me<u>zz</u>o
+      a**zz**urro, me**zz**o
     </td>
   </tr>
   <tr>
@@ -564,7 +564,7 @@ The following sections describe the valid symbols for Italian.
       0064+02A4
     </td>
     <td>
-      Chio<u>gg</u>ia, ma<u>gg</u>io
+      Chio**gg**ia, ma**gg**io
     </td>
   </tr>
   <tr>
@@ -580,7 +580,7 @@ The following sections describe the valid symbols for Italian.
       0074+02A6
     </td>
     <td>
-      ta<u>zz</u>a, chia<u>zz</u>a
+      ta**zz**a, chia**zz**a
     </td>
   </tr>
   <tr>
@@ -596,7 +596,7 @@ The following sections describe the valid symbols for Italian.
       0074+0074+0283
     </td>
     <td>
-      ghia<u>cc</u>io, fe<u>cc</u>ia
+      ghia**cc**io, fe**cc**ia
     </td>
   </tr>
 </table>
@@ -634,7 +634,7 @@ If an allophone is not used in SPR, the {{site.data.keyword.texttospeechshort}} 
       014B+0261
     </td>
     <td>
-      a<u>ng</u>olo, lu<u>ng</u>o
+      a**ng**olo, lu**ng**o
     </td>
   </tr>
   <tr>
@@ -648,7 +648,7 @@ If an allophone is not used in SPR, the {{site.data.keyword.texttospeechshort}} 
       014B+006B
     </td>
     <td>
-      a<u>nc</u>ora, bia<u>nc</u>o
+      a**nc**ora, bia**nc**o
     </td>
   </tr>
 </table>
