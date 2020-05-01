@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-03-16"
+lastupdated: "2020-05-01"
 
 subcollection: text-to-speech-data
 
@@ -44,7 +44,7 @@ Table 1 lists and provides audio samples for the voices that are available for e
   <tr>
     <td style="text-align:left;vertical-align:middle">Brazilian Portuguese</td>
     <td style="text-align:center;vertical-align:middle">Female</td>
-    <td style="text-align:center;vertical-align:middle"><code>pt-BR_IsabelaV3Voice</td>
+    <td style="text-align:center;vertical-align:middle"><code>pt-BR_IsabelaV3Voice</code></td>
     <td style="text-align:center;vertical-align:middle">
       <audio controls style="width:250px;height:30px">
         <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/IsabelaV3.wav" type="audio/wav">
