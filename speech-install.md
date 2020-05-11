@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-02-27"
+lastupdated: "2020-05-11"
 
 subcollection: text-to-speech-data
 
@@ -511,7 +511,7 @@ The `cluster-admin` role is required to deploy {{site.data.keyword.ibmwatson}} S
     -   Set `global.image.repository` to the same value you set `global.icpDockerRepo`.
     -   Set `global.image.pullSecret` to the same value you set `global.imagePullSecretName`.
 
-    See [Select the components to install](#select-components) for information about how to select the components to install. Additionally, read the [Installation appendix](#install-appendix) and [Configuration](#configuration) sections to learn more about the installation configuration.
+    See [Select the components to install](#select-components) for information about how to select the components to install. Additionally, read the [Installation appendix](#install-appendix) and [Configuration](#configuration) sections to learn more about the installation and configuration.
 
 1.  After you define any custom configuration settings, you can install the chart from the Helm command-line interface. Enter the following command from the directory where the package was loaded in your local system:
 
@@ -722,7 +722,7 @@ Object storage is used for storing binary data from the following sources:
 
 -   Base models (for example, `en_US-NarrowbandModel`)
 
-    On average, base models are each `1.5 GB`. Because models are updated regularly. You need to multiply that amount by three to make room for at least three different versions of each model.
+    On average, base models are each `1.5 GB`. Because models are updated regularly, you need to multiply that amount by three to make room for at least three different versions of each model.
 
 -   Customization data (audio files and training snapshots)
 
@@ -1053,7 +1053,7 @@ There are five components that can be enabled or disabled according to your need
 | `sttRuntime.groups.sttRuntimeDefault.resources.requestsCpu`    | Requested CPUs for STT runtime. Minimum value is 4.                                                                                      | `8`       |
 | `sttRuntime.groups.sttRuntimeDefault.resources.requestsMemory` | Calculation of the memory requirements can be found in the chart overview. When dynamic memory is enabled, this option has no effect.    | `22000Mi` |
 
-##### Speech-to-Text runtime
+##### Text-to-Speech runtime
 {: #install-resources-tts}
 
 | Value                                                          | Description                                                                                                                              | Default   |
