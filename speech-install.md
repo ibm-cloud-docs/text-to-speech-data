@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-05-11"
+lastupdated: "2020-05-12"
 
 subcollection: text-to-speech-data
 
@@ -1016,7 +1016,7 @@ There are five components that can be enabled or disabled according to your need
 | `tags.sttRuntime`               | Speech-to-Text Runtime that is the base component for recognition. If you check any of the Speech-to-Text additional components, the Speech-to-Text runtime is enabled automatically. | `true`  |
 | `tags.ttsRuntime`               | Text-to-Speech Runtime that is the base component for synthesis. If you check any of the Text-to-Speech additional components, the Text-to-Speech runtime is enabled automatically. | `true`  |
 | `tags.sttCustomization`         | Speech-to-Text Customization component. Enabling it also enables the Speech-to-Text runtime if `tags.sttRuntime=false`.                                                               | `true`  |
-| `tags.ttsCustomization`         | Text-to-Speech Customization component. Enabling it also enables the Text-to-Speech runtime if `tags.sttRuntime=false`.                                                               | `true`  |
+| `tags.ttsCustomization`         | Text-to-Speech Customization component. Enabling it also enables the Text-to-Speech runtime if `tags.ttsRuntime=false`.                                                               | `true`  |
 | `tags.sttAsync`                 | Speech-to-Text Async component.                                                                                                                                                   | `true`  |
 
 #### Datastores
