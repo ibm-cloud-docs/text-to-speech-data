@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-05-12"
+lastupdated: "2020-05-13"
 
 subcollection: text-to-speech-data
 
@@ -996,7 +996,7 @@ Assume that there is a new broadband model for the Czech language that was relea
    helm upgrade RELEASE CHART --set global.sttModels.csCSBroadbandModel.catalogName=cs-CS_BroadBandModel --set global.sttModels.csCSBroadbandModel.size=500 [OTHER-FLAGS]
 ```
 
-### Storage of customer data (STT Runtime and AMC Patcher)
+### Storage of customer data (STT Runtime and AM Patcher)
 {: #storage-of-customer-data-stt}
 
 By default, payload data, including audio files, recognition hypotheses, and annotations, are temporarily stored in the running container. You can disable this behavior by checking the `STT Runtime | Disable storage of customer data` option. Checking this option also removes sensitive information from container logs.
@@ -1068,10 +1068,10 @@ There are five components that can be enabled or disabled according to your need
 
 | Value                                                          | Description                                                                                                                              | Default   |
 |----------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|-----------|
-| `sttAMPatcher.groups.sttAMPatcher.resources.dynamicMemory`     | Calculate memory requirements for STT AMC patcher according to the selected models. For more information, see the chart overview.            | `True`    |
+| `sttAMPatcher.groups.sttAMPatcher.resources.dynamicMemory`     | Calculate memory requirements for STT AM patcher according to the selected models. For more information, see the chart overview.            | `True`    |
 | `sttAMPatcher.groups.sttAMPatcher.resources.requestsCpu`       | Each customization session needs 4 CPUs.                                                                                                | `8`       |
 | `sttAMPatcher.groups.sttAMPatcher.resources.requestsMemory`    | The amount of memory depends on the number of CPUs. Size can be calculated as the number of CPUs * 3 GB.                                                      | `22000Mi` |
-| `sttAMPatcher.groups.sttAMPatcher.resources.threads`           | Number of parallel-processing threads for AMC. Note that fewer threads means longer training time.                                       | `4`       |
+| `sttAMPatcher.groups.sttAMPatcher.resources.threads`           | Number of parallel-processing threads for AM. Note that fewer threads means longer training time.                                       | `4`       |
 
 #### Speech-to-text models
 {: #install-resources-stt-models}
