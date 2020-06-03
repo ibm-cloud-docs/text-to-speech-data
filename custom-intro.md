@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-04-22"
+lastupdated: "2020-06-03"
 
 subcollection: text-to-speech-data
 
@@ -13,6 +13,7 @@ subcollection: text-to-speech-data
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
+{:beta: .beta}
 {:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
@@ -28,10 +29,10 @@ subcollection: text-to-speech-data
 When you synthesize text with {{site.data.keyword.texttospeechdatafull}} for {{site.data.keyword.icp4dfull}}, the service applies language-dependent pronunciation rules. The service applies the rules to convert the ordinary (orthographic) spelling of each word to a phonetic spelling. A word's phonetic spelling uses phoneme symbols to define how the word is pronounced. These symbols are the distinct units of sound that distinguish words in a language, the boundaries between syllables, and the stress marks for the syllables.
 {: shortdesc}
 
-The service's regular pronunciation rules work well for common words. However, they can yield imperfect results for unusual words. Such words include special terms with foreign origins, personal or geographic names, and abbreviations or acronyms. If your application's lexicon includes such words, you can use the customization interface to specify how the service pronounces such words.
+The service's regular pronunciation rules work well for common words. However, they can yield imperfect results for unusual words. Such words include special terms with foreign origins, personal or geographic names, and abbreviations or acronyms. If your application's lexicon includes such words, you can use the customization interface to specify how the service pronounces the words. The customization interface is available for all languages.
 
-The customization interface is beta functionality that is available for all languages.
-{: note}
+Voice model customization and all methods of the customization interface are beta functionality.
+{: beta}
 
 ## How customization works
 {: #ciHow}
