@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-05-01"
+lastupdated: "2020-06-02"
 
 subcollection: text-to-speech-data
 
@@ -42,7 +42,7 @@ Table 1 lists and provides audio samples for the voices that are available for e
     <th style="text-align:center">Sample</th>
   </tr>
   <tr>
-    <td style="text-align:left;vertical-align:middle">Brazilian Portuguese</td>
+    <td style="text-align:left;vertical-align:middle">Brazilian<br/>Portuguese</td>
     <td style="text-align:center;vertical-align:middle">Female</td>
     <td style="text-align:center;vertical-align:middle"><code>pt-BR_IsabelaV3Voice</code></td>
     <td style="text-align:center;vertical-align:middle">
@@ -52,7 +52,7 @@ Table 1 lists and provides audio samples for the voices that are available for e
     </td>
   </tr>
   <tr>
-    <td style="text-align:left;vertical-align:middle">English (United Kingdom)</td>
+    <td style="text-align:left;vertical-align:middle">English<br/>(United Kingdom)</td>
     <td style="text-align:center;vertical-align:middle">Female</td>
     <td style="text-align:center;vertical-align:middle"><code>en-GB_KateV3Voice</code></td>
     <td style="text-align:center;vertical-align:middle">
@@ -62,7 +62,7 @@ Table 1 lists and provides audio samples for the voices that are available for e
     </td>
   </tr>
   <tr>
-    <td style="text-align:left;vertical-align:middle">English (United States)</td>
+    <td style="text-align:left;vertical-align:middle">English<br/>(United States)</td>
     <td style="text-align:center;vertical-align:middle">Female</td>
     <td style="text-align:center;vertical-align:middle"><code>en-US_AllisonV3Voice</code></td>
     <td style="text-align:center;vertical-align:middle">
@@ -142,7 +142,7 @@ Table 1 lists and provides audio samples for the voices that are available for e
     </td>
   </tr>
   <tr>
-    <td style="text-align:left;vertical-align:middle">Spanish (Castilian)</td>
+    <td style="text-align:left;vertical-align:middle">Spanish<br/>(Castilian)</td>
     <td style="text-align:center;vertical-align:middle">Male</td>
     <td style="text-align:center;vertical-align:middle"><code>es-ES_EnriqueV3Voice</code></td>
     <td style="text-align:center;vertical-align:middle">
@@ -162,7 +162,7 @@ Table 1 lists and provides audio samples for the voices that are available for e
     </td>
   </tr>
   <tr>
-    <td style="text-align:left;vertical-align:middle">Spanish (Latin American)</td>
+    <td style="text-align:left;vertical-align:middle">Spanish<br/>(Latin American)</td>
     <td style="text-align:center;vertical-align:middle">Female</td>
     <td style="text-align:center"><code>es-LA_SofiaV3Voice</code></td>
     <td style="text-align:center;vertical-align:middle">
@@ -172,7 +172,7 @@ Table 1 lists and provides audio samples for the voices that are available for e
     </td>
  </tr>
   <tr>
-    <td style="text-align:left;vertical-align:middle">Spanish (North American)</td>
+    <td style="text-align:left;vertical-align:middle">Spanish<br/>(North American)</td>
     <td style="text-align:center;vertical-align:middle">Female</td>
     <td style="text-align:center;vertical-align:middle"><code>es-US_SofiaV3Voice</code></td>
     <td style="text-align:center;vertical-align:middle">
