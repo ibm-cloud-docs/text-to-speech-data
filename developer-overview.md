@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-04-27"
+lastupdated: "2020-06-04"
 
 subcollection: text-to-speech-data
 
@@ -13,6 +13,7 @@ subcollection: text-to-speech-data
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
+{:beta: .beta}
 {:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
@@ -67,8 +68,19 @@ You can use custom voice models to create application-specific translations for 
 
 For example, your application might routinely encounter special terms with foreign origins, personal or geographic names, or abbreviations and acronyms. By using customization, you can define translations that tell the service how you want such terms to be pronounced. For more information, see [Understanding customization](/docs/text-to-speech-data?topic=text-to-speech-data-customIntro).
 
-The customization interface is a beta release.
-{: note}
+The customization interface is beta functionality.
+{: beta}
+
+## Data limits
+{: #data-limits}
+
+To summarize, the following data limits apply to the different speech synthesis methods:
+
+-   The HTTP `GET /v1/synthesize` method accepts a maximum of 8 KB of input, which includes the input text and the URL and headers.
+-   The HTTP `POST /v1/synthesize` method accepts a maximum of 8 KB for the URL and headers, and a maximum of 5 KB for the input text that is sent in the body of the request.
+-   The WebSocket `/v1/synthesize` method accepts a maximum of 5 KB of input text.
+
+These limits include all characters of the input, including whitespace.
 
 ## CORS support
 {: #cors}
