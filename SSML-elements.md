@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-04-21"
+lastupdated: "2020-06-15"
 
 subcollection: text-to-speech-data
 
@@ -337,7 +337,7 @@ The `rate` attribute indicates a change in the speaking rate for the text within
 ## The say-as element
 {: #say-as_element}
 
-The `<say-as>` element is only partially supported for most languages. For languages other than US English, the service typically supports only the `digits` and `letters` attributes of the element.
+The `<say-as>` element is only partially supported for most languages. For languages other than US English and Japanese, the service typically supports only the `digits` and `letters` attributes of the element.
 {: note}
 
 The `<say-as>` element provides information about the type of text that is contained within the element and specifies the level of detail for rendering the text. The element has one required attribute, `interpret-as`, which indicates how the enclosed text is to be interpreted. It has two optional attributes, `format` and `detail`, which are used only with particular values within the `interpret-as` attribute, as illustrated in the following examples.

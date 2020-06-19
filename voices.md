@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-06-02"
+lastupdated: "2020-06-06"
 
 subcollection: text-to-speech-data
 
@@ -74,6 +74,36 @@ Table 1 lists and provides audio samples for the voices that are available for e
   <tr>
     <td></td>
     <td style="text-align:center;vertical-align:middle">Female</td>
+    <td style="text-align:center;vertical-align:middle"><code>en-US_EmilyV3Voice</code></td>
+    <td style="text-align:center;vertical-align:middle">
+      <audio controls style="width:250px;height:30px">
+        <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/EmilyV3.wav" type="audio/wav">
+      </audio>
+    </td>
+  </tr>
+  <tr>
+    <td></td>
+    <td style="text-align:center;vertical-align:middle">Male</td>
+    <td style="text-align:center;vertical-align:middle"><code>en-US_HenryV3Voice</code></td>
+    <td style="text-align:center;vertical-align:middle">
+      <audio controls style="width:250px;height:30px">
+        <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/HenryV3.wav" type="audio/wav">
+      </audio>
+    </td>
+  </tr>
+  <tr>
+    <td></td>
+    <td style="text-align:center;vertical-align:middle">Male</td>
+    <td style="text-align:center;vertical-align:middle"><code>en-US_KevinV3Voice</code></td>
+    <td style="text-align:center;vertical-align:middle">
+      <audio controls style="width:250px;height:30px">
+        <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/KevinV3.wav" type="audio/wav">
+      </audio>
+    </td>
+  </tr>
+  <tr>
+    <td></td>
+    <td style="text-align:center;vertical-align:middle">Female</td>
     <td style="text-align:center;vertical-align:middle"><code>en-US_LisaV3Voice</code></td>
     <td style="text-align:center;vertical-align:middle">
       <audio controls style="width:250px;height:30px">
@@ -88,6 +118,16 @@ Table 1 lists and provides audio samples for the voices that are available for e
     <td style="text-align:center;vertical-align:middle">
       <audio controls style="width:250px;height:30px">
         <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/MichaelV3.wav" type="audio/wav">
+      </audio>
+    </td>
+  </tr>
+  <tr>
+    <td></td>
+    <td style="text-align:center;vertical-align:middle">Female</td>
+    <td style="text-align:center;vertical-align:middle"><code>en-US_OliviaV3Voice</code></td>
+    <td style="text-align:center;vertical-align:middle">
+      <audio controls style="width:250px;height:30px">
+        <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/OliviaV3.wav" type="audio/wav">
       </audio>
     </td>
   </tr>
@@ -118,6 +158,16 @@ Table 1 lists and provides audio samples for the voices that are available for e
     <td style="text-align:center;vertical-align:middle">
       <audio controls style="width:250px;height:30px">
         <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/DieterV3.wav" type="audio/wav">
+      </audio>
+    </td>
+  </tr>
+  <tr>
+    <td></td>
+    <td style="text-align:center;vertical-align:middle">Female</td>
+    <td style="text-align:center;vertical-align:middle"><code>de-DE_ErikaV3Voice</code></td>
+    <td style="text-align:center;vertical-align:middle">
+      <audio controls style="width:250px;height:30px">
+        <source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/ErikaV3.wav" type="audio/wav">
       </audio>
     </td>
   </tr>
