@@ -24,9 +24,11 @@ Text to Speech for IBM Cloud Pak for Data
     {: .topicgroup}
     Installation
         speech-install.md
-        manage.md
-        speech-uninstall.md
-        [Helm chart README.md](https://github.com/ibm-cloud-docs/data-readmes/blob/master/speech-1.1.3-README.md)
+        speech-override.md
+        speech-datastores.md
+        speech-cluster.md
+        speech-scaling.md
+        speech-backup.md
 
     making-requests.md
     http.md
@@ -59,8 +61,6 @@ Text to Speech for IBM Cloud Pak for Data
         symbols-it-it.md
         symbols-ja-jp.md
         symbols-es-es.md
-
-    backup.md
 
     {: topicgroup}
     Service background
