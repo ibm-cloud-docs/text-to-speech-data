@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-06-17"
+lastupdated: "2020-06-20"
 
 subcollection: text-to-speech-data
 
@@ -26,17 +26,17 @@ subcollection: text-to-speech-data
 # Managing your datastores
 {: #speech-datastores}
 
-The following sections provide information about administering the Minio and PostgreSQL datastores.
+The following sections provide information about administering the MinIO and PostgreSQL datastores.
 
-## Configuring Minio object storage
+## Configuring MinIO object storage
 {: #speech-datastores-minio}
 
-Minio object storage is used to store persistent data that is needed by Speech services components. You can specify the security secrets, operational mode, and amount of storage.
+MinIO object storage is used to store persistent data that is needed by Speech services components. You can specify the security secrets, operational mode, and amount of storage.
 
 ### Secrets
 {: #speech-datastores-minio-secrets}
 
-Before you install {{site.data.keyword.speechtotextshort}} or {{site.data.keyword.texttospeechshort}}, you need to provide a secrets object that is used by Minio itself and by other service components that interact with Minio. This object contains the security keys to access the Minio Object Server.
+Before you install {{site.data.keyword.speechtotextshort}} or {{site.data.keyword.texttospeechshort}}, you need to provide a secrets object that is used by MinIO itself and by other service components that interact with MinIO. This object contains the security keys to access the MinIO Object Server.
 
 The secret must contain the items `accesskey` (5 - 20 characters) and `secretkey` (8 - 40 characters) in base64 encoding. Before you create the secrets, you need to perform the base64 encoding. The following commands encode the `accesskey` and `secretkey` in base64.
 
@@ -83,11 +83,11 @@ Then, during installation, set the following value in the `speech-override.yaml`
 ### Mode of operation
 {: #speech-datastores-minio-mode}
 
-By default, Minio operates in `distributed` mode, which means that Minio is scheduled to run multiple instances on every worker node to ensure high availability of storage. To use high availability optimally, you must specify an appropriate number of replicas. Specify the number of replicas for distributed mode by setting the `external.minio.replicas={number-of-cluster-nodes}` value, where `{number-of-cluster-nodes}` is no less than 4 and no more than 32.
+By default, MinIO operates in `distributed` mode, which means that MinIO is scheduled to run multiple instances on every worker node to ensure high availability of storage. To use high availability optimally, you must specify an appropriate number of replicas. Specify the number of replicas for distributed mode by setting the `external.minio.replicas={number-of-cluster-nodes}` value, where `{number-of-cluster-nodes}` is no less than 4 and no more than 32.
 
-Minio can also operate in `standalone` mode, which means that only one instance of Minio runs on an arbitrary worker node. If that node fails, the services become unavailable until a new instance is running and healthy. This value is sufficient for development or testing purposes but not for production.
+MinIO can also operate in `standalone` mode, which means that only one instance of MinIO runs on an arbitrary worker node. If that node fails, the services become unavailable until a new instance is running and healthy. This value is sufficient for development or testing purposes but not for production.
 
-If you want to run Minio in `standalone` mode, set the value `external.minio.mode=standalone`. In this case, you do not have to set the `external.minio.replicas` value.
+If you want to run MinIO in `standalone` mode, set the value `external.minio.mode=standalone`. In this case, you do not have to set the `external.minio.replicas` value.
 
 ### Storage size calculation guidelines
 {: #speech-datastores-minio-calc}

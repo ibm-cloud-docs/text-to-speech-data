@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-06-18"
+lastupdated: "2020-06-20"
 
 subcollection: text-to-speech-data
 
@@ -30,7 +30,7 @@ To recover from potential disasters, you must back up and be prepared to restore
 
 The Speech services rely on two datastores:
 
--   [Minio](https://min.io/){: external} is an object storage solution that contains binary data for the Speech services.
+-   [MinIO](https://min.io/){: external} is an object storage solution that contains binary data for the Speech services.
 -   [PostgreSQL](https://www.postgresql.org/){: external} is an open-source relational database that contains structured data for the Speech services.
 
 The following sections describe what data to back up, how to back it up, and how to restore it for both of these datastores.
@@ -56,24 +56,24 @@ The frequency of the backups depends on factors like the following:
 -   How often you modify your {{site.data.keyword.speechtotextshort}} and {{site.data.keyword.texttospeechshort}} custom models and data, and how easy it is to re-create changes that might be lost.
 -   How heavily you use the {{site.data.keyword.speechtotextshort}} asynchronous HTTP interface, and how severely the loss of queued jobs and the results of past jobs might impact your applications.
 
-## Minio backup and restore
+## MinIO backup and restore
 {: #speech-backup-minio}
 
-You use the Minio client tool, `mc`, to connect to Minio and back up and restore your data. For more information, see the [MinIO Client Complete Guide](https://docs.min.io/docs/minio-client-complete-guide.html){: external}.
+You use the MinIO client tool, `mc`, to connect to MinIO and back up and restore your data. For more information, see the [MinIO Client Complete Guide](https://docs.min.io/docs/minio-client-complete-guide.html){: external}.
 
-You need the access key and secret key that you defined when you installed and configured the Speech services and Minio. You can find the access and secret in the `minio` Kubernetes secret object within the cluster. The name appears as `minio` in the example override file. For more information, see [Managing your datastores](/docs/text-to-speech-data?topic=text-to-speech-data-speech-datastores).
+You need the access key and secret key that you defined when you installed and configured the Speech services and MinIO. You can find the access and secret in the `minio` Kubernetes secret object within the cluster. The name appears as `minio` in the example override file. For more information, see [Managing your datastores](/docs/text-to-speech-data?topic=text-to-speech-data-speech-datastores).
 
-### Backing up data from Minio
+### Backing up data from MinIO
 {: #speech-backup-minio-backup}
 
-Use these steps to back up your data from Minio.
+Use these steps to back up your data from MinIO.
 
-1.  Create a directory in which to store the Minio data. Use a dedicated directory for the backup files, ensure that you have read and write permissions on the directory, and restrict other users' access to the directory. The following steps refer to the directory as `{minio_backup_directory}`.
+1.  Create a directory in which to store the MinIO data. Use a dedicated directory for the backup files, ensure that you have read and write permissions on the directory, and restrict other users' access to the directory. The following steps refer to the directory as `{minio_backup_directory}`.
 
     It is a best practice to create the backup directory on a mounted volume or file system that resides on a different host from the datastore. Alternatively, you can copy the finished backup files to a safe collection.
     {: note}
 
-1.  Configure the Minio client by running the `mc` command from within your cluster:
+1.  Configure the MinIO client by running the `mc` command from within your cluster:
 
     ```bash
     mc --insecure -C {minio_backup_directory} config host add {alias} \
@@ -83,13 +83,13 @@ Use these steps to back up your data from Minio.
 
     where
 
-    -   `{minio_backup_directory}` is the name of the local directory in which you want to store the Minio client configuration.
-    -   `{alias}` is an alias that refers to the target Minio host; for example, `icp-minio`.
+    -   `{minio_backup_directory}` is the name of the local directory in which you want to store the MinIO client configuration.
+    -   `{alias}` is an alias that refers to the target MinIO host; for example, `icp-minio`.
     -   `{release_name}` is the name of the installed release that you are backing up.
-    -   `{minio_access_key}` is the access key to connect to Minio.
-    -   `{minio_secret_key}` is the secret key to connect to Minio.
+    -   `{minio_access_key}` is the access key to connect to MinIO.
+    -   `{minio_secret_key}` is the secret key to connect to MinIO.
 
-1.  Check the output of the previous command to ensure that the host is added successfully. Run the following command to verify that the Minio client is correctly configured by listing the Minio buckets.
+1.  Check the output of the previous command to ensure that the host is added successfully. Run the following command to verify that the MinIO client is correctly configured by listing the MinIO buckets.
 
     ```bash
     mc --insecure -C {minio_backup_directory} ls {alias}
@@ -107,7 +107,7 @@ Use these steps to back up your data from Minio.
 
 1.  Create a subdirectory of the `{minio_backup_directory}` in which to dump the data; for example, `{minio-backup-directory}/{minio_data_dump}`.
 
-1.  Perform the actual Minio backup by using the directory names and alias from the previous steps. For example, the following command backs up the data for the `stt-customization-icp` component. The command copies the entire `stt-customization-icp` bucket to the target directory.
+1.  Perform the actual MinIO backup by using the directory names and alias from the previous steps. For example, the following command backs up the data for the `stt-customization-icp` component. The command copies the entire `stt-customization-icp` bucket to the target directory.
 
     ```bash
     mc --insecure -C {minio_backup_directory} \
@@ -119,12 +119,12 @@ Use these steps to back up your data from Minio.
 
 1.  Verify that the output of the previous command has no errors, and make sure that the backed-up data is an exact copy of the original.
 
-### Restoring data to Minio
+### Restoring data to MinIO
 {: #speech-backup-minio-restore}
 
-Use these steps to restore your data to Minio.
+Use these steps to restore your data to MinIO.
 
-1.  Configure the Minio client by running the `mc` command to connect to the target Minio installation to which the data is to be restored. The target installation is typically a different datastore from the backup.
+1.  Configure the MinIO client by running the `mc` command to connect to the target MinIO installation to which the data is to be restored. The target installation is typically a different datastore from the backup.
 
     ```bash
     mc --insecure -C {minio_backup_directory} config host add {target_alias} \
@@ -134,13 +134,13 @@ Use these steps to restore your data to Minio.
 
     where
 
-    -   `{minio_backup_directory}` is the local directory to which you backed up the Minio client configuration.
-    -   `{target_alias}` is the alias that refers to the target Minio host for the installation; for example, `icp-minio-restore`.
+    -   `{minio_backup_directory}` is the local directory to which you backed up the MinIO client configuration.
+    -   `{target_alias}` is the alias that refers to the target MinIO host for the installation; for example, `icp-minio-restore`.
     -   `{release_name}` is the name of the installed release that you are restoring.
-    -   `{minio_access_key}` is the access key to connect to Minio.
-    -   `{minio_secret_key}` is the secret key to connect to Minio.
+    -   `{minio_access_key}` is the access key to connect to MinIO.
+    -   `{minio_secret_key}` is the secret key to connect to MinIO.
 
-1.  Once the Minio client is successfully configured, use the following command to create the `stt-customization` bucket in the target Minio datastore (`{target_alias}`):
+1.  Once the MinIO client is successfully configured, use the following command to create the `stt-customization` bucket in the target MinIO datastore (`{target_alias}`):
 
     ```bash
     mc --insecure -C {minio_backup_directory} mb {target_alias}/stt-customization-icp
