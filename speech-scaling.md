@@ -2,8 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-06-17"
-
+lastupdated: "2020-06-20"
 subcollection: text-to-speech-data
 
 ---
@@ -108,7 +107,7 @@ Table 1 shows the default number of replicas for Deployment objects.
   </tr>
   <tr>
     <td>
-      `{release-name}-speech-to-text-stt-runtime`
+      `{release_name}-speech-to-text-stt-runtime`
     </td>
     <td style="text-align:center">
       1
@@ -116,7 +115,7 @@ Table 1 shows the default number of replicas for Deployment objects.
   </tr>
   <tr>
     <td>
-      `{release-name}-speech-to-text-stt-customization`
+      `{release_name}-speech-to-text-stt-customization`
     </td>
     <td style="text-align:center">
       1
@@ -124,7 +123,7 @@ Table 1 shows the default number of replicas for Deployment objects.
   </tr>
   <tr>
     <td>
-      `{release-name}-speech-to-text-stt-am-patcher`
+      `{release_name}-speech-to-text-stt-am-patcher`
     </td>
     <td style="text-align:center">
       1
@@ -132,7 +131,7 @@ Table 1 shows the default number of replicas for Deployment objects.
   </tr>
   <tr>
     <td>
-      `{release-name}-speech-to-text-stt-async`
+      `{release_name}-speech-to-text-stt-async`
     </td>
     <td style="text-align:center">
       1
@@ -140,7 +139,7 @@ Table 1 shows the default number of replicas for Deployment objects.
   </tr>
   <tr>
     <td>
-      `{release-name}-speech-to-text-gdpr-data-deletion`
+      `{release_name}-speech-to-text-gdpr-data-deletion`
     </td>
     <td style="text-align:center">
       1
@@ -148,7 +147,7 @@ Table 1 shows the default number of replicas for Deployment objects.
   </tr>
   <tr>
     <td>
-      `{release-name}-minio`
+      `{release_name}-minio`
     </td>
     <td style="text-align:center">
       1
@@ -156,7 +155,7 @@ Table 1 shows the default number of replicas for Deployment objects.
   </tr>
   <tr>
     <td>
-      `{release-name}-rabbitmq`
+      `{release_name}-rabbitmq`
     </td>
     <td style="text-align:center">
       1
@@ -164,7 +163,7 @@ Table 1 shows the default number of replicas for Deployment objects.
   </tr>
   <tr>
     <td>
-      `{release-name}-ibm-postgressql-proxy`
+      `{release_name}-ibm-postgressql-proxy`
     </td>
     <td style="text-align:center">
       2
@@ -172,7 +171,7 @@ Table 1 shows the default number of replicas for Deployment objects.
   </tr>
   <tr>
     <td>
-      `{release-name}-ibm-postgressql-sentinel`
+      `{release_name}-ibm-postgressql-sentinel`
     </td>
     <td style="text-align:center">
       3
@@ -180,7 +179,7 @@ Table 1 shows the default number of replicas for Deployment objects.
   </tr>
   <tr>
     <td>
-      `{release-name}-ibm-postgressql-keeper`
+      `{release_name}-ibm-postgressql-keeper`
     </td>
     <td style="text-align:center">
       3
@@ -202,7 +201,7 @@ Table 2 shows the default number of replicas for StatefulSet objects.
   </tr>
   <tr>
     <td>
-      `{release-name}-ibm-postgresql-keeper`
+      `{release_name}-ibm-postgresql-keeper`
     </td>
     <td style="text-align:center">
       3
@@ -210,7 +209,7 @@ Table 2 shows the default number of replicas for StatefulSet objects.
   </tr>
   <tr>
     <td>
-      `{release-name}-ibm-rabbitmq`
+      `{release_name}-ibm-rabbitmq`
     </td>
     <td style="text-align:center">
       3

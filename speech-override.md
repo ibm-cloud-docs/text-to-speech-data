@@ -323,7 +323,6 @@ Disabling dynamic resource allocation is not recommended and can cause undesired
       Dynamic resource calculation for the
       {{site.data.keyword.speechtotextshort}} runtime component.
     </td>
-
     <td style="text-align:center">
       `True`
     </td>
