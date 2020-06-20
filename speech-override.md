@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-06-19"
+lastupdated: "2020-06-20"
 
 subcollection: text-to-speech-data
 
@@ -31,7 +31,7 @@ You can use the `speech-override.yaml` file to customize many aspects of your {{
 ## The speech-override.yaml file
 {: #speech-override-file}
 
-The following example duplicates the `speech-override.yaml` example from [Override values for {{site.data.keyword.watson}} {{site.data.keyword.speechtotextshort}} installation](https://www.ibm.com/support/producthub/icpdata/docs/content/SSQNUZ_current/cpd/svc/watson/speech-to-text-override.html) and [Override values for {{site.data.keyword.watson}} {{site.data.keyword.texttospeechshort}} installation](https://www.ibm.com/support/producthub/icpdata/docs/content/SSQNUZ_current/cpd/svc/watson/text-to-speech-override.html). The sections that follow describe the values you can use to modify and augment the file. You can download a complete copy of the <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/speech-to-text/speech-override.yaml" download="speech-override.yaml">speech-override.yaml <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a> file.
+The following example duplicates the `speech-override.yaml` example from [Override values for {{site.data.keyword.watson}} {{site.data.keyword.speechtotextshort}} installation](https://www.ibm.com/support/producthub/icpdata/docs/content/SSQNUZ_current/cpd/svc/watson/speech-to-text-override.html){: external} and [Override values for {{site.data.keyword.watson}} {{site.data.keyword.texttospeechshort}} installation](https://www.ibm.com/support/producthub/icpdata/docs/content/SSQNUZ_current/cpd/svc/watson/text-to-speech-override.html){: external}. The sections that follow describe the values you can use to modify and augment the file. You can download a complete copy of the <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/speech-to-text/speech-override.yaml" download="speech-override.yaml">speech-override.yaml <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a> file.
 
 ```yaml
 tags:
@@ -191,7 +191,7 @@ Table 1 describes the top-level Speech components that you can install.
 ### Configuring datastores
 {: #speech-override-datastores}
 
-Table 2 describes the values you can specify to configure the datastores for your installation. For more information about the Minio and PostgreSQL datastores, see [Managing datastores](/docs/text-to-speech-data?topic=text-to-speech-data-speech-datastores) and [Scaling up your installation](/docs/text-to-speech-data?topic=text-to-speech-data-speech-scaling).
+Table 2 describes the values you can specify to configure the datastores for your installation. For more information about the MinIO and PostgreSQL datastores, see [Managing datastores](/docs/text-to-speech-data?topic=text-to-speech-data-speech-datastores) and [Scaling up your installation](/docs/text-to-speech-data?topic=text-to-speech-data-speech-scaling).
 
 <table>
   <caption>Table 2. Configuration of datastores</caption>
@@ -211,7 +211,7 @@ Table 2 describes the values you can specify to configure the datastores for you
       `external.minio.mode`
     </td>
     <td>
-      Minio server mode (`standalone` or `distributed`).
+      MinIO server mode (`standalone` or `distributed`).
     </td>
     <td style="text-align:center">
       `distributed`
@@ -222,7 +222,7 @@ Table 2 describes the values you can specify to configure the datastores for you
       `external.minio.persistence.size`
     </td>
     <td>
-      Size of persistent volume claim (PVC).
+      Size of persistent volume claim (PVC) for MinIO.
     </td>
     <td style="text-align:center">
       `100Gi`
@@ -233,7 +233,7 @@ Table 2 describes the values you can specify to configure the datastores for you
       `external.minio.replicas`
     </td>
     <td>
-      Number of nodes (applicable only for Minio distributed mode).
+      Number of nodes (applicable only for MinIO distributed mode).
       Must be `4 <= x <= 32`.
     </td>
     <td style="text-align:center">
@@ -247,7 +247,7 @@ Table 2 describes the values you can specify to configure the datastores for you
     <td>
       A secrets object that contains base64-encoded `accesskey` (5 - 20
       characters) and `secretkey` (8 - 40 characters) values. The keys are
-      used to access the Minio Object Server securely. You need to create the
+      used to access the MinIO Object Server securely. You need to create the
       secrets object in the same namespace in which you deploy the services.
     </td>
     <td style="text-align:center">
@@ -259,7 +259,7 @@ Table 2 describes the values you can specify to configure the datastores for you
       `global.datastores.minio.secretName`
     </td>
     <td>
-      Name of the secrets object that contains the Minio secrets that are
+      Name of the secrets object that contains the MinIO secrets that are
       needed to access the datastore securely.
     </td>
     <td style="text-align:center">
@@ -637,7 +637,7 @@ For more information about all available models, see [Languages and models](/doc
       `global.sttModels.enUsShortFormNarrowbandModel.enabled`
     </td>
     <td>
-      US English (`en-US`) ShortForm Narrowband model
+      US English (`en-US`) Short-Form Narrowband model
     </td>
     <td style="text-align:center">
       `True`
