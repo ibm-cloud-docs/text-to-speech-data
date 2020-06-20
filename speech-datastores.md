@@ -83,7 +83,7 @@ Then, during installation, set the following value in the `speech-override.yaml`
 ### Mode of operation
 {: #speech-datastores-minio-mode}
 
-By default, MinIO operates in `distributed` mode, which means that MinIO is scheduled to run multiple instances on every worker node to ensure high availability of storage. To use high availability optimally, you must specify an appropriate number of replicas. Specify the number of replicas for distributed mode by setting the `external.minio.replicas={number-of-cluster-nodes}` value, where `{number-of-cluster-nodes}` is no less than 4 and no more than 32.
+By default, MinIO operates in `distributed` mode, which means that MinIO is scheduled to run multiple instances on every worker node to ensure high availability of storage. To use high availability optimally, you must specify an appropriate number of replicas. Specify the number of replicas for distributed mode by setting the `external.minio.replicas={number_of_cluster_nodes}` value, where `{number_of_cluster_nodes}` is no less than 4 and no more than 32.
 
 MinIO can also operate in `standalone` mode, which means that only one instance of MinIO runs on an arbitrary worker node. If that node fails, the services become unavailable until a new instance is running and healthy. This value is sufficient for development or testing purposes but not for production.
 
