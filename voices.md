@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-06-06"
+lastupdated: "2020-06-22"
 
 subcollection: text-to-speech-data
 
@@ -270,8 +270,8 @@ The `GET /v1/voices` method lists information about all available voices. It tak
 The following example lists all voices that are supported by the service:
 
 ```bash
-curl -X GET
---header "Authorization: Bearer {token}"
+curl -X GET \
+--header "Authorization: Bearer {token}" \
 "{url}/v1/voices"
 ```
 {: pre}
@@ -351,8 +351,8 @@ If you omit the `customization_id` parameter, the method returns JSON output for
 The following example returns information about the `en-US_LisaV3Voice` and the specified custom voice model:
 
 ```bash
-curl -X GET
---header "Authorization: Bearer {token}"
+curl -X GET \
+--header "Authorization: Bearer {token}" \
 "{url}/v1/voices/en-US_LisaV3Voice?customization_id=64f4807f-a5f1-5867-924f-7bba1a84fe97"
 ```
 {: pre}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-03-16"
+lastupdated: "2020-06-22"
 
 subcollection: text-to-speech-data
 
@@ -102,10 +102,10 @@ You pass the following attributes as a JSON object with the body of the request.
 The following example `curl` command creates a new custom model named `curl Test`. The `Content-Type` header identifies the type of the input as `application/json`.
 
 ```bash
-curl -X POST
---header "Authorization: Bearer {token}"
---header "Content-Type: application/json"
---data "{\"name\":\"curl Test\", \"language\":\"en-US\", \"description\":\"Customization test via curl\"}"
+curl -X POST \
+--header "Authorization: Bearer {token}" \
+--header "Content-Type: application/json" \
+--data "{\"name\":\"curl Test\", \"language\":\"en-US\", \"description\":\"Customization test via curl\"}" \
 "{url}/v1/customizations"
 ```
 {: pre}
@@ -125,8 +125,8 @@ The method returns a JSON object that contains a globally unique identifier (GUI
 To query information about an existing custom model, use the `GET /v1/customizations/{customization_id}` method. This is the most direct means of seeing all of the information about a model, both its metadata and the word/translation pairs that it contains.
 
 ```bash
-curl -X GET
---header "Authorization: Bearer {token}"
+curl -X GET \
+--header "Authorization: Bearer {token}" \
 "{url}/v1/customizations/{customization_id}"
 ```
 {: pre}
@@ -157,8 +157,8 @@ The output also includes a `words` array that lists the model's custom entries. 
 To see information about all of the custom models that you own, use the `GET /v1/customizations` method:
 
 ```bash
-curl -X GET
---header "Authorization: Bearer {token}"
+curl -X GET \
+--header "Authorization: Bearer {token}" \
 "{url}/v1/customizations"
 ```
 {: pre}
@@ -201,10 +201,10 @@ To update information about a custom model, use the `POST /v1/customizations/{cu
 The following example updates the name and description of a custom model. An empty JSON array is sent with the `words` parameter to indicate that the model's entries are to remain unchanged.
 
 ```bash
-curl -X POST
---header "Authorization: Bearer {token}"
---header "Content-Type: application/json"
---data "{\"name\":\"curl Test Update\", \"description\":\"Customization test update via curl\", \"words\":[]}"
+curl -X POST \
+--header "Authorization: Bearer {token}" \
+--header "Content-Type: application/json" \
+--data "{\"name\":\"curl Test Update\", \"description\":\"Customization test update via curl\", \"words\":[]}" \
 "{url}/v1/customizations/{customization_id}"
 ```
 {: pre}
@@ -217,8 +217,8 @@ For information about updating the words in a model, see [Adding multiple words 
 To discard a custom model that you no longer need, use the `DELETE /v1/customizations/{customization_id}` method. Use this method only if you are sure that you no longer need the model, since deletion is permanent.
 
 ```bash
-curl -X DELETE
---header "Authorization: Bearer {token}"
+curl -X DELETE \
+--header "Authorization: Bearer {token}" \
 "{url}/v1/customizations/{customization_id}"
 ```
 {: pre}
