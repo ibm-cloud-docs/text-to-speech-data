@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-02-04"
+lastupdated: "2020-06-22"
 
 subcollection: text-to-speech-data
 
@@ -63,8 +63,8 @@ The {{site.data.keyword.texttospeechshort}} service offers an [HTTP interface](/
 The examples in this documentation use the `curl` command to call the service's HTTP interface. For more information, see [Using the curl examples](/docs/text-to-speech-data?topic=text-to-speech-data-gettingStarted#getting-started-curl). The basic format of an HTTP request with `curl` includes the following components:
 
 ```bash
-curl -X {http_method}
---header "Authorization: Bearer {token}"
+curl -X {http_method} \
+--header "Authorization: Bearer {token}" \
 "https://{icp4d_cluster_host}{:port}/text-to-speech/{release}/instances/{instance_id}/api/v1/{method}"
 ```
 {: pre}
