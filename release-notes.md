@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-06-18"
+lastupdated: "2020-06-30"
 
 subcollection: text-to-speech-data
 
@@ -48,7 +48,7 @@ The release includes the following changes:
     -   German: `de-DE_ErikaV3Voice`
 
     These new voices have the same capabilities for customization and SSML as all existing voices. For more information, see [Supported languages and voices](/docs/text-to-speech-data?topic=text-to-speech-data-voices#languageVoices).
--   The service now fully supports the SSML `<say-as>` element with its Japanese voice. For more information, see [The say-as element](/docs/text-to-speech-data?topic=text-to-speech-data-elements#say-as_element).
+-   The service now supports the `digits` attribute of the SSML `<say-as>` element with its Japanese voice. For more information, see [The say-as element](/docs/text-to-speech-data?topic=text-to-speech-data-elements#say-as_element).
 -   The backup and restore procedures are greatly simplified. They now back up data from the datastores, so you no longer need to re-create the operations you have run. For more information, see [Backing up and restoring your data](/docs/text-to-speech-data?topic=text-to-speech-data-speech-backup).
 
 ## Version 1.1.3 (28 February 2020)
