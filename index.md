@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-06-16"
+lastupdated: "2020-07-06"
 
 subcollection: text-to-speech-data
 
@@ -31,7 +31,7 @@ subcollection: text-to-speech-data
 
 {{site.data.keyword.texttospeechdatafull}} for {{site.data.keyword.icp4dfull}} provides speech synthesis capabilities for your applications to convert written text to natural-sounding speech. The service streams the results back to the client with minimal delay. The service offers both [HTTP](/docs/text-to-speech-data?topic=text-to-speech-data-usingHTTP) and [WebSocket](/docs/text-to-speech-data?topic=text-to-speech-data-usingWebSocket) interfaces.
 
-For information about installing and configuring {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}, see [Installing Watson Text to Speech version 1.1.4](/docs/text-to-speech-data?topic=text-to-speech-data-speech-install).
+For information about installing and configuring {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}, see [Installing {{site.data.keyword.ibmwatson_notm}} {{site.data.keyword.texttospeechshort}} version 1.1.4](/docs/text-to-speech-data?topic=text-to-speech-data-speech-install).
 
 {{site.data.keyword.texttospeechdatafull}} for {{site.data.keyword.icp4dfull}} is based on the {{site.data.keyword.texttospeechfull}} service on the public {{site.data.keyword.cloud_notm}}. For more information about the public service, see [About {{site.data.keyword.texttospeechshort}}](https://{DomainName}/docs/text-to-speech?topic=text-to-speech-about#about){: external}.
 {: note}
@@ -62,7 +62,7 @@ The service supports voices in the following languages:
 -   Japanese
 -   Spanish (Castilian, Latin American, and North American dialects)
 
-The service offers at least one female voice for each language. For some languages the service offers multiple voices, including both male and female voices. Each voice uses appropriate cadence and intonation for its dialect.
+The service offers at least one female voice for each language. For many languages the service offers multiple voices, including both male and female voices. Each voice uses appropriate cadence and intonation for its dialect.
 
 For more information about the voices that are available for each language, see [Languages and voices](/docs/text-to-speech-data?topic=text-to-speech-data-voices).
 

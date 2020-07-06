@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-06-22"
+lastupdated: "2020-07-06"
 
 subcollection: text-to-speech-data
 
@@ -45,7 +45,7 @@ If you need to request GDPR support for {{site.data.keyword.cloud}} {{site.data.
 
 Learn more about {{site.data.keyword.IBM_notm}}'s own GDPR readiness journey and our GDPR capabilities and offerings to support your compliance journey [here](http://www.ibm.com/gdpr){: external}.
 
-## Labeling and deleting data in the Text to Speech service
+## Labeling and deleting data in the {{site.data.keyword.texttospeechshort}} service
 {: #gdpr-text-to-speech}
 
 {{site.data.keyword.texttospeechdatafull}} for {{site.data.keyword.icp4dfull}} enables you to delete all data that is associated with speech synthesis requests and with custom voice models. To delete data, you must do the following:
