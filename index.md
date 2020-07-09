@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-07-06"
+lastupdated: "2020-07-09"
 
 subcollection: text-to-speech-data
 
@@ -29,7 +29,9 @@ subcollection: text-to-speech-data
 
 > ** Service update:** *{{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} was updated on 19 June 2020. The service now supports five new neural voices. It also includes greatly improved installation, configuration, and backup and restore procedures. For more information, see the [Version 1.1.4 service update](/docs/text-to-speech-data?topic=text-to-speech-data-release-notes#v114) in the release notes.*
 
-{{site.data.keyword.texttospeechdatafull}} for {{site.data.keyword.icp4dfull}} provides speech synthesis capabilities for your applications to convert written text to natural-sounding speech. The service streams the results back to the client with minimal delay. The service offers both [HTTP](/docs/text-to-speech-data?topic=text-to-speech-data-usingHTTP) and [WebSocket](/docs/text-to-speech-data?topic=text-to-speech-data-usingWebSocket) interfaces.
+{{site.data.keyword.texttospeechdatafull}} for {{site.data.keyword.icp4dfull}} provides application programming interfaces (APIs) that use {{site.data.keyword.IBM_notm}}'s speech-synthesis capabilities to convert written text to natural-sounding speech. The service streams the synthesized audio back to the client with minimal delay. The audio uses appropriate cadence and intonation for its language and dialect to provide voices that are smooth and natural.
+
+The service can be used in applications such as voice-automated chatbots, as well as a variety of voice-driven and screenless applications, such as tools for the disabled or visually impaired, video narration and voice over, and educational and home-automation solutions. It is appropriate for any application where audio is the preferred method of output.
 
 For information about installing and configuring {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}, see [Installing {{site.data.keyword.ibmwatson_notm}} {{site.data.keyword.texttospeechshort}} version 1.1.4](/docs/text-to-speech-data?topic=text-to-speech-data-speech-install).
 
@@ -39,13 +41,13 @@ For information about installing and configuring {{site.data.keyword.texttospeec
 ## Features and capabilities
 {: #features-index}
 
-The {{site.data.keyword.texttospeechshort}} service offers the following features and capabilities:
+The {{site.data.keyword.texttospeechshort}} service supports both [HTTP](/docs/text-to-speech-data?topic=text-to-speech-data-usingHTTP) and [WebSocket](/docs/text-to-speech-data?topic=text-to-speech-data-usingWebSocket) interfaces for speech synthesis. It offers the following features and capabilities:
 
--   **Audio formats** - Produces audio in Ogg or WebM with the Opus or Vorbis codec, WAV, FLAC, MP3 (MPEG), l16 (PCM), mulaw, or basic format. For more information, see [Audio formats](/docs/text-to-speech-data?topic=text-to-speech-data-audioFormats).
--   **Voices** - Synthesizes text to audio in various languages, voices, and dialects. For more information, see [Languages and voices](/docs/text-to-speech-data?topic=text-to-speech-data-voices).
--   **SSML** - Accepts plain text or text that is marked up with the XML-based Speech Synthesis Markup Language (SSML). For more information, see [Using SSML](/docs/text-to-speech-data?topic=text-to-speech-data-ssml).
--   **Word timings** - With the WebSocket interface, supports the SSML `<mark>` element and optional word timing information for all strings of the input text. Timing information synchronizes the input text and the resulting audio. For more information, see [Obtaining word timings](/docs/text-to-speech-data?topic=text-to-speech-data-timing).
--   **Customization** - Provides a customization interface that you can use to specify how the service pronounces unusual words that occur in your input. You can define pronunciations with the International Phonetic Alphabet (IPA) or {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR). For more information, see [Understanding customization](/docs/text-to-speech-data?topic=text-to-speech-data-customIntro).
+-   [Audio formats](/docs/text-to-speech-data?topic=text-to-speech-data-audioFormats) - Produces audio in Ogg or WebM with the Opus or Vorbis codec, WAV, FLAC, MP3 (MPEG), l16 (PCM), mulaw, or basic format.
+-   [Languages and voices](/docs/text-to-speech-data?topic=text-to-speech-data-voices) - Synthesizes text to audio in many different languages, voices, and dialects. The service offers both standard (concatenative) and neural versions of most voices.
+-   [Obtaining word timings](/docs/text-to-speech-data?topic=text-to-speech-data-timing) - With the WebSocket interface, supports the SSML `<mark>` element and optional word timing information for all strings of the input text. Timing information synchronizes the input text and the resulting audio.
+-   [SSML](/docs/text-to-speech-data?topic=text-to-speech-data-ssml) - Accepts plain text or text that is marked up with the XML-based Speech Synthesis Markup Language (SSML).
+-   [Voice customization](/docs/text-to-speech-data?topic=text-to-speech-data-customIntro) - Provides a customization interface that you can use to specify how the service pronounces unusual words that occur in your input text. You can define custom dictionaries for domain-specific terms, words with foreign origins, personal or geographic names, and abbreviations or acronyms in your application's lexicon. You can create pronunciations based on other words, on the International Phonetic Alphabet (IPA), or on the {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR).
 
 ## Language support
 {: #languages-index}
@@ -70,17 +72,6 @@ For more information about the voices that are available for each language, see 
 {: #fisma}
 
 Federal Information Security Management Act (FISMA) support is available for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} offerings purchased on or after August 30, 2019 (version 1.0.1). {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} is FISMA High Ready.
-
-## Use cases
-{: #usecases}
-
-The service is appropriate for voice-driven and screenless applications, where audio is the preferred method of output:
-
--   Interfaces for the disabled, such as assistance tools for the vision-impaired
--   Reading text and email messages aloud to drivers
--   Video-script narration and video voice over
--   Reading-based educational tools
--   Home-automation solutions
 
 ## Try out the service
 
