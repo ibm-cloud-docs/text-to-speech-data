@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-07-01"
+lastupdated: "2020-07-29"
 
 subcollection: text-to-speech-data
 
@@ -44,35 +44,48 @@ tags:
 affinity: {}
 
 global:
-  dockerRegistryPrefix: "cp.icr.io/cp/watson-speech"
+  dockerRegistryPrefix: "{registry_from_cluster}/{project_namespace}"
+  zenControlPlaneNamespace: "zen"
   image:
-    pullSecret: "docker-pull-{{ .Release.Namespace }}-cp-icr-io-spch-registry-registry"
+    pullSecret: {Docker_pull_secret}
     pullPolicy: "IfNotPresent"
 
-  datastores:
-    minio:
-      secretName: "minio"
-    postgressql:
-      auth:
-        authSecretName: "user-provided-postgressql"
+datastores:
+  minio:
+    secretName: "minio"
+  postgressql:
+    auth:
+      authSecretName: "user-provided-postgressql"
 
-  sttModels:
-    enUsBroadbandModel:
-      enabled: true
-    enUsNarrowbandModel:
-      enabled: true
-    enUsShortFormNarrowbandModel:
-      enabled: true
+sttModels:
+  enUsBroadbandModel:
+    enabled: true
+  enUsNarrowbandModel:
+    enabled: true
+  enUsShortFormNarrowbandModel:
+    enabled: true
 
-  ttsVoices:
-    enUSAllisonV3Voice:
-      enabled: true
-    enUSLisaV3Voice:
-      enabled: true
-    enUSMichaelV3Voice:
-      enabled: true
+ttsVoices:
+  enUSMichaelV3Voice:
+    enabled: true
+  enUSAllisonV3Voice:
+    enabled: true
+  enUSLisaV3Voice:
+    enabled: true
 ```
 {: codeblock}
+
+You replace the following variable values in the file:
+
+-   `{registry_from_cluster}/{project_namespace}` is the address of the internal Red Hat&reg; OpenShift&reg; Docker registry for the mandatory `{project_namespace}` value, which is typically `zen`. The `{registry_from_cluster}` is one of the following:
+    -   `image-registry.openshift-image-registry.svc:5000` for OpenShift 4.x.
+    -   `docker-registry.default.svc:5000` for OpenShift 3.x.
+-   `{Docker_pull_secret}` is the pull secret for the internal Docker registry, which you can learn by running the following command:
+
+    ```bash
+    oc get secrets | grep default-dockercfg
+    ```
+    {: pre}
 
 ## Override values for both Speech services
 {: #speech-override-both}
