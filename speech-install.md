@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-06-20"
+lastupdated: "2020-08-26"
 
 subcollection: text-to-speech-data
 
@@ -34,6 +34,9 @@ The following pages often refer to the combination of {{site.data.keyword.speech
 
 ## Where to begin
 {: #speech-install-begin}
+
+{{site.data.keyword.icp4dfull_notm}} 3.0.1 is deprecating support for Red Hat OpenShift 4.3 on 1 September 2020. Red Hat OpenShift 4.3 is going out of service on 22 October 2020. {{site.data.keyword.icp4dfull_notm}} is introducing support for Red Hat OpenShift 4.5. {{site.data.keyword.icp4dfull_notm}} is recommending that clients upgrade to Red Hat OpenShift 4.5 before 22 October 2020. IBM Support will work with any customers who already installed {{site.data.keyword.icp4dfull_notm}} 3.0.1 on Red Hat OpenShift 4.3. New customers who want to install on Red Hat OpenShift 4.x are instructed to install Red Hat OpenShift 4.5.
+{: important}
 
 See the following topics in the IBM Knowledge Center for the information that you need to get started with installation of the {{site.data.keyword.watson}} Speech services:
 
