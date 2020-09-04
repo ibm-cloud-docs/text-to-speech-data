@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-07-30"
+lastupdated: "2020-09-04"
 
 subcollection: text-to-speech-data
 
@@ -27,7 +27,7 @@ subcollection: text-to-speech-data
 # About
 {: #about}
 
-> ** Service update:** *{{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} was updated on 19 June 2020. The service now supports five new neural voices. It also includes greatly improved installation, configuration, and backup and restore procedures. For more information, see the [Version 1.1.4 service update](/docs/text-to-speech-data?topic=text-to-speech-data-release-notes#v114) in the release notes.*
+> ** Service update:** *{{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} was updated on 19 June 2020. The service now supports five new neural voices, and it includes greatly improved installation, configuration, and backup and restore procedures. **As of 4 September 2020,** the customization interface is generally available; customization is no longer beta functionality. For more information, see the [Version 1.1.4 service update](/docs/text-to-speech-data?topic=text-to-speech-data-release-notes#v114) in the release notes.*
 
 {{site.data.keyword.texttospeechdatafull}} for {{site.data.keyword.icp4dfull}} provides application programming interfaces (APIs) that use {{site.data.keyword.IBM_notm}}'s speech-synthesis capabilities to convert written text to natural-sounding speech. The service streams the synthesized audio back to the client with minimal delay. The audio uses appropriate cadence and intonation for its language and dialect to provide voices that are smooth and natural.
 
