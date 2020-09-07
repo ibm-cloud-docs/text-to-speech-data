@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-06-20"
+lastupdated: "2020-09-06"
 
 subcollection: text-to-speech-data
 
@@ -176,49 +176,13 @@ Checking this option also removes sensitive information from container logs. For
 
 It is possible to install ad hoc models and voices, which are models and voices that are not included with this version of the service. To do so, you need to download a special package that contains data for the models and voices. You then upload the package into the cluster as you did the main package and specify the following values in the `speech-override.yaml` file during installation.
 
-<table>
-  <caption>Table 1. Values for ad hoc models and voices</caption>
-  <tr>
-    <th>
-      Value
-    </th>
-    <th>
-      Description
-    </th>
-  </tr>
-  <tr>
-    <td>
-      `global.sttModels.$modelName.catalogName`
-    </td>
-    <td>
-      Model name as it is found in the catalog
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `global.sttModels.$modelName.size`
-    </td>
-    <td>
-      Memory footprint that is used to calculate memory requirements for the model
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `global.ttsVoices.$voiceName.catalogName`
-    </td>
-    <td>
-      Voice name as it is found in the catalog
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `global.ttsVoices.$voiceName.size`
-    </td>
-    <td>
-      Memory footprint that is used to calculate memory requirements for the voice
-    </td>
-  </tr>
-</table>
+| Value | Description |
+|-------|-------------|
+| `global.sttModels.$modelName.catalogName` | Model name as it is found in the catalog |
+| `global.sttModels.$modelName.size` | Memory footprint that is used to calculate memory requirements for the model |
+| `global.ttsVoices.$voiceName.catalogName` | Voice name as it is found in the catalog |
+| `global.ttsVoices.$voiceName.size` | Memory footprint that is used to calculate memory requirements for the voice |
+{: caption="Table 1. Values for ad hoc models and voices"}
 
 For example, suppose a new broadband model for the Czech language is made available after the current release. To enable it as a service update, specify the following values during installation: `$modelName` is `csCSBroadbandModel`, and `$catalogName` is `cs-CS_BroadbandModel`. For more information, see
 

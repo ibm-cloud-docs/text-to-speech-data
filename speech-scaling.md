@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-06-20"
+lastupdated: "2020-09-06"
 subcollection: text-to-speech-data
 
 ---
@@ -95,127 +95,27 @@ where `{n}` is the desired number of replicas for the given Deployment (`{deploy
 
 Table 1 shows the default number of replicas for Deployment objects.
 
-<table>
-  <caption>Table 1. Default number of replicas for Deployment objects</caption>
-  <tr>
-    <th>
-      Deployment object
-    </th>
-    <th style="text-align:center">
-      Default number of replicas
-    </th>
-  </tr>
-  <tr>
-    <td>
-      `{release_name}-speech-to-text-stt-runtime`
-    </td>
-    <td style="text-align:center">
-      1
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `{release_name}-speech-to-text-stt-customization`
-    </td>
-    <td style="text-align:center">
-      1
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `{release_name}-speech-to-text-stt-am-patcher`
-    </td>
-    <td style="text-align:center">
-      1
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `{release_name}-speech-to-text-stt-async`
-    </td>
-    <td style="text-align:center">
-      1
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `{release_name}-speech-to-text-gdpr-data-deletion`
-    </td>
-    <td style="text-align:center">
-      1
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `{release_name}-minio`
-    </td>
-    <td style="text-align:center">
-      1
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `{release_name}-rabbitmq`
-    </td>
-    <td style="text-align:center">
-      1
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `{release_name}-ibm-postgressql-proxy`
-    </td>
-    <td style="text-align:center">
-      2
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `{release_name}-ibm-postgressql-sentinel`
-    </td>
-    <td style="text-align:center">
-      3
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `{release_name}-ibm-postgressql-keeper`
-    </td>
-    <td style="text-align:center">
-      3
-    </td>
-  </tr>
-</table>
+| Deployment object | Default number of replicas |
+|-------------------|:--------------------------:|
+| `{release_name}-speech-to-text-stt-runtime` | 1 |
+| `{release_name}-speech-to-text-stt-customization` | 1 |
+| `{release_name}-speech-to-text-stt-am-patcher` | 1 |
+| `{release_name}-speech-to-text-stt-async` | 1 |
+| `{release_name}-speech-to-text-gdpr-data-deletion` | 1 |
+| `{release_name}-minio` | 1 |
+| `{release_name}-rabbitmq` | 1 |
+| `{release_name}-ibm-postgressql-proxy` | 2 |
+| `{release_name}-ibm-postgressql-sentinel` | 3 |
+| `{release_name}-ibm-postgressql-keeper` | 3 |
+{: caption="Table 1. Default number of replicas for Deployment objects"}
 
 Table 2 shows the default number of replicas for StatefulSet objects.
 
-<table>
-  <caption>Table 2. Default number of replicas for StatefulSet objects</caption>
-  <tr>
-    <th>
-      StatefulSet object
-    </th>
-    <th style="text-align:center">
-      Default number of replicas
-    </th>
-  </tr>
-  <tr>
-    <td>
-      `{release_name}-ibm-postgresql-keeper`
-    </td>
-    <td style="text-align:center">
-      3
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `{release_name}-ibm-rabbitmq`
-    </td>
-    <td style="text-align:center">
-      3
-    </td>
-  </tr>
-</table>
+| StatefulSet object | Default number of replicas |
+|--------------------|:--------------------------:|
+| `{release_name}-ibm-postgresql-keeper` | 3 |
+| `{release_name}-ibm-rabbitmq` | 3 |
+{: caption="Table 2. Default number of replicas for StatefulSet objects"}
 
 The development configuration requires a total of 14.75 CPUs and 38.5 GB of memory. These numbers are based on a standard installation that includes the US English models and voices only. The memory requirements vary depending on which models and voices you include in the installation.
 
@@ -280,86 +180,15 @@ One training session can use multiple threads (`T`) for processing, so one train
 
 Table 3 shows the relationship between the number of threads and the processing time for 112 minutes of audio data. As you can see, *speed up* begins to slow down with `T = 4` threads, so using more than 4 threads per session does not appreciably improve performance.
 
-<table>
-  <caption>Table 3. Relationship of threads to performance</caption>
-  <tr>
-    <th style="text-align:center">
-      Threads
-    </th>
-    <th style="text-align:center">
-      Training duration (in minutes)
-    </th>
-    <th style="text-align:center">
-      Speed up (compared to 1 thread)
-    </th>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      1
-    </td>
-    <td style="text-align:center">
-     118.6
-    </td>
-    <td style="text-align:center">
-      1.00
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      2
-    </td>
-    <td style="text-align:center">
-      65.8
-    </td>
-    <td style="text-align:center">
-      1.80
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      3
-    </td>
-    <td style="text-align:center">
-      49.2
-    </td>
-    <td style="text-align:center">
-      2.41
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      4
-    </td>
-    <td style="text-align:center">
-      40.6
-    </td>
-    <td style="text-align:center">
-      2.92
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      5
-    </td>
-    <td style="text-align:center">
-      37.6
-    </td>
-    <td style="text-align:center">
-      3.15
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      6
-    </td>
-    <td style="text-align:center">
-      37.2
-    </td>
-    <td style="text-align:center">
-      3.19
-    </td>
-  </tr>
-</table>
+| Number of Threads | Training duration (in minutes) | Speed up (compared to 1 thread) |
+|:-----------------:|:------------------------------:|:-------------------------------:|
+| 1 | 118.6 | 1.00 |
+| 2 | 65.8  | 1.80 |
+| 3 | 49.2  | 2.41 |
+| 4 | 40.6  | 2.92 |
+| 5 | 37.6  | 3.15 |
+| 6 | 37.2  | 3.19 |
+{: caption="Table 3. Relationship of threads to performance"}
 
 The overall calculation of CPU requirements for the {{site.data.keyword.speechtotextshort}} customization AM patcher is done as follows. All input values must be whole numbers (for example, 1, 2, 3, and so on).
 

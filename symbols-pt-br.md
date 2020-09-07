@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-04-30"
+lastupdated: "2020-09-07"
 
 subcollection: text-to-speech-data
 
@@ -48,7 +48,7 @@ The following sections describe the valid symbols for Brazilian Portuguese.
   </tr>
   <tr>
     <td style="text-align:center">
-      a [<strong>1</strong>]
+      a [**1**]
     </td>
     <td style="text-align:center">
       a<br/><br/>

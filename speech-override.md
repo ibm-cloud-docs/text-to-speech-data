@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-07-29"
+lastupdated: "2020-09-06"
 
 subcollection: text-to-speech-data
 
@@ -105,205 +105,30 @@ By default, all of the components are enabled, but you can enable or disable the
 
 Table 1 describes the top-level Speech components that you can install.
 
-<table>
-  <caption>Table 1. Installation of Speech services components</caption>
-  <tr>
-    <th>
-      Value
-    </th>
-    <th>
-      Installs ...
-    </th>
-    <th style="text-align:center">
-      Default
-    </th>
-  </tr>
-  <tr>
-    <td>
-      `tags.sttRuntime`
-    </td>
-    <td>
-      {{site.data.keyword.speechtotextshort}} runtime component, the base
-      component for speech recognition. This value enables the `/v1/recognize`
-      interfaces (synchronous HTTP and WebSocket). Enabling any other
-      {{site.data.keyword.speechtotextshort}} component automatically enables
-      the {{site.data.keyword.speechtotextshort}} runtime component. For more
-      information, see
-      [The synchronous HTTP interface](/docs/speech-to-text-data?topic=speech-to-text-data-http)
-      and [The WebSocket interface](/docs/speech-to-text-data?topic=speech-to-text-data-websockets).
-    </td>
-    <td style="text-align:center">
-      `True`
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `tags.sttAsync`
-    </td>
-    <td>
-      {{site.data.keyword.speechtotextshort}} asynchronous HTTP component.
-      This value enables the `/v1/recognitions` interface.
-      For more information, see
-      [The asynchronous HTTP interface](/docs/speech-to-text-data?topic=speech-to-text-data-async).
-    </td>
-    <td style="text-align:center">
-      `True`
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `tags.sttCustomization`
-    </td>
-    <td>
-      {{site.data.keyword.speechtotextshort}} customization component. This
-      value enables the `/v1/customizations` and `/v1/acoustic_customizations`
-      interfaces for language model and acoustic model customization. Enabling
-      it also enables the {{site.data.keyword.speechtotextshort}} runtime
-      component if `tags.sttRuntime=false`. For more information, see
-      [The customization interface](/docs/speech-to-text-data?topic=speech-to-text-data-customization).
-    </td>
-    <td style="text-align:center">
-      `True`
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `tags.ttsRuntime`
-    </td>
-    <td>
-      {{site.data.keyword.texttospeechshort}} runtime component, the base
-      component for speech synthesis. This value enables the `/v1/synthesize`
-      interfaces (HTTP and WebSocket). Enabling any other
-      {{site.data.keyword.texttospeechshort}} component automatically enables
-      the {{site.data.keyword.texttospeechshort}} runtime component. For more
-      information, see [The HTTP interface](/docs/text-to-speech-data?topic=text-to-speech-data-usingHTTP)
-      and [The WebSocket interface](/docs/text-to-speech-data?topic=text-to-speech-data-usingWebSocket).
-    </td>
-    <td style="text-align:center">
-      `True`
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `tags.ttsCustomization`
-    </td>
-    <td>
-      {{site.data.keyword.texttospeechshort}} customization component.
-      This value enables the `/v1/customizations` interface for voice
-      model customization. Enabling it also enables the
-      {{site.data.keyword.texttospeechshort}} runtime component if
-      `tags.sttRuntime=false`. For more information, see
-      [Understanding customization](/docs/text-to-speech-data?topic=text-to-speech-data-customIntro).
-    </td>
-    <td style="text-align:center">
-      `True`
-    </td>
-  </tr>
-</table>
+| Value | Installs ... | Default |
+|-------|--------------|:-------:|
+| `tags.sttRuntime` | {{site.data.keyword.speechtotextshort}} runtime component, the base component for speech recognition. This value enables the `/v1/recognize` interfaces (synchronous HTTP and WebSocket). Enabling any other {{site.data.keyword.speechtotextshort}} component automatically enables the {{site.data.keyword.speechtotextshort}} runtime component. For more information, see [The synchronous HTTP interface](/docs/speech-to-text-data?topic=speech-to-text-data-http) and [The WebSocket interface](/docs/speech-to-text-data?topic=speech-to-text-data-websockets). | `True` |
+| `tags.sttAsync` | {{site.data.keyword.speechtotextshort}} asynchronous HTTP component. This value enables the `/v1/recognitions` interface. For more information, see [The asynchronous HTTP interface](/docs/speech-to-text-data?topic=speech-to-text-data-async). | `True` |
+| `tags.sttCustomization` | {{site.data.keyword.speechtotextshort}} customization component. This value enables the `/v1/customizations` and `/v1/acoustic_customizations` interfaces for language model and acoustic model customization. Enabling it also enables the {{site.data.keyword.speechtotextshort}} runtime component if `tags.sttRuntime=false`. For more information, see [The customization interface](/docs/speech-to-text-data?topic=speech-to-text-data-customization). | `True` |
+| `tags.ttsRuntime` | {{site.data.keyword.texttospeechshort}} runtime component, the base component for speech synthesis. This value enables the `/v1/synthesize` interfaces (HTTP and WebSocket). Enabling any other {{site.data.keyword.texttospeechshort}} component automatically enables the {{site.data.keyword.texttospeechshort}} runtime component. For more information, see [The HTTP interface](/docs/text-to-speech-data?topic=text-to-speech-data-usingHTTP) and [The WebSocket interface](/docs/text-to-speech-data?topic=text-to-speech-data-usingWebSocket). | `True` |
+| `tags.ttsCustomization` | {{site.data.keyword.texttospeechshort}} customization component. This value enables the `/v1/customizations` interface for voice model customization. Enabling it also enables the {{site.data.keyword.texttospeechshort}} runtime component if `tags.sttRuntime=false`. For more information, see [Understanding customization](/docs/text-to-speech-data?topic=text-to-speech-data-customIntro). | `True` |
+{: caption="Table 1. Installation of Speech services components"}
 
 ### Configuring datastores
 {: #speech-override-datastores}
 
 Table 2 describes the values you can specify to configure the datastores for your installation. For more information about the MinIO and PostgreSQL datastores, see [Managing datastores](/docs/text-to-speech-data?topic=text-to-speech-data-speech-datastores) and [Scaling up your installation](/docs/text-to-speech-data?topic=text-to-speech-data-speech-scaling).
 
-<table>
-  <caption>Table 2. Configuration of datastores</caption>
-  <tr>
-    <th>
-      Value
-    </th>
-    <th>
-      Specifies ...
-    </th>
-    <th style="text-align:center">
-      Default
-    </th>
-  </tr>
-  <tr>
-    <td>
-      `external.minio.mode`
-    </td>
-    <td>
-      MinIO server mode (`standalone` or `distributed`).
-    </td>
-    <td style="text-align:center">
-      `distributed`
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `external.minio.persistence.size`
-    </td>
-    <td>
-      Size of persistent volume claim (PVC) for MinIO.
-    </td>
-    <td style="text-align:center">
-      `100Gi`
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `external.minio.replicas`
-    </td>
-    <td>
-      Number of nodes (applicable only for MinIO distributed mode).
-      Must be `4 <= x <= 32`.
-    </td>
-    <td style="text-align:center">
-      `4`
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `external.minio.minioAccessSecret`
-    </td>
-    <td>
-      A secrets object that contains base64-encoded `accesskey` (5 - 20
-      characters) and `secretkey` (8 - 40 characters) values. The keys are
-      used to access the MinIO Object Server securely. You need to create the
-      secrets object in the same namespace in which you deploy the services.
-    </td>
-    <td style="text-align:center">
-      `minio`
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `global.datastores.minio.secretName`
-    </td>
-    <td>
-      Name of the secrets object that contains the MinIO secrets that are
-      needed to access the datastore securely.
-    </td>
-    <td style="text-align:center">
-      `minio`
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `global.datastores.postgressql.auth.authSecretName`
-    </td>
-    <td>
-      Name of the secrets object that contains the PostgresSQL credentials
-      that are needed to access the datastore securely.
-    </td>
-    <td style="text-align:center">
-      `user-provided-postgressql`
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `postgressql.auth.authSecretName`
-    </td>
-    <td>
-      Name of the secrets object that contains the PostgresSQL credentials
-      that are needed to access the datastore securely.
-    </td>
-    <td style="text-align:center">
-      `user-provided-postgressql`
-    </td>
-  </tr>
-</table>
+| Value | Specifies ... | Default |
+|-------|---------------|:-------:|
+| `external.minio.mode` | MinIO server mode (`standalone` or `distributed`). | `distributed` |
+| `external.minio.persistence.size` | Size of persistent volume claim (PVC) for MinIO. | `100Gi` |
+| `external.minio.replicas` | Number of nodes (applicable only for MinIO distributed mode). Must be `4 <= x <= 32`. | `4` |
+| `external.minio.minioAccessSecret` | A secrets object that contains base64-encoded `accesskey` (5 - 20 characters) and `secretkey` (8 - 40 characters) values. The keys are used to access the MinIO Object Server securely. You need to create the secrets object in the same namespace in which you deploy the services. | `minio` |
+| `global.datastores.minio.secretName` | Name of the secrets object that contains the MinIO secrets that are needed to access the datastore securely. | `minio` |
+| `global.datastores.postgressql.auth.authSecretName` | Name of the secrets object that contains the PostgresSQL credentials that are needed to access the datastore securely. | `user-provided-postgressql` |
+| `postgressql.auth.authSecretName` | Name of the secrets object that contains the PostgresSQL credentials that are needed to access the datastore securely. | `user-provided-postgressql` |
+{: caption="Table 2. Configuration of datastores"}
 
 ### Specifying dynamic resource calculation
 {: #speech-override-dynamic}
@@ -315,57 +140,12 @@ Dynamic resource calculation is enabled by default. You can modify this behavior
 Disabling dynamic resource allocation is not recommended and can cause undesired service behavior.
 {: important}
 
-<table>
-  <caption>Table 3. Configuration of dynamic resource calculation</caption>
-  <tr>
-    <th>
-      Value
-    </th>
-    <th>
-      Enables ...
-    </th>
-    <th style="text-align:center">
-      Default
-    </th>
-  </tr>
-  <tr>
-    <td>
-      `sttRuntime.groups.sttRuntimeDefault.resources.dynamicMemory`
-    </td>
-    <td>
-      Dynamic resource calculation for the
-      {{site.data.keyword.speechtotextshort}} runtime component.
-    </td>
-    <td style="text-align:center">
-      `True`
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `ttsRuntime.groups.ttsRuntimeDefault.resources.dynamicMemory`
-    </td>
-    <td>
-      Dynamic resource calculation for the
-      {{site.data.keyword.texttospeechshort}} runtime component.
-    </td>
-    <td style="text-align:center">
-      `True`
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `sttAMPatcher.groups.sttAMPatcher.resources.dynamicMemory`
-    </td>
-    <td>
-      Dynamic resource calculation for the
-      {{site.data.keyword.speechtotextshort}} customization AM patcher
-      component.
-    </td>
-    <td style="text-align:center">
-      `True`
-    </td>
-  </tr>
-</table>
+| Value | Enables ... | Default |
+|-------|-------------|:-------:|
+| `sttRuntime.groups.sttRuntimeDefault.resources.dynamicMemory` | Dynamic resource calculation for the {{site.data.keyword.speechtotextshort}} runtime component. | `True` |
+| `ttsRuntime.groups.ttsRuntimeDefault.resources.dynamicMemory` | Dynamic resource calculation for the {{site.data.keyword.texttospeechshort}} runtime component. | `True` |
+| `sttAMPatcher.groups.sttAMPatcher.resources.dynamicMemory` | Dynamic resource calculation for the {{site.data.keyword.speechtotextshort}} customization AM patcher component. | `True` |
+{: caption="Table 3. Configuration of dynamic resource calculation"}
 
 ### Specifying node affinity
 {: #speech-override-affinity}
@@ -393,54 +173,12 @@ affinity:
 
 You can anonymize your log and audio data for increased user privacy. Use the values in Table 4 to anonymize data that is stored by the different components. You can also disable the temporary storing of payload data in the running container. For more information, see [Disabling storage of user data](/docs/text-to-speech-data?topic=text-to-speech-data-speech-cluster#speech-cluster-customer-data).
 
-<table>
-  <caption>Table 4. Anonymization of logs and audio data</caption>
-  <tr>
-    <th>
-      Value
-    </th>
-    <th>
-      Anonymizes ...
-    </th>
-    <th style="text-align:center">
-      Default
-    </th>
-  </tr>
-  <tr>
-    <td>
-      `sttRuntime.anonymizeLogs`
-    </td>
-    <td>
-      {{site.data.keyword.speechtotextshort}} runtime logs and audio data.
-    </td>
-    <td style="text-align:center">
-      `False`
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `ttsRuntime.anonymizeLogs`
-    </td>
-    <td>
-      {{site.data.keyword.texttospeechshort}} runtime logs and audio data.
-    </td>
-    <td style="text-align:center">
-      `False`
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `sttAMPatcher.anonymizeLogs`
-    </td>
-    <td>
-      {{site.data.keyword.speechtotextshort}} customization acoustic model
-      (AM) patcher runtime logs and audio data.
-    </td>
-    <td style="text-align:center">
-      `False`
-    </td>
-  </tr>
-</table>
+| Value | Anonymizes ... | Default |
+|-------|----------------|:-------:|
+| `sttRuntime.anonymizeLogs` | {{site.data.keyword.speechtotextshort}} runtime logs and audio data. | `False` |
+| `ttsRuntime.anonymizeLogs` | {{site.data.keyword.texttospeechshort}} runtime logs and audio data. | `False` |
+| `sttAMPatcher.anonymizeLogs` | {{site.data.keyword.speechtotextshort}} customization acoustic model (AM) patcher runtime logs and audio data. | `False` |
+{: caption="Table 4. Anonymization of logs and audio data"}
 
 ## Override values for the {{site.data.keyword.speechtotextshort}} service
 {: #speech-override-stt}
@@ -452,129 +190,25 @@ The following sections describe override values that are specific to the {{site.
 
 Table 5 describes the configuration values for the {{site.data.keyword.speechtotextshort}} runtime.
 
-<table>
-  <caption>Table 5. Configuration of {{site.data.keyword.speechtotextshort}} runtime</caption>
-  <tr>
-    <th>
-      Value
-    </th>
-    <th>
-     Specifies ...
-    </th>
-    <th style="text-align:center">
-      Default
-    </th>
-  </tr>
-  <tr>
-    <td>
-      `sttRuntime.groups.sttRuntimeDefault.resources.dynamicMemory`
-    </td>
-    <td>
-      Automatic calculation of the memory requirements for the
-      {{site.data.keyword.speechtotextshort}} runtime according to the
-      selected models.
-    </td>
-    <td style="text-align:center">
-      `True`
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `sttRuntime.groups.sttRuntimeDefault.resources.requestsCpu`
-    </td>
-    <td>
-      Requested CPUs for the {{site.data.keyword.speechtotextshort}} runtime.
-      The minimum value is 4. Each runtime session needs at least 4 CPUs.
-    </td>
-    <td style="text-align:center">
-      `8`
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `sttRuntime.groups.sttRuntimeDefault.resources.requestsMemory`
-    </td>
-    <td>
-      Memory requirements for the {{site.data.keyword.speechtotextshort}}
-      runtime. When dynamic memory is enabled, this value has no effect.
-    </td>
-    <td style="text-align:center">
-      `22Gi`
-    </td>
-  </tr>
-</table>
+| Value | Specifies ... | Default |
+|-------|---------------|:-------:|
+| `sttRuntime.groups.sttRuntimeDefault.resources.dynamicMemory` | Automatic calculation of the memory requirements for the {{site.data.keyword.speechtotextshort}} runtime according to the selected models. | `True` |
+| `sttRuntime.groups.sttRuntimeDefault.resources.requestsCpu` | Requested CPUs for the {{site.data.keyword.speechtotextshort}} runtime. The minimum value is 4. Each runtime session needs at least 4 CPUs. | `8` |
+| `sttRuntime.groups.sttRuntimeDefault.resources.requestsMemory` | Memory requirements for the {{site.data.keyword.speechtotextshort}} runtime. When dynamic memory is enabled, this value has no effect. | `22Gi` |
+{: caption="Table 5. Configuration of {{site.data.keyword.speechtotextshort}} runtime"}
 
 ### Configuring the {{site.data.keyword.speechtotextshort}} customization AM patcher
 {: #speech-override-stt-AMpatcher}
 
 Table 6 describes the configuration values for the {{site.data.keyword.speechtotextshort}} customization AM patcher.
 
-<table>
-  <caption>Table 6. Configuration of {{site.data.keyword.speechtotextshort}} customization AM patcher</caption>
-  <tr>
-    <th>
-      Value
-    </th>
-    <th>
-      Specifies ...
-    </th>
-    <th style="text-align:center">
-      Default
-    </th>
-  </tr>
-  <tr>
-    <td>
-      `sttAMPatcher.groups.sttAMPatcher.resources.dynamicMemory`
-    </td>
-    <td>
-      Automatic calculation of the memory requirements for the
-      {{site.data.keyword.speechtotextshort}} customization AM patcher
-      according to the selected models.
-    </td>
-    <td style="text-align:center">
-      `True`
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `sttAMPatcher.groups.sttAMPatcher.resources.requestsCpu`
-    </td>
-    <td>
-      Requested CPUs for the {{site.data.keyword.speechtotextshort}}
-      customization AM patcher. The minimum value is 4. Each customization
-      session needs at least 4 CPUs.
-    </td>
-    <td style="text-align:center">
-      `8`
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `sttAMPatcher.groups.sttAMPatcher.resources.requestsMemory`
-    </td>
-    <td>
-      Memory requirements for the {{site.data.keyword.speechtotextshort}}
-      customization AM patcher. The amount of memory depends on the number
-      of CPUs. The size can be calculated as the number of CPUs * 3 GB.
-    </td>
-    <td style="text-align:center">
-      `22Gi`
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `sttAMPatcher.groups.sttAMPatcher.resources.threads`
-    </td>
-    <td>
-      Number of parallel-processing threads for the
-      {{site.data.keyword.speechtotextshort}} customization AM patcher.
-      Note that fewer threads means longer training time.
-    </td>
-    <td style="text-align:center">
-      `4`
-    </td>
-  </tr>
-</table>
+| Value | Specifies ... | Default |
+|-------|---------------|:-------:|
+| `sttAMPatcher.groups.sttAMPatcher.resources.dynamicMemory` | Automatic calculation of the memory requirements for the {{site.data.keyword.speechtotextshort}} customization AM patcher according to the selected models. | `True` |
+| `sttAMPatcher.groups.sttAMPatcher.resources.requestsCpu` | Requested CPUs for the {{site.data.keyword.speechtotextshort}} customization AM patcher. The minimum value is 4. Each customization session needs at least 4 CPUs. | `8` |
+| `sttAMPatcher.groups.sttAMPatcher.resources.requestsMemory` | Memory requirements for the {{site.data.keyword.speechtotextshort}} customization AM patcher. The amount of memory depends on the number of CPUs. The size can be calculated as the number of CPUs * 3 GB. | `22Gi` |
+| `sttAMPatcher.groups.sttAMPatcher.resources.threads` | Number of parallel-processing threads for the {{site.data.keyword.speechtotextshort}} customization AM patcher. Note that fewer threads means longer training time. | `4` |
+{: caption="Table 6. Configuration of {{site.data.keyword.speechtotextshort}} customization AM patcher"}
 
 ### Installing {{site.data.keyword.speechtotextshort}} models
 {: #speech-override-stt-models}
@@ -609,286 +243,33 @@ global:
 
 For more information about all available models, see [Languages and models](/docs/speech-to-text-data?topic=speech-to-text-data-models). For information about updating the override file to install ad hoc models, see [Installing ad hoc models and voices](/docs/text-to-speech-data?topic=text-to-speech-data-speech-cluster#speech-cluster-model-install-adhoc).
 
-<table>
-  <caption>Table 7. Installation of {{site.data.keyword.speechtotextshort}} models</caption>
-  <tr>
-    <th>
-      Value
-    </th>
-    <th>
-      Installs ...
-    </th>
-    <th style="text-align:center">
-      Default
-    </th>
-  </tr>
-  <tr>
-    <td>
-      `global.sttModels.enUsBroadbandModel.enabled`
-    </td>
-    <td>
-      US English (`en-US`) Broadband model
-    </td>
-    <td style="text-align:center">
-      `True`
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `global.sttModels.enUsNarrowbandModel.enabled`
-    </td>
-    <td>
-      US English (`en-US`) Narrowband model
-    </td>
-    <td style="text-align:center">
-      `True`
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `global.sttModels.enUsShortFormNarrowbandModel.enabled`
-    </td>
-    <td>
-      US English (`en-US`) Short-Form Narrowband model
-    </td>
-    <td style="text-align:center">
-      `True`
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `global.sttModels.arArBroadbandModel.enabled`
-    </td>
-    <td>
-      Modern Standard Arabic (`ar-AR`) Broadband model
-    </td>
-    <td style="text-align:center">
-      `False`
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `global.sttModels.enGbBroadbandModel.enabled`
-    </td>
-    <td>
-      UK English (`en-GB`) Broadband model
-    </td>
-    <td style="text-align:center">
-      `False`
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `global.sttModels.enGbNarrowbandModel.enabled`
-    </td>
-    <td>
-      UK English (`en-GB`) Narrowband model
-    </td>
-    <td style="text-align:center">
-      `False`
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `global.sttModels.esEsBroadbandModel.enabled`
-    </td>
-    <td>
-      Spanish (`es-ES`, `es-AR`, `es-CL`, `es-CO`, `es-MX`, and `es-PE`)
-      Broadband models
-    </td>
-    <td style="text-align:center">
-      `False`
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `global.sttModels.esEsNarrowbandModel.enabled`
-    </td>
-    <td>
-      Spanish (`es-ES`, `es-AR`, `es-CL`, `es-CO`, `es-MX`, and `es-PE`)
-      Narrowband models
-    </td>
-    <td style="text-align:center">
-      `False`
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `global.sttModels.frFrBroadbandModel.enabled`
-    </td>
-    <td>
-      French (`fr-FR`) Broadband model
-    </td>
-    <td style="text-align:center">
-      `False`
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `global.sttModels.frFrNarrowbandModel.enabled`
-    </td>
-    <td>
-      French (`fr-FR`) Narrowband model
-    </td>
-    <td style="text-align:center">
-      `False`
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `global.sttModels.deDeBroadbandModel.enabled`
-    </td>
-    <td>
-      German (`de-DE`) Broadband model
-    </td>
-    <td style="text-align:center">
-      `False`
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `global.sttModels.deDeNarrowbandModel.enabled`
-    </td>
-    <td>
-      German (`de-DE`) Narrowband model
-    </td>
-    <td style="text-align:center">
-      `False`
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `global.sttModels.itItBroadbandModel.enabled`
-    </td>
-    <td>
-      Italian (`it-IT`) Broadband model
-    </td>
-    <td style="text-align:center">
-      `False`
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `global.sttModels.itItNarrowbandModel.enabled`
-    </td>
-    <td>
-      Italian (`it-IT`) Narrowband model
-    </td>
-    <td style="text-align:center">
-      `False`
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `global.sttModels.jaJpBroadbandModel.enabled`
-    </td>
-    <td>
-      Japanese (`ja-JP`) Broadband model
-    </td>
-    <td style="text-align:center">
-      `False`
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `global.sttModels.jaJpNarrowbandModel.enabled`
-    </td>
-    <td>
-      Japanese (`ja-JP`) Narrowband model
-    </td>
-    <td style="text-align:center">
-      `False`
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `global.sttModels.koKrBroadbandModel.enabled`
-    </td>
-    <td>
-      Korean (`ko-KR`) Broadband model
-    </td>
-    <td style="text-align:center">
-      `False`
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `global.sttModels.koKrNarrowbandModel.enabled`
-    </td>
-    <td>
-      Korean (`ko-KR`) Narrowband model
-    </td>
-    <td style="text-align:center">
-      `False`
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `global.sttModels.nlNlBroadbandModel.enabled`
-    </td>
-    <td>
-      Dutch (`nl-NL`) Broadband model
-    </td>
-    <td style="text-align:center">
-      `False`
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `global.sttModels.nlNlNarrowbandModel.enabled`
-    </td>
-    <td>
-      Dutch (`nl-NL`) Narrowband model
-    </td>
-    <td style="text-align:center">
-      `False`
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `global.sttModels.ptBrBroadbandModel.enabled`
-    </td>
-    <td>
-      Brazilian Portuguese (`pt-BR`) Broadband model
-    </td>
-    <td style="text-align:center">
-      `False`
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `global.sttModels.ptBrNarrowbandModel.enabled`
-    </td>
-    <td>
-      Brazilian Portuguese (`pt-BR`) Narrowband model
-    </td>
-    <td style="text-align:center">
-      `False`
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `global.sttModels.zhCnBroadbandModel.enabled`
-    </td>
-    <td>
-      Mandarin Chinese (`zh-CN`) Broadband model
-    </td>
-    <td style="text-align:center">
-      `False`
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `global.sttModels.zhCnNarrowbandModel.enabled`
-    </td>
-    <td>
-      Mandarin Chinese (`zh-CN`) Narrowband model
-    </td>
-    <td style="text-align:center">
-      `False`
-    </td>
-  </tr>
-</table>
+| Value | Installs ... | Default |
+|-------|--------------|:-------:|
+| `global.sttModels.enUsBroadbandModel.enabled` | US English (`en-US`) Broadband model | `True` |
+| `global.sttModels.enUsNarrowbandModel.enabled` | US English (`en-US`) Narrowband model | `True` |
+| `global.sttModels.enUsShortFormNarrowbandModel.enabled` | US English (`en-US`) Short-Form Narrowband model | `True` |
+| `global.sttModels.arArBroadbandModel.enabled` | Modern Standard Arabic (`ar-AR`) Broadband model | `False` |
+| `global.sttModels.enGbBroadbandModel.enabled` | `False` |
+| `global.sttModels.enGbNarrowbandModel.enabled` | UK English (`en-GB`) Narrowband model | `False` |
+| `global.sttModels.esEsBroadbandModel.enabled` | Spanish (`es-ES`, `es-AR`, `es-CL`, `es-CO`, `es-MX`, and `es-PE`) Broadband models | `False` |
+| `global.sttModels.esEsNarrowbandModel.enabled` | Spanish (`es-ES`, `es-AR`, `es-CL`, `es-CO`, `es-MX`, and `es-PE`) Narrowband models | `False` |
+| `global.sttModels.frFrBroadbandModel.enabled` | French (`fr-FR`) Broadband model | `False` |
+| `global.sttModels.frFrNarrowbandModel.enabled` | French (`fr-FR`) Narrowband model | `False` |
+| `global.sttModels.deDeBroadbandModel.enabled` | German (`de-DE`) Broadband model | `False` |
+| `global.sttModels.deDeNarrowbandModel.enabled` | German (`de-DE`) Narrowband model | `False` |
+| `global.sttModels.itItBroadbandModel.enabled` | Italian (`it-IT`) Broadband model | `False` |
+| `global.sttModels.itItNarrowbandModel.enabled` | Italian (`it-IT`) Narrowband model | `False` |
+| `global.sttModels.jaJpBroadbandModel.enabled` | Japanese (`ja-JP`) Broadband model | `False` |
+| `global.sttModels.jaJpNarrowbandModel.enabled` | Japanese (`ja-JP`) Narrowband model | `False` |
+| `global.sttModels.koKrBroadbandModel.enabled` | Korean (`ko-KR`) Broadband model | `False` |
+| `global.sttModels.koKrNarrowbandModel.enabled` | Korean (`ko-KR`) Narrowband model | `False` |
+| `global.sttModels.nlNlBroadbandModel.enabled` | Dutch (`nl-NL`) Broadband model | `False` |
+| `global.sttModels.nlNlNarrowbandModel.enabled` | Dutch (`nl-NL`) Narrowband model | `False` |
+| `global.sttModels.ptBrBroadbandModel.enabled` | `False` |
+| `global.sttModels.ptBrNarrowbandModel.enabled` | Brazilian Portuguese (`pt-BR`) Narrowband model | `False` |
+| `global.sttModels.zhCnBroadbandModel.enabled` | Mandarin Chinese (`zh-CN`) Broadband model | `False` |
+| `global.sttModels.zhCnNarrowbandModel.enabled` | Mandarin Chinese (`zh-CN`) Narrowband model | `False` |
+{: caption="Table 7. Installation of {{site.data.keyword.speechtotextshort}} models"}
 
 ## Override values for the {{site.data.keyword.texttospeechshort}} service
 {: #speech-override-tts}
@@ -900,69 +281,13 @@ The following sections describe override values that are specific to the {{site.
 
 Table 8 describes the configuration values for the {{site.data.keyword.texttospeechshort}} runtime.
 
-<table>
-  <caption>Table 8. Configuration of {{site.data.keyword.texttospeechshort}} runtime</caption>
-  <tr>
-    <th>
-      Value
-    </th>
-    <th>
-      Specifies ...
-    </th>
-    <th style="text-align:center">
-      Default
-    </th>
-  </tr>
-  <tr>
-    <td>
-      `ttsRuntime.groups.ttsRuntimeDefault.resources.dynamicMemory`
-    </td>
-    <td>
-      Automatic calculation of memory requirements for the
-      {{site.data.keyword.texttospeechshort}} runtime according to the
-      selected voices.
-    </td>
-    <td style="text-align:center">
-      `True`
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `ttsRuntime.groups.ttsRuntimeDefault.resources.requestsCpu`
-    </td>
-    <td>
-      Requested CPUs for the {{site.data.keyword.texttospeechshort}} runtime.
-      The minimum value is 4. Each runtime session needs at least 4 CPUs.
-    </td>
-    <td style="text-align:center">
-      `8`
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `ttsRuntime.groups.ttsRuntimeDefault.resources.requestsMemory`
-    </td>
-    <td>
-      Memory requirements for the {{site.data.keyword.texttospeechshort}}
-      runtime. When dynamic memory is enabled, this value has no effect.
-    </td>
-    <td style="text-align:center">
-      `22Gi`
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `global.ttsVoiceMarginalCPU`
-    </td>
-    <td>
-      {{site.data.keyword.texttospeechshort}} voice marginal CPU used for
-      synthesis. The value is in milli-CPUs.
-    </td>
-    <td style="text-align:center">
-      `400`
-    </td>
-  </tr>
-</table>
+| Value | Specifies ... | Default |
+|-------|---------------|:-------:|
+| `ttsRuntime.groups.ttsRuntimeDefault.resources.dynamicMemory` | Automatic calculation of memory requirements for the {{site.data.keyword.texttospeechshort}} runtime according to the selected voices. | `True` |
+| `ttsRuntime.groups.ttsRuntimeDefault.resources.requestsCpu` | Requested CPUs for the {{site.data.keyword.texttospeechshort}} runtime. The minimum value is 4. Each runtime session needs at least 4 CPUs. | `8` |
+| `ttsRuntime.groups.ttsRuntimeDefault.resources.requestsMemory` | Memory requirements for the {{site.data.keyword.texttospeechshort}} runtime. When dynamic memory is enabled, this value has no effect. | `22Gi` |
+| `global.ttsVoiceMarginalCPU` | {{site.data.keyword.texttospeechshort}} voice marginal CPU used for synthesis. The value is in milli-CPUs. | `400` |
+{: caption="Table 8. Configuration of {{site.data.keyword.texttospeechshort}} runtime"}
 
 ### Installing {{site.data.keyword.texttospeechshort}} voices
 {: #speech-override-tts-voices}
@@ -995,226 +320,25 @@ global:
 
 For more information about all available voices, see [Languages and voices](/docs/text-to-speech-data?topic=text-to-speech-data-voices). For information about updating the override file to install ad hoc voices, see [Installing ad hoc models and voices](/docs/text-to-speech-data?topic=text-to-speech-data-speech-cluster#speech-cluster-model-install-adhoc).
 
-<table>
-  <caption>Table 9. Installation of {{site.data.keyword.texttospeechshort}} voices</caption>
-  <tr>
-    <th>
-      Value
-    </th>
-    <th>
-      Installs ...
-    </th>
-    <th style="text-align:center">
-      Default
-    </th>
-  </tr>
-  <tr>
-    <td>
-      `global.ttsVoices.enUSAllisonV3Voice.enabled`
-    </td>
-    <td>
-      US English (`en-US`) Allison neural voice
-    </td>
-    <td style="text-align:center">
-      `True`
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `global.ttsVoices.enUSLisaV3Voice.enabled`
-    </td>
-    <td>
-      US English (`en-US`) Lisa neural voice
-    </td>
-    <td style="text-align:center">
-      `True`
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `global.ttsVoices.enUSMichaelV3Voice.enabled`
-    </td>
-    <td>
-      US English (`en-US`) Michael neural voice
-    </td>
-    <td style="text-align:center">
-      `True`
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `global.ttsVoices.enUSEmilyV3Voice.enabled`
-    </td>
-    <td>
-      US English (`en-US`) Emily neural voice
-    </td>
-    <td style="text-align:center">
-      `False`
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `global.ttsVoices.enUSHenryV3Voice.enabled`
-    </td>
-    <td>
-      US English (`en-US`) Henry neural voice
-    </td>
-    <td style="text-align:center">
-      `False`
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `global.ttsVoices.enUSKevinV3Voice.enabled`
-    </td>
-    <td>
-      US English (`en-US`) Kevin neural voice
-    </td>
-    <td style="text-align:center">
-      `False`
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `global.ttsVoices.enUSOliviaV3Voice.enabled`
-    </td>
-    <td>
-      US English (`en-US`) Olivia neural voice
-    </td>
-    <td style="text-align:center">
-      `False`
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `global.ttsVoices.deDEBirgitV3Voice.enabled`
-    </td>
-    <td>
-      German (`de-DE`) Birgit neural voice
-    </td>
-    <td style="text-align:center">
-      `False`
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `global.ttsVoices.deDEDieterV3Voice.enabled`
-    </td>
-    <td>
-      German (`de-DE`) Dieter neural voice
-    </td>
-    <td style="text-align:center">
-      `False`
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `global.ttsVoices.deDeErikaV3Voice.enabled`
-    </td>
-    <td>
-      German (`de-DE`) Erika neural voice
-    </td>
-    <td style="text-align:center">
-      `False`
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `global.ttsVoices.enGBKateV3Voice.enabled`
-    </td>
-    <td>
-      UK English (`en-GB`) Kate neural voice
-    </td>
-    <td style="text-align:center">
-      `False`
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `global.ttsVoices.esESEnriqueV3Voice.enabled`
-    </td>
-    <td>
-      Spanish (`es-ES`) Enrique neural voice
-    </td>
-    <td style="text-align:center">
-      `False`
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `global.ttsVoices.esESLauraV3Voice.enabled`
-    </td>
-    <td>
-      Spanish (`es-ES`) Laura neural voice
-    </td>
-    <td style="text-align:center">
-      `False`
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `global.ttsVoices.esLASofiaV3Voice.enabled`
-    </td>
-    <td>
-      Latin American Spanish (`es-LA`) Sofia neural voice
-    </td>
-    <td style="text-align:center">
-      `False`
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `global.ttsVoices.esUSSofiaV3Voice.enabled`
-    </td>
-    <td>
-      North American Spanish (`es-US`) Sofia neural voice
-    </td>
-    <td style="text-align:center">
-      `False`
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `global.ttsVoices.frFRReneeV3Voice.enabled`
-    </td>
-    <td>
-      French (`fr-FR`) Renee neural voice
-    </td>
-    <td style="text-align:center">
-      `False`
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `global.ttsVoices.itITFrancescaV3Voice.enabled`
-    </td>
-    <td>
-      Italian (`it-IT`) Francesca neural voice
-    </td>
-    <td style="text-align:center">
-      `False`
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `global.ttsVoices.jaJPEmiV3Voice.enabled`
-    </td>
-    <td>
-      Japanese (`ja-JP`) Emi neural voice
-    </td>
-    <td style="text-align:center">
-      `False`
-    </td>
-  </tr>
-  <tr>
-    <td>
-      `global.ttsVoices.ptBRIsabelaV3Voice.enabled`
-    </td>
-    <td>
-      Brazilian Portuguese (`pt-BR`) Isabela neural voice
-    </td>
-    <td style="text-align:center">
-      `False`
-    </td>
-  </tr>
-</table>
+| Value | Installs ... | Default |
+|-------|--------------|:-------:|
+| `global.ttsVoices.enUSAllisonV3Voice.enabled` | US English (`en-US`) Allison neural voice | `True` |
+| `global.ttsVoices.enUSLisaV3Voice.enabled` | US English (`en-US`) Lisa neural voice | `True` |
+| `global.ttsVoices.enUSMichaelV3Voice.enabled` | US English (`en-US`) Michael neural voice | `True` |
+| `global.ttsVoices.enUSEmilyV3Voice.enabled` | US English (`en-US`) Emily neural voice | `False` |
+| `global.ttsVoices.enUSHenryV3Voice.enabled` | US English (`en-US`) Henry neural voice | `False` |
+| `global.ttsVoices.enUSKevinV3Voice.enabled` | US English (`en-US`) Kevin neural voice | `False` |
+| `global.ttsVoices.enUSOliviaV3Voice.enabled` | US English (`en-US`) Olivia neural voice | `False` |
+| `global.ttsVoices.deDEBirgitV3Voice.enabled` | German (`de-DE`) Birgit neural voice | `False` |
+| `global.ttsVoices.deDEDieterV3Voice.enabled` | German (`de-DE`) Dieter neural voice | `False` |
+| `global.ttsVoices.deDeErikaV3Voice.enabled` | German (`de-DE`) Erika neural voice | `False` |
+| `global.ttsVoices.enGBKateV3Voice.enabled` | UK English (`en-GB`) Kate neural voice | `False` |
+| `global.ttsVoices.esESEnriqueV3Voice.enabled` | Spanish (`es-ES`) Enrique neural voice | `False` |
+| `global.ttsVoices.esESLauraV3Voice.enabled` | Spanish (`es-ES`) Laura neural voice | `False` |
+| `global.ttsVoices.esLASofiaV3Voice.enabled` | Latin American Spanish (`es-LA`) Sofia neural voice | `False` |
+| `global.ttsVoices.esUSSofiaV3Voice.enabled` | North American Spanish (`es-US`) Sofia neural voice | `False` |
+| `global.ttsVoices.frFRReneeV3Voice.enabled` | French (`fr-FR`) Renee neural voice | `False` |
+| `global.ttsVoices.itITFrancescaV3Voice.enabled` | Italian (`it-IT`) Francesca neural voice | `False` |
+| `global.ttsVoices.jaJPEmiV3Voice.enabled` | Japanese (`ja-JP`) Emi neural voice | `False` |
+| `global.ttsVoices.ptBRIsabelaV3Voice.enabled` | Brazilian Portuguese (`pt-BR`) Isabela neural voice | `False` |
+{: caption="Table 9. Installation of {{site.data.keyword.texttospeechshort}} voices"}
