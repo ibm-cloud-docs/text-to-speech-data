@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-08-26"
+lastupdated: "2020-09-06"
 
 subcollection: text-to-speech-data
 
@@ -53,70 +53,11 @@ See the following topic if you need to remove an installation:
 
 See the following pages for more information about installation and configuration parameters, and post-deployment management activities.
 
-<table>
-  <caption>Table 1. Documentation overview and links</caption>
-  <tr>
-    <th>
-      Page
-    </th>
-    <th>
-      Contents
-    </th>
-  </tr>
-  <tr>
-    <td>
-      [Using the override file](/docs/text-to-speech-data?topic=text-to-speech-data-speech-override)
-    </td>
-    <td>
-      Using values in the `speech-override.yaml` file to specify aspects
-      of the installation and configuration that are common to both Speech
-      services or are specific to {{site.data.keyword.speechtotextshort}}
-      or {{site.data.keyword.texttospeechshort}}.
-    </td>
-  </tr>
-  <tr>
-    <td>
-      [Managing your datastores](/docs/text-to-speech-data?topic=text-to-speech-data-speech-datastores)
-    </td>
-    <td>
-      Administering the MinIO and PostgreSQL datastores. For MinIO, topics
-      include security secrets, operation mode, and storage. For PostgreSQL,
-      the page describes setting access credentials.
-    </td>
-  </tr>
-  <tr>
-    <td>
-      [Managing your cluster](/docs/text-to-speech-data?topic=text-to-speech-data-speech-cluster)
-    </td>
-    <td>
-      A collection of basic cluster and service management procedures and
-      information. Topics include managing user access, using common cluster
-      management commands, setting Red Hat OpenShift
-      SecurityContextConstraints, disabling storage of user data, and
-      installing ad hoc models and voices.
-    </td>
-  </tr>
-  <tr>
-    <td>
-      [Scaling up your installation](/docs/text-to-speech-data?topic=text-to-speech-data-speech-scaling)
-    </td>
-    <td>
-      Scaling from a development configuration to a production configuration.
-      Topics include increasing the number of available CPUs for PostgreSQL
-      and RabbitMQ, including the number of replicas for the Speech services
-      and datastores. Topics also include setting the session-to-CPU ratio
-      for the {{site.data.keyword.speechtotextshort}} runtime and
-      customization AM patcher, and for the
-      {{site.data.keyword.texttospeechshort}} runtime.
-    </td>
-  </tr>
-  <tr>
-    <td>
-      [Backing up and restoring your data](/docs/text-to-speech-data?topic=text-to-speech-data-speech-backup)
-    </td>
-    <td>
-      Backup and restore procedures for both disaster recovery and upgrade
-      of your data. The procedures cover the MinIO and PostgreSQL datastores.
-    </td>
-  </tr>
-</table>
+| Page | Contents |
+|------|----------|
+| [Using the override file](/docs/text-to-speech-data?topic=text-to-speech-data-speech-override) | Using values in the `speech-override.yaml` file to specify aspects of the installation and configuration that are common to both Speech services or are specific to {{site.data.keyword.speechtotextshort}} or {{site.data.keyword.texttospeechshort}}. |
+| [Managing your datastores](/docs/text-to-speech-data?topic=text-to-speech-data-speech-datastores) | Administering the MinIO and PostgreSQL datastores. For MinIO, topics include security secrets, operation mode, and storage. For PostgreSQL, the page describes setting access credentials. |
+| [Managing your cluster](/docs/text-to-speech-data?topic=text-to-speech-data-speech-cluster) | A collection of basic cluster and service management procedures and information. Topics include managing user access, using common cluster management commands, setting Red Hat OpenShift SecurityContextConstraints, disabling storage of user data, and installing ad hoc models and voices. |
+| [Scaling up your installation](/docs/text-to-speech-data?topic=text-to-speech-data-speech-scaling) | Scaling from a development configuration to a production configuration. Topics include increasing the number of available CPUs for PostgreSQL and RabbitMQ, including the number of replicas for the Speech services and datastores. Topics also include setting the session-to-CPU ratio for the {{site.data.keyword.speechtotextshort}} runtime and customization AM patcher, and for the {{site.data.keyword.texttospeechshort}} runtime. |
+| [Backing up and restoring your data](/docs/text-to-speech-data?topic=text-to-speech-data-speech-backup) | Backup and restore procedures for both disaster recovery and upgrade of your data. The procedures cover the MinIO and PostgreSQL datastores. |
+{: caption="Table 1. Documentation overview and links"}

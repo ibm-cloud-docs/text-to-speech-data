@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-06-30"
+lastupdated: "2020-09-07"
 
 subcollection: text-to-speech-data
 
@@ -57,65 +57,12 @@ wss://{icp4d_cluster_host}{:port}/text-to-speech/{release}/instances/{instance_i
 The examples in the documentation abbreviate `wss://{icp4d_cluster_host}{:port}/text-to-speech/{release}/instances/{instance_id}/api` to `{ws_url}`. So all WebSocket examples call the method as `{ws_url}/v1/synthesize`.
 {: note}
 
-A WebSocket client calls this method with the following query parameters to establish an authenticated connection with the service.
+A WebSocket client calls the `/v1/synthesize` method with the following query parameters to establish an authenticated connection with the service.
 
-<table>
-  <caption>Table 1. Parameters of the <code>/v1/synthesize</code>
-    method</caption>
-  <tr>
-    <th style="text-align:left; width:23%">Parameter</th>
-    <th style="text-align:center; width:12%">Data type</th>
-    <th style="text-align:left">Description</th>
-  </tr>
-  <tr>
-    <td style="text-align:left"><code>access_token</code>
-      <br/><em>Required</em></td>
-    <td style="text-align:center">String</td>
-    <td style="text-align:left">
-      Pass a valid access token to authenticate with the service. You must use
-      the access token before it expires.
-    </td>
-  </tr>
-  <tr>
-    <td><code>voice</code><br/><em>Optional</em></td>
-    <td style="text-align:center">String</td>
-    <td>
-      Specifies the voice in which the text is to be spoken in the audio.
-      Omit the parameter to use the default voice, `en-US_MichaelV3Voice`.
-      For more information, see
-      [Languages and voices](/docs/text-to-speech-data?topic=text-to-speech-data-voices).
-    </td>
-  </tr>
-  <tr>
-    <td><code>customization_id</code><br/><em>Optional</em></td>
-    <td style="text-align:center">String</td>
-    <td>
-      Specifies the globally unique identifier (GUID) for a custom voice
-      model that is to be used for the synthesis. A specified custom voice
-      model must match the language of the voice that
-      is used for the synthesis. If you include a customization ID, you must
-      make the request with credentials for the instance of the service that
-      owns the custom model. Omit the parameter to use the specified voice
-      with no customization. For more information, see
-      [Understanding customization](/docs/text-to-speech-data?topic=text-to-speech-data-customIntro).
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:left"><code>x-watson-metadata</code>
-      <br/><em>Optional</em></td>
-    <td style="text-align:center">String</td>
-    <td style="text-align:left">
-      Associates a customer ID with data that is passed over the
-      connection. The parameter accepts the argument
-      <code>customer_id={id}</code>, where <code>id</code> is a random
-      or generic string that is to be associated with the data. You must
-      URL-encode the argument to the parameter, for example,
-      `customer_id%3dmy_ID`. By default, no customer ID is associated
-      with the data. For more information, see
-      [Information security](/docs/text-to-speech-data?topic=text-to-speech-data-information-security).
-    </td>
-  </tr>
-</table>
+-   `access_token` (*required* string) - Pass a valid access token to authenticate with the service. You must use the access token before it expires.
+-   `voice` (*optional* string) - Specifies the voice in which the text is to be spoken in the audio. Omit the parameter to use the default voice, `en-US_MichaelV3Voice`. For more information, see [Languages and voices](/docs/text-to-speech-data?topic=text-to-speech-data-voices).
+-   `customization_id` (*optional* string) - Specifies the globally unique identifier (GUID) for a custom voice model that is to be used for the synthesis. A specified custom voice model must match the language of the voice that is used for the synthesis. If you include a customization ID, you must make the request with credentials for the instance of the service that owns the custom model. Omit the parameter to use the specified voice with no customization. For more information, see [Understanding customization](/docs/text-to-speech-data?topic=text-to-speech-data-customIntro).
+-   `x-watson-metadata` (*optional* string) - Associates a customer ID with data that is passed over the connection. The parameter accepts the argument `customer_id={id}`, where `id` is a random or generic string that is to be associated with the data. You must URL-encode the argument to the parameter, for example, `customer_id%3dmy_ID`. By default, no customer ID is associated with the data. For more information, see [Information security](/docs/text-to-speech-data?topic=text-to-speech-data-information-security).
 
 The following snippet of JavaScript code opens a connection with the service. The call to the `/v1/synthesize` method passes the `access_token` and `voice` query parameters, the latter to direct the service to use the US English Allison voice. Once the connection is established, the event listeners (`onOpen`, `onClose`, and so on) are defined to respond to events from the service.
 
@@ -140,53 +87,9 @@ websocket.onerror = function(evt) { onError(evt) };
 
 To synthesize text, the client passes a simple JSON text message to the service with the following parameters.
 
-<table>
-  <caption>Table 2. Parameters of the JSON text message</caption>
-  <tr>
-    <th style="text-align:left; width:23%">Parameter</th>
-    <th style="text-align:center; width:12%">Data type</th>
-    <th style="text-align:left">Description</th>
-  </tr>
-  <tr>
-    <td><code>text</code><br/><em>Required</em></td>
-    <td style="text-align:center">String</td>
-    <td>
-      Provides the text that is to be synthesized. The client can pass
-      plain text or text that is annotated with the Speech Synthesis
-      Markup Language (SSML). The client can pass a maximum of 5 KB of
-      input text with the request. The limit includes any SSML that you
-      specify. For more information, see
-      [Specifying input text](/docs/text-to-speech-data?topic=text-to-speech-data-usingHTTP#input)
-      and the sections that follow it.<br/><br/>
-      SSML input can also include the <code>&lt;mark&gt;</code> element.
-      For more information, see
-      [Specifying an SSML mark](/docs/text-to-speech-data?topic=text-to-speech-data-timing#mark).
-    </td>
-  </tr>
-  <tr>
-    <td><code>accept</code><br/><em>Required</em></td>
-    <td style="text-align:center">String</td>
-    <td>
-      Specifies the requested format (MIME type) of the audio. Use
-      `*/*` to request the default audio format,
-      <code>audio/ogg;codecs=opus</code>. For more information, see
-      [Audio formats](/docs/text-to-speech-data?topic=text-to-speech-data-audioFormats).
-    </td>
-  </tr>
-  <tr>
-    <td><code>timings</code><br/><em>Optional</em></td>
-    <td style="text-align:center">String[ ]</td>
-    <td>
-      Specifies that the service is to return word timing information
-      for all strings of the input text. The service returns the start
-      and end time of each token of the input. Specify <code>words</code>
-      as the lone element of the array to request word timings. Specify
-      an empty array or omit the parameter to receive no word timings.
-      For more information, see
-      [Obtaining word timings](/docs/text-to-speech-data?topic=text-to-speech-data-timing#timing). <em>Not supported for Japanese input text.</em>
-    </td>
-  </tr>
-</table>
+-   `text` (*required* string) - Provides the text that is to be synthesized. The client can pass plain text or text that is annotated with the Speech Synthesis Markup Language (SSML). The client can pass a maximum of 5 KB of input text with the request. The limit includes any SSML that you specify. For more information, see [Specifying input text](/docs/text-to-speech-data?topic=text-to-speech-data-usingHTTP#input) and the sections that follow it. (SSML input can also include the `&lt;mark&gt;` element. For more information, see [Specifying an SSML mark](/docs/text-to-speech-data?topic=text-to-speech-data-timing#mark).)
+-   `accept` (*required* string) - Specifies the requested format (MIME type) of the audio. Use `*/*` to request the default audio format, `audio/ogg;codecs=opus`. For more information, see [Audio formats](/docs/text-to-speech-data?topic=text-to-speech-data-audioFormats).
+-   `timings` (*optional* string[ ]) - Specifies that the service is to return word timing information for all strings of the input text. The service returns the start and end time of each token of the input. Specify `words` as the lone element of the array to request word timings. Specify an empty array or omit the parameter to receive no word timings. For more information, see [Obtaining word timings](/docs/text-to-speech-data?topic=text-to-speech-data-timing#timing). *Not supported for Japanese input text.*
 
 The following snippet of JavaScript code passes a simple "Hello world" message as the input text and requests the default format for the audio. The calls are included in the `onOpen` function that is defined for the client to ensure that they are sent only after the connection is established.
 

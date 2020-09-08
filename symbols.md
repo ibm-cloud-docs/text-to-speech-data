@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-04-30"
+lastupdated: "2020-09-07"
 
 subcollection: text-to-speech-data
 
@@ -103,61 +103,12 @@ You can use a `.` (period) to mark the beginning of each syllable. However, to p
 
 Table 1 identifies the symbols that you can use to indicate syllable stress for a pronunciation. {{site.data.keyword.IBM_notm}} recommends that you indicate primary stress for pronunciations in either SPR or IPA. However, indicating syllable stress is optional for both formats; the service determines where stress occurs if you do not indicate it.
 
-<table style="width:80%">
-  <caption>Table 1. Syllable stress</caption>
-  <tr>
-    <th style="width:22%; text-align:center; vertical-align:bottom">
-      SPR symbol
-    </th>
-    <th style="width:22%; text-align:center; vertical-align:bottom">
-      IPA symbol
-    </th>
-    <th style="width:22%; text-align:center; vertical-align:bottom">
-      IPA Unicode
-    </th>
-    <th style="text-align:left; vertical-align:bottom">
-      Meaning
-    </th>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      1
-    </td>
-    <td style="text-align:center">
-      <code>&#712;</code>
-    </td>
-    <td style="text-align:center">
-      02C8
-    </td>
-    <td>
-      Primary stress
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      2
-    </td>
-    <td style="text-align:center">
-      <code>&#716;</code>
-    </td>
-    <td style="text-align:center">
-      02CC
-    </td>
-    <td>
-      Secondary stress
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      0
-    </td>
-    <td style="text-align:center">No symbol</td>
-    <td style="text-align:center">No value</td>
-    <td>
-      No stress
-    </td>
-  </tr>
-</table>
+| Stress | SPR symbol | IPA symbol | IPA Unicode |
+|---------|:----------:|:----------:|:-----------:|
+| Primary stress | `1` | <code>&#712;</code> | `02C8` |
+| Secondary stress | `2` | <code>&#716;</code> | `02CC` |
+| No stress | `0` | No symbol | No value |
+{: caption="Table 1. Syllable stress"}
 
 You must place a syllable stress marker within a syllable boundary but always to the left of the syllable's vowel. You can place a marker anywhere to the left of the stressed vowel. For example, each of the following SPR examples places the primary stress on the correct vowel of the word *construction*:
 
@@ -174,81 +125,14 @@ You must place a syllable stress marker within a syllable boundary but always to
 
 Table 2 lists language-specific considerations that apply to specifying syllable stress. Unless the table qualifies the rules for a language, you can use the syllable stress symbols described in the previous section.
 
-<table style="width:90%">
-  <caption>Table 2. Language-specific rules for using syllable stress</caption>
-  <tr>
-    <th style="width:20%; text-align:center; vertical-align:bottom">
-      Language
-    </th>
-    <th style="width:20%; text-align:center; vertical-align:bottom">
-      Notation
-    </th>
-    <th style="text-align:left; vertical-align:bottom">
-      Language-specific rules
-    </th>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      French
-    </td>
-    <td style="text-align:center">
-      SPR
-    </td>
-    <td>
-      All syllable stress symbols are honored. But syllable stress must
-      immediately precede the vowel of the syllable. Syllable stress for
-      French is much stricter than for other languages. An error occurs
-      if you place the stress symbol in an invalid location.
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      French
-    </td>
-    <td style="text-align:center">
-      IPA
-    </td>
-    <td>
-      All syllable stress symbols are ignored.
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      Italian
-    </td>
-    <td style="text-align:center">
-      SPR
-    </td>
-    <td>
-      You can specify only `1` (primary stress). An error occurs if you
-      specify secondary or no stress.
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      Japanese
-    </td>
-    <td style="text-align:center">
-      SPR
-    </td>
-    <td>
-      You can specify only `1` (primary stress) and `0` (no stress). An
-      error occurs if you specify secondary stress.
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:center">
-      Spanish
-    </td>
-    <td style="text-align:center">
-      SPR
-    </td>
-    <td>
-      You can specify only `1` (primary stress). An error occurs if you
-      specify secondary or no stress.
-    </td>
-  </tr>
-</table>
+| Language | Notation | Language-specific rules |
+|:--------:|:--------:|-------------------------|
+| French | SPR | All syllable stress symbols are honored. But syllable stress must immediately precede the vowel of the syllable. Syllable stress for French is much stricter than for other languages. An error occurs if you place the stress symbol in an invalid location. |
+| French | IPA | All syllable stress symbols are ignored. |
+| Italian | SPR | You can specify only `1` (primary stress). An error occurs if you specify secondary or no stress. |
+| Japanese | SPR | You can specify only `1` (primary stress) and `0` (no stress). An error occurs if you specify secondary stress. |
+| Spanish | SPR | You can specify only `1` (primary stress). An error occurs if you specify secondary or no stress. |
+{: caption="Table 2. Language-specific rules for using syllable stress"}
 
 ## Language support for SPR and IPA
 {: #supportedLanguages}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-06-04"
+lastupdated: "2020-09-07"
 
 subcollection: text-to-speech-data
 
@@ -45,60 +45,12 @@ To synthesize text to audio, you call one of the two versions of the service's `
 
 The two versions of the `/v1/synthesize` method have the following parameters in common:
 
-<table>
-  <caption>Table 1. Parameters of the <code>/v1/synthesize</code>
-    methods</caption>
-  <tr>
-    <th style="text-align:left; width:18%">Parameter</th>
-    <th style="text-align:center; width:12%">Type</th>
-    <th style="text-align:center; width:12%">Data type</th>
-    <th style="text-align:left">Description</th>
-  </tr>
-  <tr>
-    <td><code>accept</code><br/><em>Optional</em></td>
-    <td style="text-align:center">Query</td>
-    <td style="text-align:center">String</td>
-    <td>
-      Specifies the requested audio format, or MIME type, in which the
-      service is to return the audio. You can also specify this value with
-      the HTTP <code>Accept</code> request header. URL-encode the argument
-      to the `accept` query parameter. For more information, see
-      [Audio formats](/docs/text-to-speech-data?topic=text-to-speech-data-audioFormats).
-    </td>
-  </tr>
-  <tr>
-    <td><code>voice</code><br/><em>Optional</em></td>
-    <td style="text-align:center">Query</td>
-    <td style="text-align:center">String</td>
-    <td>
-      Specifies the voice in which the text is to be spoken in
-      the audio. Use the <code>/v1/voices</code> method to get the
-      current list of supported voices. The default voice is
-      <code>en-US_MichaelV3Voice</code>. For more information, see
-      [Languages and voices](/docs/text-to-speech-data?topic=text-to-speech-data-voices).
-    </td>
-  </tr>
-  <tr>
-    <td><code>customization_id</code><br/><em>Optional</em></td>
-    <td style="text-align:center">Query</td>
-    <td style="text-align:center">String</td>
-    <td>
-      Specifies a globally unique identifier (GUID) for a custom voice
-      model that is to be used for the synthesis. A specified custom voice
-      model must match the language of the voice that is used for the
-      synthesis. If you include a customization
-      ID, you must make the request with credentials for the instance of
-      the service that owns the custom model. Omit the parameter to use
-      the specified voice with no customization. For more information, see
-      [Understanding customization](/docs/text-to-speech-data?topic=text-to-speech-data-customIntro).
-    </td>
-  </tr>
-</table>
-
-You can also use the `X-Watson-Metadata` request header, which associates a customer ID with data that is passed with a request. For more information, see [Information security](/docs/text-to-speech-data?topic=text-to-speech-data-information-security).
+-   `accept` (query parameter, *optional* string) - Specifies the requested audio format, or MIME type, in which the service is to return the audio. You can also specify this value with the HTTP `Accept` request header. URL-encode the argument to the `accept` query parameter. For more information, see [Audio formats](/docs/text-to-speech-data?topic=text-to-speech-data-audioFormats).
+-   `voice` (query parameter, *optional* string) - Specifies the voice in which the text is to be spoken in the audio. Use the `/v1/voices` method to get the current list of supported voices. The default voice is `en-US_MichaelV3Voice`. For more information, see [Languages and voices](/docs/text-to-speech-data?topic=text-to-speech-data-voices).
+-   `customization_id` (query parameter, *optional* string) - Specifies a globally unique identifier (GUID) for a custom voice model that is to be used for the synthesis. A specified custom voice model must match the language of the voice that is used for the synthesis. If you include a customization ID, you must make the request with credentials for the instance of the service that owns the custom model. Omit the parameter to use the specified voice with no customization. For more information, see [Understanding customization](/docs/text-to-speech-data?topic=text-to-speech-data-customIntro).
+-   `X-Watson-Metadata` (request header, *optional* string) - Associates a customer ID with data that is passed with a request. For more information, see [Information security](/docs/text-to-speech-data?topic=text-to-speech-data-information-security).
 
 If you specify an invalid query parameter or JSON field as part of the input to the `/v1/synthesize` method, the service returns a `Warnings` response header that describes and lists each invalid argument. The request succeeds despite the warnings.
-{: note}
 
 ## Specifying input text
 {: #input}
@@ -131,41 +83,16 @@ For more information about using SSML to annotate input text, see [Using SSML](/
 {: troubleshoot}
 {: support}
 
-Because you can submit input text that includes XML-based SSML annotations, the service validates all input to ensure that any SSML is correct and well formed. Therefore, you must escape any XML control characters that are present in the input text, regardless of whether the input includes SSML. Use the equivalent escape strings or character encodings from Table 2 instead of the indicated characters.
+Because you can submit input text that includes XML-based SSML annotations, the service validates all input to ensure that any SSML is correct and well formed. Therefore, you must escape any XML control characters that are present in the input text, regardless of whether the input includes SSML. Use the equivalent escape strings or character encodings from Table 1 instead of the indicated characters.
 
-<table style="width:80%">
-  <caption>Table 2. Escaping XML control characters</caption>
-  <tr>
-    <th style="text-align:center; vertical-align:bottom; width:40%">Character</th>
-    <th style="text-align:center; vertical-align:bottom; width:30%">Escape strings</th>
-    <th style="text-align:center; vertical-align:bottom; width:30%">Character encoding</th>
-  </tr>
-  <tr>
-    <td style="text-align:center"><code>&quot;</code><br/>(double quotes)</td>
-    <td style="text-align:center"><code>&amp;quot;</code></td>
-    <td style="text-align:center"><code>&amp;#34;</code></td>
-  </tr>
-  <tr>
-    <td style="text-align:center"><code>'</code><br/>(apostrophe or single quote)</td>
-    <td style="text-align:center"><code>&amp;apos;</code></td>
-    <td style="text-align:center"><code>&amp;#39;</code></td>
-  </tr>
-  <tr>
-    <td style="text-align:center"><code>&amp;</code><br/>(ampersand)</td>
-    <td style="text-align:center"><code>&amp;amp;</code></td>
-    <td style="text-align:center"><code>&amp;#38;</code></td>
-  </tr>
-  <tr>
-    <td style="text-align:center"><code>&lt;</code><br/>(left angle bracket)</td>
-    <td style="text-align:center"><code>&amp;lt;</code></td>
-    <td style="text-align:center"><code>&amp;#60;</code></td>
-  </tr>
-  <tr>
-    <td style="text-align:center"><code>&gt;</code><br/>(right angle bracket)</td>
-    <td style="text-align:center"><code>&amp;gt;</code></td>
-    <td style="text-align:center"><code>&amp;#62;</code></td>
-  </tr>
-</table>
+| Character | Escape strings | Character encoding |
+|:---------:|:--------------:|:------------------:|
+| `"`<br/>(double quotes) | `&quot;` | `&#34;` |
+| `'`<br/>(apostrophe or single quote) | `&apos;` | `&#39;` |
+| `&`<br/>(ampersand) | `&amp;` | `&#38;` |
+| `<`<br/>(left angle bracket) | `&lt;` | `&#60;` |
+| `>`<br/>(right angle bracket) | `&gt;` | `&#62;` |
+{: caption="Table 1. Escaping XML control characters"}
 
 For more information about how the service validates input text, see [SSML validation](/docs/text-to-speech-data?topic=text-to-speech-data-ssml#errors).
 
