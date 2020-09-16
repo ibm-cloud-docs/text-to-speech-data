@@ -24,7 +24,6 @@ subcollection: text-to-speech-data
 {:go: .ph data-hd-programlang='go'}
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
-{:download: .download}
 {:url: data-credential-placeholder='url'}
 {:hide-dashboard: .hide-dashboard}
 
