@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-09-06"
+lastupdated: "2020-09-16"
 
 subcollection: text-to-speech-data
 
@@ -20,7 +20,6 @@ subcollection: text-to-speech-data
 {:java: .ph data-hd-programlang='java'}
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
-{:download: .download}
 {:gif: data-image-type='gif'}
 
 # Using the override file
@@ -31,7 +30,7 @@ You can use the `speech-override.yaml` file to customize many aspects of your {{
 ## The speech-override.yaml file
 {: #speech-override-file}
 
-The following example duplicates the `speech-override.yaml` example from [Override values for {{site.data.keyword.watson}} {{site.data.keyword.speechtotextshort}} installation](https://www.ibm.com/support/producthub/icpdata/docs/content/SSQNUZ_current/cpd/svc/watson/speech-to-text-override.html){: external} and [Override values for {{site.data.keyword.watson}} {{site.data.keyword.texttospeechshort}} installation](https://www.ibm.com/support/producthub/icpdata/docs/content/SSQNUZ_current/cpd/svc/watson/text-to-speech-override.html){: external}. The sections that follow describe the values you can use to modify and augment the file. You can download a complete copy of the <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/speech-to-text/speech-override.yaml" download="speech-override.yaml">speech-override.yaml <img src="../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a> file.
+The following example duplicates the `speech-override.yaml` example from [Override values for {{site.data.keyword.watson}} {{site.data.keyword.speechtotextshort}} installation](https://www.ibm.com/support/producthub/icpdata/docs/content/SSQNUZ_current/cpd/svc/watson/speech-to-text-override.html){: external} and [Override values for {{site.data.keyword.watson}} {{site.data.keyword.texttospeechshort}} installation](https://www.ibm.com/support/producthub/icpdata/docs/content/SSQNUZ_current/cpd/svc/watson/text-to-speech-override.html){: external}. The sections that follow describe the values you can use to modify and augment the file. You can download a complete copy of the [speech-override.yaml](https://watson-developer-cloud.github.io/doc-tutorial-downloads/speech-to-text/speech-override.yaml){: external} file.
 
 ```yaml
 tags:
