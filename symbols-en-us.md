@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-09-10"
+lastupdated: "2020-09-17"
 
 subcollection: text-to-speech-data
 
@@ -22,7 +22,7 @@ subcollection: text-to-speech-data
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-# US English symbols
+# English (United States) symbols
 {: #usSymbols}
 
 The following sections describe the valid symbols for United States (US) English.
