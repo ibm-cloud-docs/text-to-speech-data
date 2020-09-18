@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-06-20"
+lastupdated: "2020-09-18"
 
 subcollection: text-to-speech-data
 
@@ -167,7 +167,7 @@ To dump backup data from PostgreSQL, you use the `pg_dump` tool. For more inform
 
 To restore data to PostgreSQL, you use the `psql` tool. This utility is a terminal-based front-end that connects to the database to perform interactive queries and to restore data to the database from backup files. For more information, see the [PostgreSQL `psql` documentation](https://www.postgresql.org/docs/9.6/app-psql.html){: external}.
 
-You need the user name that you defined when you installed and configured the Speech services and PostgreSQL. You can find the name in the Kubernetes `postgresql` object secret within the cluster. The name appears as `user-provided-postgressql` in the example override file. For more information, see [Managing your datastores](/docs/text-to-speech-data?topic=text-to-speech-data-speech-datastores).
+You need the user name that you defined when you installed and configured the Speech services and PostgreSQL. You can find the name in the `postgresql` Kubernetes secret object within the cluster. The name appears as `user-provided-postgressql` in the example override file. For more information, see [Managing your datastores](/docs/text-to-speech-data?topic=text-to-speech-data-speech-datastores).
 
 ### Backing up data from PostgreSQL
 {: #speech-backup-postgresql-backup}
