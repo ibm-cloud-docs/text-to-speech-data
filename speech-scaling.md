@@ -2,7 +2,8 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-09-06"
+lastupdated: "2020-09-21"
+
 subcollection: text-to-speech-data
 
 ---
@@ -29,7 +30,7 @@ When you install the {{site.data.keyword.watson}} Speech services, you choose on
 -   The *development configuration* is used by the default installation. This configuration has a minimal footprint and is meant for development purposes and as a proof of concept. It can only handle several concurrent recognition sessions, and it is not highly available because some of the core components have no redundancy (they are single-replica).
 -   The *production configuration* is a highly available solution that is intended to run production workloads. This configuration, which requires a minimum of three worker nodes, provides a highly available solution.
 
-You can scale up from the development configuration to the production configuration after installing the solution by increasing the number of pods and replicas that are available for the deployment objects. How much to scale up each of the components depends on the degree of concurrency that you need. It is limited by the amount of hardware resources that are available in your Kubernetes cluster and namespace.
+You can scale up from the development configuration to the production configuration after installing the solution by increasing the number of pods and replicas that are available for the Deployment objects. How much to scale up each of the components depends on the degree of concurrency that you need. It is limited by the amount of hardware resources that are available in your Kubernetes cluster and namespace.
 
 ## Scaling up the PostgreSQL and RabbitMQ datastores
 {: #speech-scaling-postgre}
@@ -132,7 +133,7 @@ The following sections describe how to calculate resources for each type of sess
 ### {{site.data.keyword.speechtotextshort}} runtime (recognize)
 {: #speech-scaling-ratio-stt}
 
-The {{site.data.keyword.speechtotextshort}} runtime requires 0.6 CPUs per recognize session. Let the following variables represent the parameters for the calculation:
+The {{site.data.keyword.speechtotextshort}} runtime requires 0.6 CPUs per recognize session. The following variables represent the parameters for the calculation:
 
 -   `R` is the number of CPUs per recognize session, `R = 0.6`.
 -   `S` is the maximum number of sessions that you want to run in parallel; for example, `S = 13`.
@@ -151,7 +152,7 @@ Set the value `sttRuntime.groups.sttRuntimeDefault.resources.requestsCpu=8`.
 ### {{site.data.keyword.texttospeechshort}} runtime (synthesize)
 {: #speech-scaling-ratio-tts}
 
-The {{site.data.keyword.texttospeechshort}} runtime requires 0.4 CPUs per synthesize session. Let the following values represents the parameters for the calculation:
+The {{site.data.keyword.texttospeechshort}} runtime requires 0.4 CPUs per synthesize session. The following variables represent the parameters for the calculation:
 
 -   `R` is the number of CPUs per synthesize session, `R = 0.4`.
 -   `S` is the maximum number of sessions that you want to run in parallel; for example, `S = 13`.
