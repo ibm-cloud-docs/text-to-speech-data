@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-09-04"
+lastupdated: "2020-10-02"
 
 subcollection: text-to-speech-data
 
@@ -44,10 +44,10 @@ This documentation describes installed instances of {{site.data.keyword.texttosp
 The {{site.data.keyword.texttospeechshort}} service supports both [HTTP](/docs/text-to-speech-data?topic=text-to-speech-data-usingHTTP) and [WebSocket](/docs/text-to-speech-data?topic=text-to-speech-data-usingWebSocket) interfaces for speech synthesis. It offers the following features and capabilities:
 
 -   [Audio formats](/docs/text-to-speech-data?topic=text-to-speech-data-audioFormats) - Produces audio in Ogg or WebM with the Opus or Vorbis codec, WAV, FLAC, MP3 (MPEG), l16 (PCM), mulaw, or basic format.
--   [Languages and voices](/docs/text-to-speech-data?topic=text-to-speech-data-voices) - Synthesizes text to audio in many different languages, voices, and dialects. The service offers both standard (concatenative) and neural versions of most voices.
+-   [Languages and voices](/docs/text-to-speech-data?topic=text-to-speech-data-voices) - Synthesizes text to audio in many different languages, voices, and dialects. All of the voices are neural voices.
 -   [Obtaining word timings](/docs/text-to-speech-data?topic=text-to-speech-data-timing) - With the WebSocket interface, supports the SSML `<mark>` element and optional word timing information for all strings of the input text. Timing information synchronizes the input text and the resulting audio.
 -   [SSML](/docs/text-to-speech-data?topic=text-to-speech-data-ssml) - Accepts plain text or text that is marked up with the XML-based Speech Synthesis Markup Language (SSML).
--   [Voice customization](/docs/text-to-speech-data?topic=text-to-speech-data-customIntro) - Provides a customization interface that you can use to specify how the service pronounces unusual words that occur in your input text. You can define custom dictionaries for domain-specific terms, words with foreign origins, personal or geographic names, and abbreviations or acronyms in your application's lexicon. You can create pronunciations based on other words, on the International Phonetic Alphabet (IPA), or on the {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR).
+-   [Customization](/docs/text-to-speech-data?topic=text-to-speech-data-customIntro) - Provides a customization interface that you can use to specify how the service pronounces unusual words that occur in your input text. You can define custom models to include dictionaries of domain-specific terms, words with foreign origins, personal or geographic names, and abbreviations or acronyms in your application's lexicon. You can create pronunciations based on other words, on the International Phonetic Alphabet (IPA), or on the {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR).
 
 ## Language support
 {: #languages-index}
@@ -75,7 +75,7 @@ Federal Information Security Management Act (FISMA) support is available for {{s
 
 ## Try out the service
 
-For examples of the {{site.data.keyword.texttospeechshort}} service in action, see
+You can see examples of the {{site.data.keyword.texttospeechshort}} service in action:
 
 -   A [quick demo](https://text-to-speech-demo.ng.bluemix.net/){: external} of the {{site.data.keyword.texttospeechshort}} service that accepts text and generates speech with different voices. It offers expressiveness and transformation where supported.
 -   Applications in {{site.data.keyword.ibmwatson}} [Starter Kits](http://www.ibm.com/watson/developercloud/starter-kits.html){: external} that demonstrate the {{site.data.keyword.texttospeechshort}} service.

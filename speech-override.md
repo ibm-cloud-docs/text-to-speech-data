@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-09-16"
+lastupdated: "2020-10-02"
 
 subcollection: text-to-speech-data
 
@@ -110,7 +110,7 @@ Table 1 describes the top-level Speech components that you can install.
 | `tags.sttAsync` | {{site.data.keyword.speechtotextshort}} asynchronous HTTP component. This value enables the `/v1/recognitions` interface. For more information, see [The asynchronous HTTP interface](/docs/speech-to-text-data?topic=speech-to-text-data-async). | `True` |
 | `tags.sttCustomization` | {{site.data.keyword.speechtotextshort}} customization component. This value enables the `/v1/customizations` and `/v1/acoustic_customizations` interfaces for language model and acoustic model customization. Enabling it also enables the {{site.data.keyword.speechtotextshort}} runtime component if `tags.sttRuntime=false`. For more information, see [The customization interface](/docs/speech-to-text-data?topic=speech-to-text-data-customization). | `True` |
 | `tags.ttsRuntime` | {{site.data.keyword.texttospeechshort}} runtime component, the base component for speech synthesis. This value enables the `/v1/synthesize` interfaces (HTTP and WebSocket). Enabling any other {{site.data.keyword.texttospeechshort}} component automatically enables the {{site.data.keyword.texttospeechshort}} runtime component. For more information, see [The HTTP interface](/docs/text-to-speech-data?topic=text-to-speech-data-usingHTTP) and [The WebSocket interface](/docs/text-to-speech-data?topic=text-to-speech-data-usingWebSocket). | `True` |
-| `tags.ttsCustomization` | {{site.data.keyword.texttospeechshort}} customization component. This value enables the `/v1/customizations` interface for voice model customization. Enabling it also enables the {{site.data.keyword.texttospeechshort}} runtime component if `tags.sttRuntime=false`. For more information, see [Understanding customization](/docs/text-to-speech-data?topic=text-to-speech-data-customIntro). | `True` |
+| `tags.ttsCustomization` | {{site.data.keyword.texttospeechshort}} customization component. This value enables the `/v1/customizations` interface for customization. Enabling it also enables the {{site.data.keyword.texttospeechshort}} runtime component if `tags.sttRuntime=false`. For more information, see [Understanding customization](/docs/text-to-speech-data?topic=text-to-speech-data-customIntro). | `True` |
 {: caption="Table 1. Installation of Speech services components"}
 
 ### Configuring datastores
