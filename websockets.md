@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-09-07"
+lastupdated: "2020-10-02"
 
 subcollection: text-to-speech-data
 
@@ -61,7 +61,7 @@ A WebSocket client calls the `/v1/synthesize` method with the following query pa
 
 -   `access_token` (*required* string) - Pass a valid access token to authenticate with the service. You must use the access token before it expires.
 -   `voice` (*optional* string) - Specifies the voice in which the text is to be spoken in the audio. Omit the parameter to use the default voice, `en-US_MichaelV3Voice`. For more information, see [Languages and voices](/docs/text-to-speech-data?topic=text-to-speech-data-voices).
--   `customization_id` (*optional* string) - Specifies the globally unique identifier (GUID) for a custom voice model that is to be used for the synthesis. A specified custom voice model must match the language of the voice that is used for the synthesis. If you include a customization ID, you must make the request with credentials for the instance of the service that owns the custom model. Omit the parameter to use the specified voice with no customization. For more information, see [Understanding customization](/docs/text-to-speech-data?topic=text-to-speech-data-customIntro).
+-   `customization_id` (*optional* string) - Specifies the globally unique identifier (GUID) for a custom model that is to be used for the synthesis. A specified custom model must match the language of the voice that is used for the synthesis. If you include a customization ID, you must make the request with credentials for the instance of the service that owns the custom model. Omit the parameter to use the specified voice with no customization. For more information, see [Understanding customization](/docs/text-to-speech-data?topic=text-to-speech-data-customIntro).
 -   `x-watson-metadata` (*optional* string) - Associates a customer ID with data that is passed over the connection. The parameter accepts the argument `customer_id={id}`, where `id` is a random or generic string that is to be associated with the data. You must URL-encode the argument to the parameter, for example, `customer_id%3dmy_ID`. By default, no customer ID is associated with the data. For more information, see [Information security](/docs/text-to-speech-data?topic=text-to-speech-data-information-security).
 
 The following snippet of JavaScript code opens a connection with the service. The call to the `/v1/synthesize` method passes the `access_token` and `voice` query parameters, the latter to direct the service to use the US English Allison voice. Once the connection is established, the event listeners (`onOpen`, `onClose`, and so on) are defined to respond to events from the service.

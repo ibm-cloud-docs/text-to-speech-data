@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-09-07"
+lastupdated: "2020-10-02"
 
 subcollection: text-to-speech-data
 
@@ -22,7 +22,7 @@ subcollection: text-to-speech-data
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-# Creating and managing custom voice models
+# Creating and managing custom models
 {: #customModels}
 
 The first step in working with any custom model is to create it. Once it exists, you can manage the model by querying or updating its metadata and entries, and by deleting it if it is no longer needed. Before getting started, review the following general usage information about custom models.
@@ -33,10 +33,10 @@ The first step in working with any custom model is to create it. Once it exists,
 
 Consider the following guidelines when working with the customization interface.
 
-### Ownership of custom voice models
+### Ownership of custom models
 {: #customOwner}
 
-A custom voice model is owned by the instance of the {{site.data.keyword.texttospeechshort}} service whose credentials are used to create it. You must use credentials for that service instance with methods of the customization interface to work with the custom model in any way.
+A custom model is owned by the instance of the {{site.data.keyword.texttospeechshort}} service whose credentials are used to create it. You must use credentials for that service instance with methods of the customization interface to work with the custom model in any way.
 
 All credentials obtained for the same instance of the {{site.data.keyword.texttospeechshort}} service share access to all custom models created for that service instance. To restrict access to a custom model, create a separate instance of the service and use only the credentials for that service instance to create and work with the model. Credentials for other service instances cannot affect the custom model.
 
@@ -45,7 +45,7 @@ An advantage of sharing ownership across credentials is that you can cancel a se
 ### Information security
 {: #customSecurity}
 
-The service allows you to associate a customer ID with data that is added or updated for custom voice models. You can associate a customer ID with custom words by passing the `X-Watson-Metadata` header with the following methods:
+The service allows you to associate a customer ID with data that is added or updated for custom models. You can associate a customer ID with custom words by passing the `X-Watson-Metadata` header with the following methods:
 
 -   `POST /v1/customizations/{customization_id}`
 -   `POST /v1/customizations/{customization_id}/words`
@@ -56,7 +56,7 @@ If necessary, you can then delete the data associated with the customer ID by us
 ## Creating a custom model
 {: #cuModelsCreate}
 
-To create a new custom model, use the `POST /v1/customizations` method. A new model is always empty when you first create it. You must use other methods to populate it with word/translation pairs. The new custom model is owned by the service instance whose credentials are used to create it. For more information, see [Ownership of custom voice models](#customOwner).
+To create a new custom model, use the `POST /v1/customizations` method. A new model is always empty when you first create it. You must use other methods to populate it with word/translation pairs. The new custom model is owned by the service instance whose credentials are used to create it. For more information, see [Ownership of custom models](#customOwner).
 
 You pass the following attributes as a JSON object with the body of a `POST /v1/customizations` request:
 

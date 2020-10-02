@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-07-06"
+lastupdated: "2020-10-02"
 
 subcollection: text-to-speech-data
 
@@ -48,7 +48,7 @@ Learn more about {{site.data.keyword.IBM_notm}}'s own GDPR readiness journey and
 ## Labeling and deleting data in the {{site.data.keyword.texttospeechshort}} service
 {: #gdpr-text-to-speech}
 
-{{site.data.keyword.texttospeechdatafull}} for {{site.data.keyword.icp4dfull}} enables you to delete all data that is associated with speech synthesis requests and with custom voice models. To delete data, you must do the following:
+{{site.data.keyword.texttospeechdatafull}} for {{site.data.keyword.icp4dfull}} enables you to delete all data that is associated with speech synthesis requests and with custom models. To delete data, you must do the following:
 
 1.  Use the `X-Watson-Metadata` header to associate a customer ID with data that is passed by a request to the service; see [Specifying a customer ID](#specify-customer-id).
 1.  Use the `DELETE /v1/user_data` method to delete all data that is associated with a specified customer ID; see [Deleting data](#delete-pi).
@@ -90,7 +90,7 @@ Use the `X-Watson-Metadata` header with the following methods:
 
     You specify the customer ID with the `x-watson-metadata` query parameter to associate the ID with data that is sent with the request. You must URL-encode the argument to the query parameter, for example, `customer_id%3dmy_ID`.
 
--   With requests to add custom words to custom voice models:
+-   With requests to add custom words to custom models:
     -   `POST /v1/customizations/{customization_id}`
     -   `POST /v1/customizations/{customization_id}/words`
     -   `PUT /v1/customizations/{customization_id}/words/{word}`

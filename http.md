@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-09-07"
+lastupdated: "2020-10-02"
 
 subcollection: text-to-speech-data
 
@@ -28,7 +28,7 @@ subcollection: text-to-speech-data
 # The HTTP interface
 {: #usingHTTP}
 
-To synthesize text to speech with the HTTP REST interface of {{site.data.keyword.texttospeechdatafull}} for {{site.data.keyword.icp4dfull}}, you call the `GET` or `POST /v1/synthesize` method. You specify the text that is to be synthesized and the voice and format for the spoken audio. You can also specify a custom voice model that is to be used with the request.
+To synthesize text to speech with the HTTP REST interface of {{site.data.keyword.texttospeechdatafull}} for {{site.data.keyword.icp4dfull}}, you call the `GET` or `POST /v1/synthesize` method. You specify the text that is to be synthesized and the voice and format for the spoken audio. You can also specify a custom model that is to be used with the request.
 {: shortdesc}
 
 For more information about the HTTP interface, see the [API reference](https://{DomainName}/apidocs/text-to-speech-data){: external}.
@@ -47,7 +47,7 @@ The two versions of the `/v1/synthesize` method have the following parameters in
 
 -   `accept` (query parameter, *optional* string) - Specifies the requested audio format, or MIME type, in which the service is to return the audio. You can also specify this value with the HTTP `Accept` request header. URL-encode the argument to the `accept` query parameter. For more information, see [Audio formats](/docs/text-to-speech-data?topic=text-to-speech-data-audioFormats).
 -   `voice` (query parameter, *optional* string) - Specifies the voice in which the text is to be spoken in the audio. Use the `/v1/voices` method to get the current list of supported voices. The default voice is `en-US_MichaelV3Voice`. For more information, see [Languages and voices](/docs/text-to-speech-data?topic=text-to-speech-data-voices).
--   `customization_id` (query parameter, *optional* string) - Specifies a globally unique identifier (GUID) for a custom voice model that is to be used for the synthesis. A specified custom voice model must match the language of the voice that is used for the synthesis. If you include a customization ID, you must make the request with credentials for the instance of the service that owns the custom model. Omit the parameter to use the specified voice with no customization. For more information, see [Understanding customization](/docs/text-to-speech-data?topic=text-to-speech-data-customIntro).
+-   `customization_id` (query parameter, *optional* string) - Specifies a globally unique identifier (GUID) for a custom model that is to be used for the synthesis. A specified custom model must match the language of the voice that is used for the synthesis. If you include a customization ID, you must make the request with credentials for the instance of the service that owns the custom model. Omit the parameter to use the specified voice with no customization. For more information, see [Understanding customization](/docs/text-to-speech-data?topic=text-to-speech-data-customIntro).
 -   `X-Watson-Metadata` (request header, *optional* string) - Associates a customer ID with data that is passed with a request. For more information, see [Information security](/docs/text-to-speech-data?topic=text-to-speech-data-information-security).
 
 If you specify an invalid query parameter or JSON field as part of the input to the `/v1/synthesize` method, the service returns a `Warnings` response header that describes and lists each invalid argument. The request succeeds despite the warnings.

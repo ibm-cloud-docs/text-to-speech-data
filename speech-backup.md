@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-09-18"
+lastupdated: "2020-10-02"
 
 subcollection: text-to-speech-data
 
@@ -49,7 +49,7 @@ Your disaster recovery plan includes knowing, preserving, and being prepared to 
 
 For the {{site.data.keyword.texttospeechshort}} service, you need to back up data from the following interface:
 
--   *Voice model customization* - Data from custom voice models that you create with the `/v1/customizations` interface. For more information, see [Understanding customization](/docs/text-to-speech-data?topic=text-to-speech-data-customIntro).
+-   *Customization* - Data from custom models that you create with the `/v1/customizations` interface. For more information, see [Understanding customization](/docs/text-to-speech-data?topic=text-to-speech-data-customIntro).
 
 The frequency of the backups depends on factors like the following:
 
