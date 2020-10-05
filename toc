@@ -47,8 +47,8 @@ Text to Speech for IBM Cloud Pak for Data
 
     {: topicgroup}
     SSML
-        SSML.md
-        SSML-elements.md
+        ssml.md
+        ssml-elements.md
 
     {: topicgroup}
     Phonetic symbols

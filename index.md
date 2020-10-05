@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-10-02"
+lastupdated: "2020-10-05"
 
 subcollection: text-to-speech-data
 
