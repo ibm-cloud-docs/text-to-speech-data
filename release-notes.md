@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-09-04"
+lastupdated: "2020-10-15"
 
 subcollection: text-to-speech-data
 
@@ -83,8 +83,8 @@ The initial release of the service. {{site.data.keyword.texttospeechshort}} for 
 
 {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} differs from the public {{site.data.keyword.texttospeechshort}} service in the following ways. You might find this information helpful if you are already familiar with the {{site.data.keyword.texttospeechshort}} service on the public {{site.data.keyword.cloud_notm}}.
 
--   {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} uses access tokens for authentication. For more information, see [Making requests to the service](/docs/text-to-speech-data?topic=text-to-speech-data-making-requests) and the [API reference](https://{DomainName}/apidocs/text-to-speech-data){: external}.
--   The endpoints for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} are specific to your {{site.data.keyword.icp4dfull_notm}} cluster. For more information, see [Making requests to the service](/docs/text-to-speech-data?topic=text-to-speech-data-making-requests) and the [API reference](https://{DomainName}/apidocs/text-to-speech-data){: external}.
+-   {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} uses access tokens for authentication. For more information, see [Making requests to the service](/docs/text-to-speech-data?topic=text-to-speech-data-making-requests) and the [API & SDK reference](https://{DomainName}/apidocs/text-to-speech-data){: external}.
+-   The endpoints for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} are specific to your {{site.data.keyword.icp4dfull_notm}} cluster. For more information, see [Making requests to the service](/docs/text-to-speech-data?topic=text-to-speech-data-making-requests) and the [API & SDK reference](https://{DomainName}/apidocs/text-to-speech-data){: external}.
 -   {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} supports only neural voices. It does not support standard (concatenative) voices. The neural voices do not support the SSML `<express-as>` and `<voice-transformation>` elements.
 -   {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} does not perform any request logging. You do not need to use the `X-Watson-Learning-Opt-Out` request header.
 -   {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} does not support Watson tokens. You cannot use the `X-Watson-Authorization-Token` request header to authenticate with the service.

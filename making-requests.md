@@ -33,7 +33,7 @@ To make authenticated requests to {{site.data.keyword.texttospeechdatafull}} for
 
 Before using the {{site.data.keyword.texttospeechshort}} service, you must provision an instance of the service and obtain your credentials. For more information, see [Before you begin](/docs/text-to-speech-data?topic=text-to-speech-data-gettingStarted#before-you-begin). In the last step of that procedure, you copy the `{token}` and `{URL}` for your service instance:
 
--   The `{token}` provides your access token for authenticating to the service. You can use the access token displayed in the {{site.data.keyword.icp4dfull_notm}} web client. However, in a production environment, use a token that you generate programmatically for your service instance. For more information and for examples, see *Authentication* in the [API reference](https://{DomainName}/apidocs/text-to-speech-data#authentication){: external}.
+-   The `{token}` provides your access token for authenticating to the service. You can use the access token displayed in the {{site.data.keyword.icp4dfull_notm}} web client. However, in a production environment, use a token that you generate programmatically for your service instance. For more information and for examples, see *Authentication* in the [API & SDK reference](https://{DomainName}/apidocs/text-to-speech-data#authentication){: external}.
 
     You authenticate to the {{site.data.keyword.texttospeechshort}} service by passing your access token with each request. {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} is a multi-tenant cloud solution. Your credentials provide access only to your data, and your data is isolated from other users.
 -   The `{URL}` provides the base endpoint that you use to call methods of the service.
@@ -115,4 +115,4 @@ All Watson services use SSL (or TLS) for secure connections and communications b
     -   To disable SSL verification for a `curl` request, use the `--insecure` (`-k`) option with the request. This option directs the command to bypass the tool's verification of SSL certificates.
     -   To disable SSL verification for a WebSocket request, use the appropriate approach for your client library or use one of the {{site.data.keyword.ibmwatson}} {{site.data.keyword.texttospeechshort}} SDKs.
 
-For more information about disabling SSL verification for calls to the service, see *Disabling SSL verification* in the [API reference](https://{DomainName}/apidocs/text-to-speech-data#disabling-ssl){: external}. The information includes examples for `curl` and for all of the SDKs.
+For more information about disabling SSL verification for calls to the service, see *Disabling SSL verification* in the [API & SDK reference](https://{DomainName}/apidocs/text-to-speech-data#disabling-ssl){: external}. The information includes examples for `curl` and for all of the SDKs.
