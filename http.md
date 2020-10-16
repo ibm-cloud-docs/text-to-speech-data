@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-10-02"
+lastupdated: "2020-10-15"
 
 subcollection: text-to-speech-data
 
@@ -31,7 +31,7 @@ subcollection: text-to-speech-data
 To synthesize text to speech with the HTTP REST interface of {{site.data.keyword.texttospeechdatafull}} for {{site.data.keyword.icp4dfull}}, you call the `GET` or `POST /v1/synthesize` method. You specify the text that is to be synthesized and the voice and format for the spoken audio. You can also specify a custom model that is to be used with the request.
 {: shortdesc}
 
-For more information about the HTTP interface, see the [API reference](https://{DomainName}/apidocs/text-to-speech-data){: external}.
+For more information about the HTTP interface, see the [API & SDK reference](https://{DomainName}/apidocs/text-to-speech-data){: external}.
 
 ## Synthesizing text to audio
 {: #synthesize}

@@ -8,10 +8,7 @@ Text to Speech for IBM Cloud Pak for Data
     getting-started.md
     index.md
     developer-overview.md
-
-    {: .topicgroup}
-    Demos
-        [Quick demo](https://text-to-speech-demo.ng.bluemix.net/)
+    [Demo](https://text-to-speech-demo.ng.bluemix.net/)
 
     {: .topicgroup}
     Additional resources
@@ -69,7 +66,7 @@ Text to Speech for IBM Cloud Pak for Data
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    [API reference](https://cloud.ibm.com/apidocs/text-to-speech-data)
+    [API & SDK reference](https://cloud.ibm.com/apidocs/text-to-speech-data)
     information-security.md
     /watson/watson-using-sdks
     [Watson GitHub repos](https://github.com/watson-developer-cloud/)
