@@ -2,11 +2,14 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-10-21"
+lastupdated: "2020-10-23"
 
-keywords: text to speech,IBM cloud pak for data,getting started,tutorial,synthesize audio,speech synthesis
+keywords: text to speech data,IBM cloud pak for data,getting started,tutorial,synthesize audio,speech synthesis
 
 subcollection: text-to-speech-data
+
+content-type: tutorial
+completion-time: 10m
 
 ---
 
@@ -26,9 +29,12 @@ subcollection: text-to-speech-data
 {:swift: .ph data-hd-programlang='swift'}
 {:url: data-credential-placeholder='url'}
 {:hide-dashboard: .hide-dashboard}
+{:step: data-tutorial-type='step'}
 
 # Getting started with {{site.data.keyword.texttospeechshort}}
 {: #gettingStarted}
+{: toc-content-type="tutorial"}
+{: toc-completion-time="10m"}
 
 {{site.data.keyword.texttospeechdatafull}} for {{site.data.keyword.icp4dfull}} converts written text to natural-sounding speech to provide speech-synthesis capabilities for applications. This curl-based tutorial can help you get started quickly with the service. The examples show you how to call the service's `POST` and `GET /v1/synthesize` methods to request an audio stream.
 {: shortdesc}
@@ -56,11 +62,12 @@ This tutorial uses the `curl` command to call methods of the service's HTTP inte
 
 1.  If necessary, install the version of `curl` with SSL enabled for your operating system from [curl.haxx.se](https://curl.haxx.se/){: external}.
 
-Omit the braces from the examples. They indicate variable values.
+Omit the braces (`{ }`) from the examples. They indicate variable values.
 {: tip}
 
-## Step 1: Synthesize text in US English
+## Synthesize text in US English
 {: #synthesizeEnglish}
+{: step}
 
 The following commands use the `POST /v1/synthesize` method to synthesize US English input to audio files in two different formats. Both requests use the default US English voice, `en-US_MichaelVoice`.
 
@@ -99,8 +106,9 @@ The following commands use the `POST /v1/synthesize` method to synthesize US Eng
 You can use a browser or other tools to play the audio files that are produced by the examples. For more information, see [Playing an audio file](/docs/text-to-speech-data?topic=text-to-speech-data-audioFormats#formatsPlay).
 {: note}
 
-## Step 2: Synthesize text in Spanish
+## Synthesize text in Spanish
 {: #synthesizeSpanish}
+{: step}
 
 The following command uses the `GET /v1/synthesize` method to synthesize Spanish input to an audio file.
 
