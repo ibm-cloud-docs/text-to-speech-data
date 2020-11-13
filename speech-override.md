@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-10-02"
+lastupdated: "2020-11-20"
 
 subcollection: text-to-speech-data
 
@@ -49,28 +49,28 @@ global:
     pullSecret: {Docker_pull_secret}
     pullPolicy: "IfNotPresent"
 
-datastores:
-  minio:
-    secretName: "minio"
-  postgressql:
-    auth:
-      authSecretName: "user-provided-postgressql"
+  datastores:
+    minio:
+      secretName: "minio"
+    postgressql:
+      auth:
+        authSecretName: "user-provided-postgressql"
 
-sttModels:
-  enUsBroadbandModel:
-    enabled: true
-  enUsNarrowbandModel:
-    enabled: true
-  enUsShortFormNarrowbandModel:
-    enabled: true
+  sttModels:
+    enUsBroadbandModel:
+      enabled: true
+    enUsNarrowbandModel:
+      enabled: true
+    enUsShortFormNarrowbandModel:
+      enabled: true
 
-ttsVoices:
-  enUSMichaelV3Voice:
-    enabled: true
-  enUSAllisonV3Voice:
-    enabled: true
-  enUSLisaV3Voice:
-    enabled: true
+  ttsVoices:
+    enUSMichaelV3Voice:
+      enabled: true
+    enUSAllisonV3Voice:
+      enabled: true
+    enUSLisaV3Voice:
+      enabled: true
 ```
 {: codeblock}
 
