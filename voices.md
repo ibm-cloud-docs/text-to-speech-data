@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-10-02"
+lastupdated: "2020-11-30"
 
 subcollection: text-to-speech-data
 
@@ -35,25 +35,28 @@ Table 1 lists and provides audio samples for the voices that are available for e
 
 | Language | Gender / Type | Voice | Sample |
 |----------|:-------------:|:-----:|:------:|
-| Brazilian<br/>Portuguese | Female | `pt-BR_IsabelaV3Voice` | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/IsabelaV3.wav" type="audio/wav"></audio> |
-| English<br/>(United Kingdom) | Female | `en-GB_KateV3Voice` | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/KateV3.wav" type="audio/wav"></audio> |
-| English<br/>(United States) | Female | `en-US_AllisonV3Voice` | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/AllisonV3.wav" type="audio/wav"></audio> |
-| | Female | `en-US_EmilyV3Voice` | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/EmilyV3.wav" type="audio/wav"></audio> |
-| | Male | `en-US_HenryV3Voice` | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/HenryV3.wav" type="audio/wav"></audio> |
-| | Male | `en-US_KevinV3Voice` | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/KevinV3.wav" type="audio/wav"></audio> |
-| | Female | `en-US_LisaV3Voice` | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/LisaV3.wav" type="audio/wav"></audio> |
-| | Male | `en-US_MichaelV3Voice` | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/MichaelV3.wav" type="audio/wav"></audio> |
-| | Female | `en-US_OliviaV3Voice` | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/OliviaV3.wav" type="audio/wav"></audio> |
-| French | Female | `fr-FR_ReneeV3Voice` | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/ReneeV3.wav" type="audio/wav"></audio> |
-| German | Female | `de-DE_BirgitV3Voice` | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/BirgitV3.wav" type="audio/wav"></audio> |
-| | Male | `de-DE_DieterV3Voice` | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/DieterV3.wav" type="audio/wav"></audio> |
-| | Female | `de-DE_ErikaV3Voice` | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/ErikaV3.wav" type="audio/wav"></audio> |
-| Italian | Female | `it-IT_FrancescaV3Voice` | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/FrancescaV3.wav" type="audio/wav"></audio> |
-| Japanese | Female | `ja-JP_EmiV3Voice` | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/EmiV3.wav" type="audio/wav"></audio> |
-| Spanish<br/>(Castilian) | Male | `es-ES_EnriqueV3Voice` | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/EnriqueV3.wav" type="audio/wav"></audio> |
-| | Female | `es-ES_LauraV3Voice` | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/LauraV3.wav" type="audio/wav"></audio> |
-| Spanish<br/>(Latin American) | Female | `es-LA_SofiaV3Voice` | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/SofiaV3.wav" type="audio/wav"></audio> |
-| Spanish<br/>(North American) | Female | `es-US_SofiaV3Voice` | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples/SofiaV3.wav" type="audio/wav"></audio> |
+| Brazilian<br/>Portuguese | Female | `pt-BR_IsabelaV3Voice` | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/IsabelaV3.wav" type="audio/wav"></audio> |
+| English<br/>(United Kingdom) | Female | `en-GB_CharlotteV3Voice` | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/CharlotteV3.wav" type="audio/wav"></audio> |
+| | Male | `en-GB_JamesV3Voice` | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/JamesV3.wav" type="audio/wav"></audio> |
+| | Female | `en-GB_KateV3Voice` | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/KateV3.wav" type="audio/wav"></audio> |
+| English<br/>(United States) | Female | `en-US_AllisonV3Voice` | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/AllisonV3.wav" type="audio/wav"></audio> |
+| | Female | `en-US_EmilyV3Voice` | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/EmilyV3.wav" type="audio/wav"></audio> |
+| | Male | `en-US_HenryV3Voice` | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/HenryV3.wav" type="audio/wav"></audio> |
+| | Male | `en-US_KevinV3Voice` | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/KevinV3.wav" type="audio/wav"></audio> |
+| | Female | `en-US_LisaV3Voice` | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/LisaV3.wav" type="audio/wav"></audio> |
+| | Male | `en-US_MichaelV3Voice` | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/MichaelV3.wav" type="audio/wav"></audio> |
+| | Female | `en-US_OliviaV3Voice` | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/OliviaV3.wav" type="audio/wav"></audio> |
+| French | Male | `fr-FR_NicolasV3Voice` | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/NicolasV3.wav" type="audio/wav"></audio> |
+| | Female | `fr-FR_ReneeV3Voice` | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/ReneeV3.wav" type="audio/wav"></audio> |
+| German | Female | `de-DE_BirgitV3Voice` | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/BirgitV3.wav" type="audio/wav"></audio> |
+| | Male | `de-DE_DieterV3Voice` | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/DieterV3.wav" type="audio/wav"></audio> |
+| | Female | `de-DE_ErikaV3Voice` | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/ErikaV3.wav" type="audio/wav"></audio> |
+| Italian | Female | `it-IT_FrancescaV3Voice` | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/FrancescaV3.wav" type="audio/wav"></audio> |
+| Japanese | Female | `ja-JP_EmiV3Voice` | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/EmiV3.wav" type="audio/wav"></audio> |
+| Spanish<br/>(Castilian) | Male | `es-ES_EnriqueV3Voice` | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/EnriqueV3.wav" type="audio/wav"></audio> |
+| | Female | `es-ES_LauraV3Voice` | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/LauraV3.wav" type="audio/wav"></audio> |
+| Spanish<br/>(Latin American) | Female | `es-LA_SofiaV3Voice` | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/SofiaV3.wav" type="audio/wav"></audio> |
+| Spanish<br/>(North American) | Female | `es-US_SofiaV3Voice` | <audio controls style="width:250px;height:30px"><source src="https://watson-developer-cloud.github.io/doc-tutorial-downloads/text-to-speech/samples-neural/SofiaV3.wav" type="audio/wav"></audio> |
 {: caption="Table 1. Supported languages and voices"}
 
 The Spanish Latin American and North American `Sofia` voices are essentially the same voice. The most significant difference concerns how the two voices interpret a $ (dollar sign). The Latin American version uses the term *pesos*, while the North American version uses the term *d&oacute;lares*. Other minor differences might also exist between the two voices.

@@ -8,7 +8,7 @@ Text to Speech for IBM Cloud Pak for Data
     getting-started.md
     index.md
     features.md
-    [Demo](https://text-to-speech-demo.ng.bluemix.net/)
+    [Demo](https://www.ibm.com/demos/live/tts-demo/self-service/home)
 
     {: .topicgroup}
     Additional resources
@@ -19,13 +19,13 @@ Text to Speech for IBM Cloud Pak for Data
 
     {: .navgroup id="howto"}
     {: .topicgroup}
-    Installation
-        speech-install.md
-        speech-override.md
-        speech-datastores.md
-        speech-cluster.md
-        speech-scaling.md
-        speech-backup.md
+    Installation and management (version 1.2)
+        speech-install-12.md
+        speech-override-12.md
+        speech-datastores-12.md
+        speech-cluster-12.md
+        speech-scaling-12.md
+        speech-backup-12.md
 
     making-requests.md
     http.md
@@ -70,6 +70,15 @@ Text to Speech for IBM Cloud Pak for Data
     information-security.md
     /watson/watson-using-sdks
     [Watson GitHub repos](https://github.com/watson-developer-cloud/)
+
+    {: .topicgroup}
+    Installation and management (version 1.1.4)
+        speech-install.md
+        speech-override.md
+        speech-datastores.md
+        speech-cluster.md
+        speech-scaling.md
+        speech-backup.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}
