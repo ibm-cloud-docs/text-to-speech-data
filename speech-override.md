@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-11-20"
+lastupdated: "2020-11-25"
 
 subcollection: text-to-speech-data
 
@@ -248,7 +248,7 @@ For more information about all available models, see [Languages and models](/doc
 | `global.sttModels.enUsNarrowbandModel.enabled` | US English (`en-US`) Narrowband model | `True` |
 | `global.sttModels.enUsShortFormNarrowbandModel.enabled` | US English (`en-US`) Short-Form Narrowband model | `True` |
 | `global.sttModels.arArBroadbandModel.enabled` | Modern Standard Arabic (`ar-AR`) Broadband model | `False` |
-| `global.sttModels.enGbBroadbandModel.enabled` | `False` |
+| `global.sttModels.enGbBroadbandModel.enabled` | UK English (`en-GB`) Broadband model | `False` |
 | `global.sttModels.enGbNarrowbandModel.enabled` | UK English (`en-GB`) Narrowband model | `False` |
 | `global.sttModels.esEsBroadbandModel.enabled` | Spanish (`es-ES`, `es-AR`, `es-CL`, `es-CO`, `es-MX`, and `es-PE`) Broadband models | `False` |
 | `global.sttModels.esEsNarrowbandModel.enabled` | Spanish (`es-ES`, `es-AR`, `es-CL`, `es-CO`, `es-MX`, and `es-PE`) Narrowband models | `False` |
@@ -264,7 +264,7 @@ For more information about all available models, see [Languages and models](/doc
 | `global.sttModels.koKrNarrowbandModel.enabled` | Korean (`ko-KR`) Narrowband model | `False` |
 | `global.sttModels.nlNlBroadbandModel.enabled` | Dutch (`nl-NL`) Broadband model | `False` |
 | `global.sttModels.nlNlNarrowbandModel.enabled` | Dutch (`nl-NL`) Narrowband model | `False` |
-| `global.sttModels.ptBrBroadbandModel.enabled` | `False` |
+| `global.sttModels.ptBrBroadbandModel.enabled` | Brazilian Portuguese (`pt-BR`) Broadband model | `False` |
 | `global.sttModels.ptBrNarrowbandModel.enabled` | Brazilian Portuguese (`pt-BR`) Narrowband model | `False` |
 | `global.sttModels.zhCnBroadbandModel.enabled` | Mandarin Chinese (`zh-CN`) Broadband model | `False` |
 | `global.sttModels.zhCnNarrowbandModel.enabled` | Mandarin Chinese (`zh-CN`) Narrowband model | `False` |

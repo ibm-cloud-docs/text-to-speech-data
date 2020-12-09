@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-10-15"
+lastupdated: "2020-12-04"
 
 subcollection: text-to-speech-data
 
@@ -25,7 +25,7 @@ subcollection: text-to-speech-data
 # Release notes
 {: #release-notes}
 
-The following versions of {{site.data.keyword.texttospeechdatafull}} for {{site.data.keyword.icp4dfull}} are available. The information includes new features and changes for each version of the product and any known limitations.
+The following versions of {{site.data.keyword.texttospeechdatafull}} for {{site.data.keyword.icp4dfull}} have been released. The information includes new features and changes for each version of the product and any known limitations.
 {: shortdesc}
 
 ## Known limitations
@@ -34,6 +34,28 @@ The following versions of {{site.data.keyword.texttospeechdatafull}} for {{site.
 {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} has the following known limitation:
 
 -   When you specify the `audio/ogg;codecs=opus` audio format, you can optionally specify a sampling rate other than the default 48,000 Hz. However, while the service accepts `48000`, `24000`, `16000`, `12000`, or `8000` as a valid sampling rate, it currently disregards a specified value and always returns the audio with a sampling rate of 48 kHz.
+
+## Version 1.2 (9 December 2020)
+{: #v12}
+
+{{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} version 1.2 is now available. Installation and administration of the service include many changes. This version supports {{site.data.keyword.icp4dfull_notm}} versions 3.5 and 3.0.1, and Red Hat OpenShift versions 4.5 and 3.11. For more information about installing and managing the service, see [Installing {{site.data.keyword.watson}} {{site.data.keyword.texttospeechshort}} version 1.2](/docs/text-to-speech-data?topic=text-to-speech-data-speech-install-12).
+
+The release includes the following functional changes and enhancements:
+
+-   The service now offers three new voices:
+    -   UK English: `en-GB_CharlotteV3Voice` and `en-GB_JamesV3Voice`
+    -   French: `fr-FR_NicolasV3Voice`
+
+    The service also offers an improved version of the existing UK voice, `en-KateV3Voice`. For more information about all supported languages and voices, see [Languages and voices](/docs/text-to-speech-data?topic=text-to-speech-data-voices).
+-   **Defect fix:** For the `ja-JP_EmiV3Voice` voice, the service now correctly parses SSML input text that includes a prosody rate specification. Previously, the following use of the `<prosody>` element worked properly:
+
+    `<speak>成功する/繁栄する</speak>`
+
+    But the following use of the rate attribute with the `<prosody>` element caused the service to read and speak the embedded SSML notation:
+
+    `<speak rate="fast">成功する/繁栄する</speak>`
+
+    The service now correctly parses and applies the `rate` attribute of the `<prosody>` element for Japanese input.
 
 ## Version 1.1.4 (19 June 2020)
 {: #v114}
