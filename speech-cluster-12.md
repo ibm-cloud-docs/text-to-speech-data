@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-12-07"
+lastupdated: "2020-12-11"
 
 subcollection: text-to-speech-data
 
@@ -34,7 +34,7 @@ After you install and configure the Speech services on {{site.data.keyword.icp4d
 
 After you provision an instance, you can share the URL for the service with other users. However, those users can log in to the service only if you give them access.
 
-If you plan to use Security Assertion Markup Language (SAML) for single sign-on (SSO), complete the procedure in [Configuring single sign-on](https://www.ibm.com/support/knowledgecenter/SSQNUZ_latest/cpd/install/saml-sso.html){: external} before you add users. If you add users before you configure SSO, you need to re-add the users with their SAML IDs to enable them to use SSO.
+If you plan to use Security Assertion Markup Language (SAML) for single sign-on (SSO), complete the procedure in [Configuring single sign-on](https://www.ibm.com/support/knowledgecenter/SSQNUZ_3.5.0/cpd/install/saml-sso.html){: external} before you add users. If you add users before you configure SSO, you need to re-add the users with their SAML IDs to enable them to use SSO.
 
 1.  From the web client menu, click **Administer > Manage user**.
 1.  Click **Add user**, then specify the user's full name, user name, and email address. Set the user's permissions, and then click **Add**.

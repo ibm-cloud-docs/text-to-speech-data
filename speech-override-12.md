@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-12-07"
+lastupdated: "2020-12-11"
 
 subcollection: text-to-speech-data
 
@@ -30,7 +30,7 @@ You can use the `speech-override.yaml` file to customize many aspects of your {{
 ## The speech-override.yaml file
 {: #speech-override-file-12}
 
-The following example duplicates the `speech-override.yaml` example from [Creating an override file for {{site.data.keyword.watson}} {{site.data.keyword.speechtotextshort}}](https://www.ibm.com/support/producthub/icpdata/docs/content/SSQNUZ_latest/svc-speech/stt-svc-override.html){: external} and [Creating an override file for {{site.data.keyword.watson}} {{site.data.keyword.texttospeechshort}}](https://www.ibm.com/support/producthub/icpdata/docs/content/SSQNUZ_latest/svc-text/tts-svc-override.html){: external}. The sections that follow describe the values that you can use to modify and augment the file. You can download a complete copy of the [speech-override.yaml](https://watson-developer-cloud.github.io/doc-tutorial-downloads/speech-to-text/cpd-version-12/speech-override.yaml){: external} file.
+The following example duplicates the `speech-override.yaml` example from [Creating an override file for {{site.data.keyword.watson}} {{site.data.keyword.speechtotextshort}}](https://www.ibm.com/support/knowledgecenter/SSQNUZ_3.5.0/svc-speech/stt-svc-override.html){: external} and [Creating an override file for {{site.data.keyword.watson}} {{site.data.keyword.texttospeechshort}}](https://www.ibm.com/support/knowledgecenter/SSQNUZ_3.5.0/svc-text/tts-svc-override.html){: external}. The sections that follow describe the values that you can use to modify and augment the file. You can download a complete copy of the [speech-override.yaml](https://watson-developer-cloud.github.io/doc-tutorial-downloads/speech-to-text/cpd-version-12/speech-override.yaml){: external} file.
 
 ```yaml
 tags:
