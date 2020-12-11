@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-12-09"
+lastupdated: "2020-12-11"
 
 subcollection: text-to-speech-data
 
@@ -40,20 +40,20 @@ See the following topics in the IBM Knowledge Center for the information that yo
 
 -   *To install a new deployment of the service:*
 
-    -   [Setting up the cluster for {{site.data.keyword.watson}} {{site.data.keyword.texttospeechshort}}](https://www.ibm.com/support/producthub/icpdata/docs/content/SSQNUZ_latest/svc-text/tts-svc-install-adm.html){: external}
-    -   [Creating an override file for {{site.data.keyword.watson}} {{site.data.keyword.texttospeechshort}} installation](https://www.ibm.com/support/producthub/icpdata/docs/content/SSQNUZ_latest/svc-text/tts-svc-override.html){: external}
-    -   [Installing the {{site.data.keyword.watson}} {{site.data.keyword.texttospeechshort}} service](https://www.ibm.com/support/producthub/icpdata/docs/content/SSQNUZ_latest/svc-text/tts-svc-install.html){: external}
+    -   [Setting up the cluster for {{site.data.keyword.watson}} {{site.data.keyword.texttospeechshort}}](https://www.ibm.com/support/knowledgecenter/SSQNUZ_3.5.0/svc-text/tts-svc-install-adm.html){: external}
+    -   [Creating an override file for {{site.data.keyword.watson}} {{site.data.keyword.texttospeechshort}} installation](https://www.ibm.com/support/knowledgecenter/SSQNUZ_3.5.0/svc-text/tts-svc-override.html){: external}
+    -   [Installing the {{site.data.keyword.watson}} {{site.data.keyword.texttospeechshort}} service](https://www.ibm.com/support/knowledgecenter/SSQNUZ_3.5.0/svc-text/tts-svc-install.html){: external}
 
 <!--
 -   *To upgrade an existing deployment of the service:*
 
-    -   [Preparing to upgrade {{site.data.keyword.watson}} {{site.data.keyword.texttospeechshort}}](https://www.ibm.com/support/producthub/icpdata/docs/content/SSQNUZ_latest/svc-text/tts-svc-upgrade-adm.html){: external}
-    -   [Upgrading {{site.data.keyword.watson}} {{site.data.keyword.texttospeechshort}}](https://www.ibm.com/support/producthub/icpdata/docs/content/SSQNUZ_latest/svc-text/tts-upgrade-svc.html){: external}
+    -   [Preparing to upgrade {{site.data.keyword.watson}} {{site.data.keyword.texttospeechshort}}](https://www.ibm.com/support/knowledgecenter/SSQNUZ_3.5.0/svc-text/tts-svc-upgrade-adm.html){: external}
+    -   [Upgrading {{site.data.keyword.watson}} {{site.data.keyword.texttospeechshort}}](https://www.ibm.com/support/knowledgecenter/SSQNUZ_3.5.0/svc-text/tts-upgrade-svc.html){: external}
 -->
 
 -   *To uninstall the service:*
 
-    -   [Uninstalling {{site.data.keyword.watson}} {{site.data.keyword.texttospeechshort}}](https://www.ibm.com/support/producthub/icpdata/docs/content/SSQNUZ_latest/svc-text/tts-svc-uninstall.html){: external}
+    -   [Uninstalling {{site.data.keyword.watson}} {{site.data.keyword.texttospeechshort}}](https://www.ibm.com/support/knowledgecenter/SSQNUZ_3.5.0/svc-text/tts-svc-uninstall.html){: external}
 
 ## Where to continue
 {: #speech-install-continue-12}
