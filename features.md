@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-10-21"
+lastupdated: "2020-12-16"
 
 subcollection: text-to-speech-data
 
@@ -91,6 +91,18 @@ The service includes a customization interface that you can use to create custom
 You can use custom models to create application-specific translations for unusual words for which the service's regular pronunciation rules might yield imperfect pronunciations. For example, your application might routinely encounter domain-specific terms, special terms with foreign origins, personal or geographic names, or abbreviations and acronyms. By using customization, you can define translations that tell the service how you want such terms to be pronounced.
 
 You can define the custom entry for a word/translation pair based on other words, or you can create pronunciations based on phoneme symbols in the standard International Phonetic Alphabet (IPA) or the proprietary {{site.data.keyword.IBM_notm}} Symbolic Phonetic Representation (SPR). Customization is available for all languages. For more information about customization, see [Understanding customization](/docs/text-to-speech-data?topic=text-to-speech-data-customIntro).
+
+## Understanding data security
+{: #features-data-security}
+
+The {{site.data.keyword.texttospeechshort}} service provides security for all user data both in motion and at rest:
+
+-   Transport Layer Security (TLS) 1.2 is used to secure data in transit.
+-   Advanced Encryption Standard (AES)-256 with Secure Hash Algorithm (SHA)-256 is used to secure data at rest.
+
+For more information about data security for cloud applications, see [Security architecture for cloud applications](https://www.ibm.com/cloud/architecture/architectures/securityArchitecture/security-for-data){: external}.
+
+The service also supports the European Union General Data Protection Regulation (GDPR) to mange user data. For more information, see [Information security](/docs/text-to-speech-data?topic=text-to-speech-data-information-security).
 
 ## Leveraging CORS support
 {: #features-cors}
