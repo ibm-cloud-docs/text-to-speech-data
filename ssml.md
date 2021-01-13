@@ -1,10 +1,12 @@
 ---
 
 copyright:
-  years: 2019, 2020
-lastupdated: "2020-04-21"
+  years: 2019, 2021
+lastupdated: "2021-01-13"
 
 subcollection: text-to-speech-data
+
+content-type: troubleshoot
 
 ---
 
