@@ -14,8 +14,6 @@ subcollection: text-to-speech-data
 {:support: data-reuse='support'}
 {:shortdesc: .shortdesc}
 {:external: target="_blank" .external}
-{:faq: data-hd-content-type='faq'}
-{:support: data-reuse='support'}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
