@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020
-lastupdated: "2020-12-07"
+  years: 2020, 2021
+lastupdated: "2021-03-01"
 
 subcollection: text-to-speech-data
 
@@ -88,10 +88,10 @@ global:
 ### Mode of operation
 {: #speech-datastores-minio-mode-12}
 
-MinIO operates in distributed mode, which means that MinIO is scheduled to run multiple instances on every worker node to ensure high availability of storage. To use high availability optimally, you must specify an appropriate number of replicas. You can specify different numbers of replicas for a development or a deployment configuration. You set both of these values in the `speech-override.yaml` file.
+MinIO operates in distributed mode, which means that MinIO is scheduled to run multiple instances on every worker node to ensure high availability of storage. To use high availability optimally, you must specify an appropriate number of replicas. You can specify a number of replicas for a development configuration that is different from the number of replicas for a deployment configuration. You set both of these values in the `speech-override.yaml` file.
 
 1.  To specify the deployment type for your configuration, set the value `global.datastores.minio.deploymentType` to either `Development` or `Production`.
-2. To specify the number of replicas for each deployment type, set the following values. The number of replicas for either value must be no less than 4 and no more than 32 (`4 <= replicas <= 32`).
+2. To specify the number of replicas for each deployment type, set the following values. The number of replicas for both values must be no less than 4 and no more than 32 (`4 <= replicas <= 32`).
 
     -   `global.datastores.minio.replicasForDev`
     -   `global.datastores.minio.replicasForProd`

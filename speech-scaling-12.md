@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020
-lastupdated: "2020-12-07"
+  years: 2020, 2021
+lastupdated: "2021-03-01"
 
 subcollection: text-to-speech-data
 
@@ -42,7 +42,7 @@ To scale up all aspects of the Speech services other than the datastores, use th
 where
 
 -   `{namespace}` is the name of the namespace where IBM Cloud Pak for Data is installed (normally `zen`).
--   `{repo_file}` is the name of the repo file that you used during installation.
+-   `{repo_file}` is the name of the repository file that you used during installation.
 -   `{deployment_type}` is either `small` for a development configuration or `medium` for a production configuration.
 
 ## Scaling up the MinIO datastore
