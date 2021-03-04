@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-01-13"
+lastupdated: "2021-03-04"
 
 subcollection: text-to-speech-data
 
@@ -76,9 +76,10 @@ Although the `GET` and `POST` methods offer equivalent functionality, it is alwa
 ## Specifying SSML input
 {: #ssml-http}
 
-The Speech Synthesis Markup Language (SSML) is an XML-based markup language that is designed to provide annotations of text for speech synthesis applications such as the {{site.data.keyword.texttospeechshort}} service. You can use SSML elements and their attributes to gain greater control over the synthesis and resulting audio output.
+The Speech Synthesis Markup Language (SSML) is an XML-based markup language that is designed to provide annotations of text for speech synthesis applications such as the {{site.data.keyword.texttospeechshort}} service. You can use SSML elements and their attributes to gain greater control over the synthesis and resulting audio output. For more information about using SSML to annotate input text and an inventory of all supported elements and attributes, see
 
-For more information about using SSML to annotate input text, see [Using SSML](/docs/text-to-speech-data?topic=text-to-speech-data-ssml). The documentation inventories the SSML elements and attributes that are supported by the service.
+-   [Using SSML](/docs/text-to-speech-data?topic=text-to-speech-data-ssml)
+-   [SSML elements](/docs/text-to-speech-data?topic=text-to-speech-data-elements)
 
 ## Escaping XML control characters
 {: #escape}
@@ -102,6 +103,10 @@ For more information about how the service validates input text, see [SSML valid
 {: #httpExamples}
 
 The following examples show how to specify input text with either method of the HTTP interface. They also show how to escape XML control characters. The examples include line breaks for readability. Do *not* include the line breaks in actual input.
+
+Write text for synthesis with the punctuation you would use normally, as shown in the following examples. For example, include commas, periods, exclamation points, and questions marks as you would in normal writing. Commas and end-of-sentence punctuation affect the audio by inserting pauses at appropriate places in the resulting speech.
+
+However, the service does not change the cadence and intonation of the speech based on whether a sentence concludes with a period, an exclamation point, or a question mark. You can affect these aspects of the speech only by using different SSML elements and features.
 
 ### Example input with a GET request
 {: #getExamples}
