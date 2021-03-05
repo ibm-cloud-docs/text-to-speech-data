@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-01-13"
+lastupdated: "2021-03-05"
 
 subcollection: text-to-speech-data
 
@@ -80,6 +80,9 @@ The {{site.data.keyword.texttospeechshort}} service bases its support on SSML Ve
 For more information about using SSML with the service, see the following:
 
 -   For complete information about the service's level of support for all SSML elements, see [SSML elements](/docs/text-to-speech-data?topic=text-to-speech-data-elements). With a few exceptions, the service implements most of the W3C specification, as well as SSML fragments.
+-   The service supports the use of SSML with the input text of a speech synthesis request to control how the resulting audio is pronounced or to obtain timing marks for the resulting audio.
+    -   For examples of using SSML elements with the `text` of a synthesis request, see [Examples of input text](/docs/text-to-speech-data?topic=text-to-speech-data-usingHTTP#httpExamples).
+    -   For information about using the SSML `<mark>` element with a WebSocket request, see [Specifying an SSML mark](/docs/text-to-speech-data?topic=text-to-speech-data-timing#mark).
 -   The service's customization interface supports the use of the SSML `<phoneme>` element to specify the phonetic spelling that it uses to pronounce a word. The phonetic spelling represents the sounds of a word, how these sounds are divided into syllables, and which syllables receive stress.
     -   For information about the customization interface, see [Understanding customization](/docs/text-to-speech-data?topic=text-to-speech-data-customIntro).
     -   For information about the valid symbols that you can use in an {{site.data.keyword.IBM_notm}} SPR or IPA specification for any supported language, see [Using phonetic symbols](/docs/text-to-speech-data?topic=text-to-speech-data-sprs).
