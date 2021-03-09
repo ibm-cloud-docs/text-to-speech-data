@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-03-04"
+lastupdated: "2021-03-09"
 
 subcollection: text-to-speech-data
 
@@ -95,6 +95,7 @@ Because you can submit input text that includes XML-based SSML annotations, the 
 | `&`<br/>(ampersand) | `&amp;` | `&#38;` |
 | `<`<br/>(left angle bracket) | `&lt;` | `&#60;` |
 | `>`<br/>(right angle bracket) | `&gt;` | `&#62;` |
+| `/`<br/>(forward slash) | None | `&#47;` |
 {: caption="Table 1. Escaping XML control characters"}
 
 For more information about how the service validates input text, see [SSML validation](/docs/text-to-speech-data?topic=text-to-speech-data-ssml#errors).
