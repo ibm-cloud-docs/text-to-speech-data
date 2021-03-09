@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-03-05"
+lastupdated: "2021-03-09"
 
 subcollection: text-to-speech-data
 
@@ -106,4 +106,4 @@ Specifically, the service returns an error in the following cases:
 -   *Japanese `:` symbol does not precede a vowel.* In the `ph` attribute of a `<phoneme>` element, a `:` character does not occur before a vowel (possibly with other symbols, such as syllable boundary, in between).
 -   *Invalid syllable stress.* The `ph` attribute of a `<phoneme>` element for an {{site.data.keyword.IBM_notm}} SPR includes invalid syllable stress. For French, a syllable stress symbol does not immediately precede a vowel. For Spanish or Italian, a secondary (`2`) or no stress (`0`) symbol is used. For Japanese, a secondary stress symbol (`2`) is used.
 -   *Invalid use of SSML `<prosody>` element.* You cannot use the `volume`, `contour`, `duration`, and `range` attributes of the `<prosody>` element.
--   *Unescaped XML control characters.* The input text itself contains a <code>&quot;</code>, <code>&apos;</code>, `&`, `<`, or `>` character instead of its equivalent escape string or character encoding. For more information, see [Escaping XML control characters](/docs/text-to-speech-data?topic=text-to-speech-data-usingHTTP#escape).
+-   *Unescaped XML control characters.* The input text itself contains a <code>&quot;</code>, <code>&apos;</code>, `&`, `<`, `>`, or `/` character instead of its equivalent escape string or character encoding. For more information, see [Escaping XML control characters](/docs/text-to-speech-data?topic=text-to-speech-data-usingHTTP#escape).
