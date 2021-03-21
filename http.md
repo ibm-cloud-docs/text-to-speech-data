@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-03-09"
+lastupdated: "2021-03-21"
 
 subcollection: text-to-speech-data
 
@@ -59,19 +59,33 @@ If you specify an invalid query parameter or JSON field as part of the input to 
 {: help}
 {: support}
 
-Both the `GET` and `POST /v1/synthesize` methods accept plain input text or text that is annotated with SSML. The two versions differ primarily in how you specify the text that is to be synthesized:
+Both the `POST` and `GET /v1/synthesize` methods accept plain input text or text that is annotated with SSML. The two versions differ primarily in how you specify the text that is to be synthesized. The following examples both pass the plain text `Hello world`.
 
--   The `GET /v1/synthesize` method accepts input text that is specified by the `text` query parameter. You specify the input as plain text or as SSML, both of which must be URL-encoded.
--   The `POST /v1/synthesize` method accepts input text in the body of the request. You specify the input with the following simple JSON construct that encapsulates plain text or SSML. You must also specify a value of `application/json` for the `Content-Type` header.
+-   The `POST /v1/synthesize` method accepts input text in the body of the request. You specify the input with a simple JSON construct that includes plain text or SSML. You must also specify a value of `application/json` for the `Content-Type` header.
 
-    ```javascript
-    {
-      "text": ""
-    }
+    ```bash
+    curl -X POST \
+    --header "Authorization: Bearer {token}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: audio/wav" \
+    --output hello_world.wav \
+    --data "{\"text\":\"Hello world\"}" \
+    "{url}/v1/synthesize"
     ```
-    {: codeblock}
+    {: pre}
 
-Although the `GET` and `POST` methods offer equivalent functionality, it is always more secure to pass input text to the service with the `POST` method. A `POST` request passes input in the body of the request, while a `GET` request exposes the data in the URL.
+-   The `GET /v1/synthesize` method accepts input text that is specified by the `text` query parameter. You specify the input as plain text or SSML, both of which must be URL-encoded.
+
+    ```bash
+    curl -X GET \
+    --header "Authorization: Bearer {token}" \
+    --header "Accept: audio/wav" \
+    --output hello_world.wav \
+    "{url}/v1/synthesize?text=Hello%20world"
+    ```
+    {: pre}
+
+Although the `POST` and `GET` methods offer equivalent functionality, it is always more secure to pass input text to the service with the `POST` method. A `POST` request passes input in the body of the request, while a `GET` request exposes the data in the URL.
 
 ## Specifying SSML input
 {: #ssml-http}
