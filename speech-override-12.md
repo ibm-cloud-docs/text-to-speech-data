@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-01-29"
+lastupdated: "2021-03-24"
 
 subcollection: text-to-speech-data
 
@@ -40,126 +40,30 @@ tags:
   sttRuntime: true
   ttsRuntime: true
 
-sttRuntime:
-  images:
-    miniomc:
-      tag:
-        1.0.5
-sttAMPatcher:
-  images:
-    miniomc:
-      tag:
-        1.0.5
-ttsRuntime:
-  images:
-    miniomc:
-      tag:
-        1.0.5
-
 affinity: {}
 
 global:
-  dockerRegistryPrefix: "{Registry}"
   image:
     pullSecret: "{Registry_pull_secret}"
-    pullPolicy: "IfNotPresent"
 
   datastores:
-
-    minio:
-      tlsEnabled: true
+   minio:
       serviceAccountName: "ibm-minio-operator"
-
-      #Images
-      images:
-        certgen:
-          name: opencontent-icp-cert-gen-1
-          tag: 1.1.9
-        minio:
-          name: "opencontent-minio"
-          tag: 1.1.5
-        minioClient:
-          name: "opencontent-minio-client"
-          tag: 1.0.5
-
       #Sizing
       deploymentType: Development #Development or Production
-
-      # 4 <= Replicas <= 32
-      replicasForDev: 4
-      replicasForProd: 4
-
-      memoryLimit: 2048Mi
-      cpuRequest: 250m
-      cpuLimit: 500m
-      memoryRequest: 256Mi
-
       #Storage
       storageClassName: "portworx-shared-gp3"
-
       #Secrets
-      authSecretName: minio
-      tlsSecretName: "{{ .Release.Name }}-ibm-datastore-tls"
-
+      authSecretName: "minio"
     rabbitMQ:
-      tlsEnabled: true
-      replicas: 3
-
-      #Images
-      images:
-        config:
-          name: opencontent-rabbitmq-config-copy
-          tag: 1.1.5
-        rabbitmq:
-          name: opencontent-rabbitmq-3
-          tag: 1.1.8
-
-      #Sizing
-      cpuRequest: 200m
-      cpuLimit: 200m
-      memoryRequest: 256Mi
-      memoryLimit: 256Mi
-
       #Storage
       storageClassName: "portworx-shared-gp3"
-      pvEnabled: true
-      pvSize: 5Gi
-      useDynamicProvisioning: true
-
-      #Secrets
-      tlsSecretName: "{{ .Release.Name }}-ibm-datastore-tls"
-      authSecretName: "{{ .Release.Name }}-ibm-rabbitmq-auth-secret"
-
     postgressql:
-      tlsEnabled: true
-      serviceAccount: "edb-operator"
-
-      #Images
-      images:
-        stolon:
-          name: "edb-stolon"
-          tag: "v1-ubi8-amd64"
-        postgres:
-          name: "edb-postgresql-12"
-          tag: "ubi8-amd64"
-
-      #Sizing configuration
-      replicas: 3
-      databaseMemoryLimit: "5Gi"
-      databaseMemoryRequest: "1Gi"
-      databaseCPULimit: "1000m"
-      databaseCPU: "50m"
-      databaseStorageRequest: "5Gi"
-
-      #Storage configuration
       databaseStorageClass: "portworx-shared-gp3"
       databaseArchiveStorageClass: "portworx-shared-gp3"
       databaseWalStorageClass: "portworx-shared-gp3"
-      databasePort: 5432
-
       #Secrets
       authSecretName: "user-provided-postgressql"
-      tlsSecretName: "{{ .Release.Name }}-ibm-datastore-tls"
 
   sttModels:
     enUsBroadbandModel:
@@ -185,17 +89,18 @@ global:
 ```
 {: codeblock}
 
-You replace the following variable values in the file:
+You replace and use the following variable values in the file:
 
--   `{Registry}` is the address of the internal Red Hat&reg; OpenShift&reg; Docker registry. The value is one of the following:
-    -   `image-registry.openshift-image-registry.svc:5000` for OpenShift 4.x.
-    -   `docker-registry.default.svc:5000` for OpenShift 3.x.
 -   `{Registry_pull_secret}` is the pull secret for the internal Docker registry, which you can learn by running the following command:
 
     ```bash
     oc get secrets | grep default-dockercfg
     ```
     {: pre}
+
+-   The authentication secrets for the Minio and PostgresSQL datastores must be created before the installation and must have the following values:
+    -   For Minio, the `authsecretname` must be `minio`.
+    -   For PostgresSQL, the `authsecretname` must be `user-provided-postgressql`.
 
 ## Override values for both Speech services
 {: #speech-override-both-12}
@@ -224,24 +129,12 @@ Table 1 describes the top-level Speech components that you can install.
 | `tags.ttsCustomization` | {{site.data.keyword.texttospeechshort}} customization component. This value enables the `/v1/customizations` interface for customization. Enabling it also enables the {{site.data.keyword.texttospeechshort}} runtime component if `tags.sttRuntime=false`. For more information, see [Understanding customization](/docs/text-to-speech-data?topic=text-to-speech-data-customIntro). | `true` |
 {: caption="Table 1. Installation of Speech services components"}
 
-### Specifying MinIO client images
-{: #speech-override-minio-client-images-12}
-
-Table 2 shows the image tag specifications for the MinIO client component.
-
-| Value | Specifies ... | Default |
-|-------|---------------|:-------:|
-| `sttRuntime.images.miniomc.tag` | Image tag of MinIO client component for {{site.data.keyword.speechtotextshort}} runtime. | `1.0.5` |
-| `sttAMPatcher.images.miniomc.tag` | Image tag of MinIO client component for {{site.data.keyword.speechtotextshort}} customization AM patcher. | `1.0.5` |
-| `ttsRuntime.images.miniomc.tag` | Image tag of MinIO client component for {{site.data.keyword.texttospeechshort}} runtime. | `1.0.5` |
-{: caption="Table 2. Specifying MinIO client images"}
-
 ### Specifying dynamic resource calculation
 {: #speech-override-dynamic-12}
 
 The {{site.data.keyword.speechtotextshort}} runtime, {{site.data.keyword.texttospeechshort}} runtime, and {{site.data.keyword.speechtotextshort}} customization AM patcher support dynamic memory resource calculation. The calculation is performed automatically based on the selected number of CPUs and the selected models and voices.
 
-Dynamic resource calculation is enabled by default. You can modify this behavior by setting the values in Table 3 to `true` or `false` in the root of the override file. If you set any of these values to `false`, you must specify the required memory yourself.
+Dynamic resource calculation is enabled by default. You can modify this behavior by setting the values in Table 2 to `true` or `false` in the root of the override file. If you set any of these values to `false`, you must specify the required memory yourself.
 
 Disabling dynamic resource allocation is not recommended and can cause undesired service behavior.
 {: important}
@@ -251,7 +144,7 @@ Disabling dynamic resource allocation is not recommended and can cause undesired
 | `sttRuntime.groups.sttRuntimeDefault.resources.dynamicMemory` | Dynamic resource calculation for the {{site.data.keyword.speechtotextshort}} runtime component. | `true` |
 | `ttsRuntime.groups.ttsRuntimeDefault.resources.dynamicMemory` | Dynamic resource calculation for the {{site.data.keyword.texttospeechshort}} runtime component. | `true` |
 | `sttAMPatcher.groups.sttAMPatcher.resources.dynamicMemory` | Dynamic resource calculation for the {{site.data.keyword.speechtotextshort}} customization AM patcher component. | `true` |
-{: caption="Table 3. Configuration of dynamic resource calculation"}
+{: caption="Table 2. Configuration of dynamic resource calculation"}
 
 ### Specifying node affinity
 {: #speech-override-affinity-12}
@@ -277,14 +170,14 @@ affinity:
 ### Anonymizing logs and audio data
 {: #speech-override-anonymize-12}
 
-You can anonymize your log and audio data for increased user privacy. Use the values in Table 4 to anonymize data that is stored by the different components. You can also disable the temporary storing of payload data in the running container. For more information, see [Disabling storage of user data](/docs/text-to-speech-data?topic=text-to-speech-data-speech-cluster-12#speech-cluster-customer-data-12).
+You can anonymize your log and audio data for increased user privacy. Use the values in Table 3 to anonymize data that is stored by the different components. You can also disable the temporary storing of payload data in the running container. For more information, see [Disabling storage of user data](/docs/text-to-speech-data?topic=text-to-speech-data-speech-cluster-12#speech-cluster-customer-data-12).
 
 | Value | Anonymizes ... | Default |
 |-------|----------------|:-------:|
 | `sttRuntime.anonymizeLogs` | {{site.data.keyword.speechtotextshort}} runtime logs and audio data. | `false` |
 | `ttsRuntime.anonymizeLogs` | {{site.data.keyword.texttospeechshort}} runtime logs and audio data. | `false` |
 | `sttAMPatcher.anonymizeLogs` | {{site.data.keyword.speechtotextshort}} customization acoustic model (AM) patcher runtime logs and audio data. | `false` |
-{: caption="Table 4. Anonymization of logs and audio data"}
+{: caption="Table 3. Anonymization of logs and audio data"}
 
 ## Override values for datastores
 {: #speech-override-datastores-12}
@@ -294,7 +187,7 @@ The following sections describe override values for the MinIO, RabbitMQ, and Pos
 ### Configuring the MinIO datastore
 {: #speech-override-datastores-minio-12}
 
-Table 5 describes the values that you can use to configure the MinIO datastore for your installation.
+Table 4 describes the values that you can use to configure the MinIO datastore for your installation.
 
 | Value | Specifies ... | Default |
 |-------|---------------|:-------:|
@@ -314,14 +207,14 @@ Table 5 describes the values that you can use to configure the MinIO datastore f
 | `global.datastores.minio.cpuLimit` | Maximum CPU that MinIO can use. | `500m` |
 | `global.datastores.minio.memoryRequest` | Minimum memory requested by MinIO. | `256Mi` |
 | `global.datastores.minio.storageClassName` | Storage class that is used by MinIO. | `"portworx-shared-gp3"` |
-| `global.datastores.minio.authSecretName` | Name of MinIO secrets object. | `minio` |
+| `global.datastores.minio.authSecretName` | Name of MinIO secrets object. | `"minio"` |
 | `global.datastores.minio.tlsSecretName` | Name of TLS secrets object that MinIO uses. | `"{{ .Release.Name }}-ibm-datastore-tls"` |
-{: caption="Table 5. Configuration of MinIO datastore"}
+{: caption="Table 4. Configuration of MinIO datastore"}
 
 ### Configuring the RabbitMQ datastore
 {: #speech-override-datastores-rabbitmq-12}
 
-Table 6 describes the values that you can use to configure the RabbitMQ datastore for your installation.
+Table 5 describes the values that you can use to configure the RabbitMQ datastore for your installation.
 
 | Value | Specifies ... | Default |
 |-------|---------------|:-------:|
@@ -341,12 +234,12 @@ Table 6 describes the values that you can use to configure the RabbitMQ datastor
 | `global.datastores.rabbitMQ.useDynamicProvisioning` | Whether RabbitMQ uses dynamic provisioning. | `true` |
 | `global.datastores.rabbitMQ.tlsSecretName` | Name of TLS secrets object that RabbitMQ uses. | `"{{ .Release.Name }}-ibm-datastore-tls"` |
 | `global.datastores.rabbitMQ.authSecretName` | Name of RabbitMQ secrets object. | `"{{ .Release.Name }}-ibm-rabbitmq-auth-secret"` |
-{: caption="Table 6. Configuration of RabbitMQ datastore"}
+{: caption="Table 5. Configuration of RabbitMQ datastore"}
 
 ### Configuring the PostgreSQL datastore
 {: #speech-override-datastores-postgresql-12}
 
-Table 7 describes the values that you can use to configure the PostgreSQL datastore for your installation.
+Table 6 describes the values that you can use to configure the PostgreSQL datastore for your installation.
 
 | Value | Specifies ... | Default |
 |-------|---------------|:-------:|
@@ -368,7 +261,7 @@ Table 7 describes the values that you can use to configure the PostgreSQL datast
 | `global.datastores.postgressql.databasePort` | The port at which PostgreSQL listens for requests. | `5432` |
 | `global.datastores.postgressql.authSecretName` | Name of PostgreSQL secrets object. | `"user-provided-postgressql"` |
 | `global.datastores.postgressql.tlsSecretName` | Name of TLS secrets object that PostgreSQL uses. | `"{{ .Release.Name }}-ibm-datastore-tls"` |
-{: caption="Table 7. Configuration of PostgreSQL datastore"}
+{: caption="Table 6. Configuration of PostgreSQL datastore"}
 
 ## Override values for the {{site.data.keyword.speechtotextshort}} service
 {: #speech-override-stt-12}
@@ -378,19 +271,19 @@ The following sections describe override values that are specific to the {{site.
 ### Configuring the {{site.data.keyword.speechtotextshort}} runtime
 {: #speech-override-stt-runtime-12}
 
-Table 8 describes the configuration values for the {{site.data.keyword.speechtotextshort}} runtime.
+Table 7 describes the configuration values for the {{site.data.keyword.speechtotextshort}} runtime.
 
 | Value | Specifies ... | Default |
 |-------|---------------|:-------:|
 | `sttRuntime.groups.sttRuntimeDefault.resources.dynamicMemory` | Automatic calculation of the memory requirements for the {{site.data.keyword.speechtotextshort}} runtime according to the selected models. | `true` |
 | `sttRuntime.groups.sttRuntimeDefault.resources.requestsCpu` | Requested CPUs for the {{site.data.keyword.speechtotextshort}} runtime. The minimum value is 4. Each runtime session needs at least 4 CPUs. | `8` |
 | `sttRuntime.groups.sttRuntimeDefault.resources.requestsMemory` | Memory requirements for the {{site.data.keyword.speechtotextshort}} runtime. When dynamic memory is enabled, this value has no effect. | `22Gi` |
-{: caption="Table 8. Configuration of {{site.data.keyword.speechtotextshort}} runtime"}
+{: caption="Table 7. Configuration of {{site.data.keyword.speechtotextshort}} runtime"}
 
 ### Configuring the {{site.data.keyword.speechtotextshort}} customization AM patcher
 {: #speech-override-stt-AMpatcher-12}
 
-Table 9 describes the configuration values for the {{site.data.keyword.speechtotextshort}} customization AM patcher.
+Table 8 describes the configuration values for the {{site.data.keyword.speechtotextshort}} customization AM patcher.
 
 | Value | Specifies ... | Default |
 |-------|---------------|:-------:|
@@ -398,12 +291,12 @@ Table 9 describes the configuration values for the {{site.data.keyword.speechtot
 | `sttAMPatcher.groups.sttAMPatcher.resources.requestsCpu` | Requested CPUs for the {{site.data.keyword.speechtotextshort}} customization AM patcher. The minimum value is 4. Each customization session needs at least 4 CPUs. | `8` |
 | `sttAMPatcher.groups.sttAMPatcher.resources.requestsMemory` | Memory requirements for the {{site.data.keyword.speechtotextshort}} customization AM patcher. The amount of memory depends on the number of CPUs. The size can be calculated as the number of CPUs * 3 GB. | `22Gi` |
 | `sttAMPatcher.groups.sttAMPatcher.resources.threads` | Number of parallel-processing threads for the {{site.data.keyword.speechtotextshort}} customization AM patcher. Note that fewer threads means longer training time. | `4` |
-{: caption="Table 9. Configuration of {{site.data.keyword.speechtotextshort}} customization AM patcher"}
+{: caption="Table 8. Configuration of {{site.data.keyword.speechtotextshort}} customization AM patcher"}
 
 ### Installing {{site.data.keyword.speechtotextshort}} models
 {: #speech-override-stt-models-12}
 
-You can use the values in Table 10 to specify the language models to install. Installing all models substantially increases the memory requirements. You are therefore strongly encouraged to install only those models and voices that you intend to use. By default, the dynamic resource calculation feature automatically computes the exact amount of memory that is required for the selected models.
+You can use the values in Table 9 to specify the language models to install. Installing all models substantially increases the memory requirements. You are therefore strongly encouraged to install only those models and voices that you intend to use. By default, the dynamic resource calculation feature automatically computes the exact amount of memory that is required for the selected models.
 
 You specify the models to be installed by setting the values in the `speech-override.yaml` file to `true` or `false`. For example, to install the Japanese, Korean, and Chinese language models (both broadband and narrowband) instead of the US English models, modify the `global.sttModels` values as follows:
 
@@ -472,7 +365,7 @@ For more information about all available models, see [Languages and models](/doc
 | `global.sttModels.ptBrNarrowbandModel.enabled` | Brazilian Portuguese (`pt-BR`) Narrowband model | `false` |
 | `global.sttModels.zhCnBroadbandModel.enabled` | Mandarin Chinese (`zh-CN`) Broadband model | `false` |
 | `global.sttModels.zhCnNarrowbandModel.enabled` | Mandarin Chinese (`zh-CN`) Narrowband model | `false` |
-{: caption="Table 10. Installation of {{site.data.keyword.speechtotextshort}} models"}
+{: caption="Table 9. Installation of {{site.data.keyword.speechtotextshort}} models"}
 
 ## Override values for the {{site.data.keyword.texttospeechshort}} service
 {: #speech-override-tts-12}
@@ -482,7 +375,7 @@ The following sections describe override values that are specific to the {{site.
 ### Configuring the {{site.data.keyword.texttospeechshort}} runtime
 {: #speech-override-tts-runtime-12}
 
-Table 11 describes the configuration values for the {{site.data.keyword.texttospeechshort}} runtime.
+Table 10 describes the configuration values for the {{site.data.keyword.texttospeechshort}} runtime.
 
 | Value | Specifies ... | Default |
 |-------|---------------|:-------:|
@@ -490,12 +383,12 @@ Table 11 describes the configuration values for the {{site.data.keyword.texttosp
 | `ttsRuntime.groups.ttsRuntimeDefault.resources.requestsCpu` | Requested CPUs for the {{site.data.keyword.texttospeechshort}} runtime. The minimum value is 4. Each runtime session needs at least 4 CPUs. | `8` |
 | `ttsRuntime.groups.ttsRuntimeDefault.resources.requestsMemory` | Memory requirements for the {{site.data.keyword.texttospeechshort}} runtime. When dynamic memory is enabled, this value has no effect. | `22Gi` |
 | `global.ttsVoiceMarginalCPU` | {{site.data.keyword.texttospeechshort}} voice marginal CPU used for synthesis. The value is in milli-CPUs. | `400` |
-{: caption="Table 11. Configuration of {{site.data.keyword.texttospeechshort}} runtime"}
+{: caption="Table 10. Configuration of {{site.data.keyword.texttospeechshort}} runtime"}
 
 ### Installing {{site.data.keyword.texttospeechshort}} voices
 {: #speech-override-tts-voices-12}
 
-You can use the values in Table 12 to specify the voices to install. Installing all voices increases the memory requirements. You are therefore encouraged to install only those voices that you intend to use. By default, the dynamic resource calculation feature automatically computes the exact amount of memory that is required for the selected voices.
+You can use the values in Table 11 to specify the voices to install. Installing all voices increases the memory requirements. You are therefore encouraged to install only those voices that you intend to use. By default, the dynamic resource calculation feature automatically computes the exact amount of memory that is required for the selected voices.
 
 You specify the voices to be installed by setting the values in the `speech-override.yaml` file to `true` or `false`. For example, to install the German, French, and Italian voices instead of the US English voices, modify the `global.ttsVoices` values as follows:
 
@@ -558,4 +451,4 @@ For more information about all available voices, see [Languages and voices](/doc
 | `global.ttsVoices.itITFrancescaV3Voice.enabled` | Italian (`it-IT`) Francesca neural voice | `false` |
 | `global.ttsVoices.jaJPEmiV3Voice.enabled` | Japanese (`ja-JP`) Emi neural voice | `false` |
 | `global.ttsVoices.ptBRIsabelaV3Voice.enabled` | Brazilian Portuguese (`pt-BR`) Isabela neural voice | `false` |
-{: caption="Table 12. Installation of {{site.data.keyword.texttospeechshort}} voices"}
+{: caption="Table 11. Installation of {{site.data.keyword.texttospeechshort}} voices"}

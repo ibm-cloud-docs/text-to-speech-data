@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-03-01"
+lastupdated: "2021-03-23"
 
 subcollection: text-to-speech-data
 
@@ -57,7 +57,7 @@ YWRtaW4xMjM0
 To create a secrets object, run the following command to create a YAML file:
 
 ```bash
-kubectl create -f {secrets_file}
+kubectl create -f minio
 ```
 {: pre}
 
@@ -68,7 +68,7 @@ apiVersion: v1
 kind: Secret
 type: Opaque
 metadata:
-  name: minio # This name can be anything you choose.
+  name: minio
 data:
   accesskey: YWRtaW4=
   secretkey: YWRtaW4xMjM0
@@ -156,7 +156,7 @@ type: Opaque
 To create a secrets object, run the following command to create a YAML file:
 
 ```bash
-kubectl create -f {secrets_file}
+kubectl create -f user-provided-prosgressql
 ```
 {: pre}
 
