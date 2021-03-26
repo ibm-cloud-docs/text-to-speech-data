@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2020
-lastupdated: "2020-12-04"
+  years: 2019, 2021
+lastupdated: "2021-03-24"
 
 subcollection: text-to-speech-data
 
@@ -27,7 +27,7 @@ subcollection: text-to-speech-data
 # About
 {: #about}
 
-> ** Service update:** *{{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} released version 1.2 on 9 December 2020. For more information about all changes included in this release, see the [Version 1.2 service update](/docs/text-to-speech-data?topic=text-to-speech-data-release-notes#v12) in the release notes.*
+**Service update:** *{{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} released version 1.2.1 on 26 March 2021. The release includes a number of updates to the installation procedures and override file. Versions 1.2 and 1.2.1 use the same version 1.2 documentation and installation instructions. For more information about all changes in this release, see the [Version 1.2.1 service update](/docs/text-to-speech-data?topic=text-to-speech-data-release-notes#v121) in the release notes.*
 
 {{site.data.keyword.texttospeechdatafull}} for {{site.data.keyword.icp4dfull}} provides APIs that use {{site.data.keyword.IBM_notm}}'s speech-synthesis capabilities to convert written text to natural-sounding speech. The service streams the synthesized audio back to the client with minimal delay. The audio uses appropriate cadence and intonation for its language and dialect to provide voices that are smooth and natural.
 

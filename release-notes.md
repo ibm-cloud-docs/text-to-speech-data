@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2020
-lastupdated: "2020-12-04"
+  years: 2019, 2021
+lastupdated: "2021-03-24"
 
 subcollection: text-to-speech-data
 
@@ -34,6 +34,52 @@ The following versions of {{site.data.keyword.texttospeechdatafull}} for {{site.
 {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} has the following known limitation:
 
 -   When you specify the `audio/ogg;codecs=opus` audio format, you can optionally specify a sampling rate other than the default 48,000 Hz. However, while the service accepts `48000`, `24000`, `16000`, `12000`, or `8000` as a valid sampling rate, it currently disregards a specified value and always returns the audio with a sampling rate of 48 kHz.
+
+## Version 1.2.1 (26 March 2021)
+{: #v121}
+
+{{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} version 1.2.1 is now available. Versions 1.2 and 1.2.1 use the same version 1.2 documentation and installation instructions. Version 1.2.1 includes the following changes:
+
+-   Version 1.2.1 supports installation on Red Hat OpenShift version 4.6 in addition to versions 4.5 and 3.11.
+-   For both clusters connected to the internet and air-gapped clusters, the installation instructions include the following steps:
+    -   Use the `oc label` command to set up required labels for the namespace where {{site.data.keyword.icp4dfull_notm}} is installed.
+    -   Use the `oc project` command to ensure that you are pointing at the correct OpenShift project.
+    -   Use the `cpd-cli install` command to install an EnterpriseDB PostgreSQL server that is used by the Speech services.
+
+    You perform these steps before you install the Speech services. For more information, see [Installing the {{site.data.keyword.watson}} {{site.data.keyword.texttospeechshort}} service](https://www.ibm.com/support/knowledgecenter/SSQNUZ_3.5.0/svc-speech/stt-svc-install.html){: external}.
+-   The Minio and PostgreSQL datastores require the following hard-coded values for their secrets:
+    -   For *Minio*, use `minio`.
+    -   For *PostgreSQL*, use `user-provided-postgressql`.
+
+    You cannot use your own values for these secrets. The secrets must be created before you install the Speech services.
+-   The following entries have been removed from the `speech-override.yaml` file. They were added to work around a problem that has now been fixed.
+
+    ```yaml
+    sttRuntime:
+      images:
+        miniomc:
+          tag:
+            1.0.5
+    sttAMPatcher:
+      images:
+        miniomc:
+          tag:
+            1.0.5
+    ttsRuntime:
+      images:
+        miniomc:
+          tag:
+            1.0.5
+    ```
+    {: codeblock}
+
+-   The abbreviated `speech-override.yaml` file has generally been reduced further by fine-tuning its contents to the essential elements. The updated version of the file appears in the following sections:
+    -   [Creating an override file for {{site.data.keyword.watson}} {{site.data.keyword.texttospeechshort}} installation](https://www.ibm.com/support/knowledgecenter/SSQNUZ_3.5.0/svc-speech/stt-svc-override.html){: external}
+    -   [Using the override file](/docs/text-to-speech-data?topic=text-to-speech-data-speech-override-12)
+
+    You can download a complete version of the [speech-override.yaml](https://watson-developer-cloud.github.io/doc-tutorial-downloads/speech-to-text/cpd-version-12/speech-override.yaml){: external} file. The complete version includes all of the detailed elements described in [Using the override file](/docs/text-to-speech-data?topic=text-to-speech-data-speech-override-12).
+-   The entitled registry from which the service pulls images for the PostgreSQL datastore has changed. The registry location changed from `cp.icr.io/cp/watson-speech` to `cp.icr.io/cp/cpd`. This change is transparent to users.
+-   A step was added to the procedure for uninstalling the Speech services to clean up all of the resources from the installation. For more information, see [Uninstalling {{site.data.keyword.watson}} {{site.data.keyword.texttospeechshort}}](https://www.ibm.com/support/knowledgecenter/SSQNUZ_3.5.0/svc-text/tts-svc-uninstall.html){: external}.
 
 ## Version 1.2 (9 December 2020)
 {: #v12}
@@ -79,17 +125,25 @@ The release includes the following changes:
 -   The service now supports the `digits` attribute of the SSML `<say-as>` element with its Japanese voice. For more information, see [The say-as element](/docs/text-to-speech-data?topic=text-to-speech-data-elements#say-as_element).
 -   The backup and restore procedures are greatly simplified. They now back up data from the datastores, so you no longer need to re-create the operations you have run. For more information, see [Backing up and restoring your data](/docs/text-to-speech-data?topic=text-to-speech-data-speech-backup).
 
-## Version 1.1.3 (28 February 2020)
+## Older versions
+{: #older}
+
+-   [Version 1.1.3 (28 February 2020)](#v113)
+-   [Version 1.1.2 (27 November 2019)](#v112)
+-   [Version 1.0.1 (30 August 2019)](#v101)
+-   [Version 1.0.0 (28 June 2019)](#v100)
+
+### Version 1.1.3 (28 February 2020)
 {: #v113}
 
 {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} version 1.1.3 is now available.
 
-## Version 1.1.2 (27 November 2019)
+### Version 1.1.2 (27 November 2019)
 {: #v112}
 
 {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} version 1.1.2 is now available.
 
-## Version 1.0.1 (30 August 2019)
+### Version 1.0.1 (30 August 2019)
 {: #v101}
 
 {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} version 1.0.1 is now available. The service now works with {{site.data.keyword.icp4dfull_notm}} 2.1.0.1. The release includes the following changes:
@@ -98,7 +152,7 @@ The release includes the following changes:
 -   The service now offers the neural Japanese voice `ja-JP_EmiV3Voice`. For more information, see [Supported languages and voices](/docs/text-to-speech-data?topic=text-to-speech-data-voices#languageVoices).
 -   Federal Information Security Management Act (FISMA) support is now available for {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}. The service is FISMA High Ready.
 
-## Version 1.0.0 (28 June 2019)
+### Version 1.0.0 (28 June 2019)
 {: #v100}
 
 The initial release of the service. {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} is based on the {{site.data.keyword.texttospeechfull}} service on the public {{site.data.keyword.cloud_notm}}. For more information about the public service, see [About {{site.data.keyword.texttospeechshort}}](https://{DomainName}/docs/text-to-speech?topic=text-to-speech-about#about){: external}.
