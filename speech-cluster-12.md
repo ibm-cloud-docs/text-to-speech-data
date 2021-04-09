@@ -170,7 +170,7 @@ oc adm policy add-scc-to-group restricted system:serviceaccounts:{namespace_name
 ```
 {: pre}
 
-where `{namespace_name}` is the namespace into which IBM Cloud Pak for Data is installed, normally `zen`.
+where `{namespace_name}` is the namespace into which {{site.data.keyword.icp4dfull_notm}} is installed, normally `zen`.
 
 The standard definition of the `restricted` SecurityContextConstraints follows. Use this content to create a custom definition.
 
