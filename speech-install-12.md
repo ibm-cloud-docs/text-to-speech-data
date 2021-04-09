@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-03-23"
+lastupdated: "2021-04-09"
 
 subcollection: text-to-speech-data
 
@@ -63,8 +63,8 @@ See the following pages for more information about installation and configuratio
 | Page | Contents |
 |------|----------|
 | [Using the override file](/docs/text-to-speech-data?topic=text-to-speech-data-speech-override-12) | Using values in the `speech-override.yaml` file to specify aspects of the installation and configuration that are common to both Speech services, including datastores, or are specific to {{site.data.keyword.speechtotextshort}} or {{site.data.keyword.texttospeechshort}}. |
+| [Managing your cluster](/docs/text-to-speech-data?topic=text-to-speech-data-speech-cluster-12) | A collection of basic cluster and service management procedures and information. Topics include modifying the installed models and voices, managing user access, using common cluster management commands, setting Red Hat OpenShift SecurityContextConstraints, and disabling storage of user data. |
 | [Managing your datastores](/docs/text-to-speech-data?topic=text-to-speech-data-speech-datastores-12) | Administering the MinIO and PostgreSQL datastores. For MinIO, topics include security secrets, which must be named `minio`, operation mode, and storage. For PostgreSQL, the page describes security secrets, which must be named `user-provided-postgressql`. |
-| [Managing your cluster](/docs/text-to-speech-data?topic=text-to-speech-data-speech-cluster-12) | A collection of basic cluster and service management procedures and information. Topics include managing user access, using common cluster management commands, setting Red Hat OpenShift SecurityContextConstraints, disabling storage of user data, and installing ad hoc models and voices. |
 | [Scaling up your installation](/docs/text-to-speech-data?topic=text-to-speech-data-speech-scaling-12) | Scaling from a development configuration to a production configuration. Topics include scaling up PostgreSQL, RabbitMQ, and MinIO. Topics also include scaling up other aspects of the installation and setting the session-to-CPU ratio for the {{site.data.keyword.speechtotextshort}} runtime and customization AM patcher, and for the {{site.data.keyword.texttospeechshort}} runtime. |
 | [Backing up and restoring your data](/docs/text-to-speech-data?topic=text-to-speech-data-speech-backup-12) | Backup and restore procedures for both disaster recovery and upgrade of your data. The procedures cover the MinIO and PostgreSQL datastores. |
 {: caption="Table 1. Documentation overview and links"}

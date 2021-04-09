@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020
-lastupdated: "2020-12-11"
+  years: 2020, 2021
+lastupdated: "2021-04-09"
 
 subcollection: text-to-speech-data
 
@@ -28,6 +28,73 @@ subcollection: text-to-speech-data
 
 After you install and configure the Speech services on {{site.data.keyword.icp4dfull}}, you can manage the service instance and the cluster. The following sections document some basic cluster and service management operations.
 {: shortdesc}
+
+## Modifying the installed models and voices
+{: #speech-cluster-models-voices-12}
+
+You can add or remove installed models and voices from an existing installation. You must perform a `helm upgrade` operation to modify the installation. Complete the following steps to modify your installed models or voices.
+
+1.  Log in to your Red Hat OpenShift cluster as a project administrator:
+
+    ```bash
+    oc login {OpenShift_URL}:{port}
+    ```
+    {: pre}
+
+1.  Exec to the `cpd-install-operator` pod. The Helm chart is installed in this location.
+
+    -   Get the name of the operator pod:
+
+        ```bash
+        oc get pods | grep cpd-install-operator
+        ```
+        {: pre}
+
+    -   Exec to the named pod:
+
+        ```bash
+        oc exec -ti {operator_podname} -- /bin/bash
+        ```
+        {: pre}
+
+1.  If you do not already know it, find the name of the Speech release. If you already know the release name, continue to the next step.
+
+    ```bash
+    helm list --tls
+    ```
+    {: pre}
+
+1. Save the `values.yaml` file from the existing installation. This command copies the file to `/tmp/values.yaml`. In the command, replace `{speech_release_name}` with the name of your release.
+
+    ```bash
+    helm get values {speech_release_name} --tls > /tmp/values.yaml
+    ```
+    {: pre}
+
+    Make a backup copy of this file in case you need to retry or correct the upgrade procedure.
+
+1.  Edit the `/tmp/values.yaml` file. To modify the currently installed models or voices, locate the `sttModels` or `ttsVoices` section of the file. Set the `enabled` flag to `true` for any models or voices that you want to install. Similarly, set the flag to `false` for any models or voices that you want to remove from the installation. Removing unnecessary models and voices decreases the memory that your deployment uses. Save the file to preserve your changes.
+
+1.  Validate the path to the Helm chart for the Speech services. The Helm chart exists at one of the following locations depending on the version of the Speech services you have installed:
+
+    -   *Version 1.2:* `/mnt/installer/modules/watson-speech-base/x86_64/1.2/ibm-watson-speech-prod-1.2.1.tgz`
+    -   *Version 1.2.1:* `/mnt/installer/modules/watson-speech-base/x86_64/1.2.1/ibm-watson-speech-prod-1.2.2.tgz`
+
+1.  Run the `helm upgrade` upgrade command to add or remove the models or voices you updated in the Helm chart. In the command, `{speech_release_name}` is the name of your release, and `{path_to_helm_chart}` is the path from the previous step.
+
+    ```bash
+    helm upgrade {speech_release_name} {path_to_helm_chart} -f /tmp/values.yaml --tls
+    ```
+    {: pre}
+
+    The amount of time required for the upgrade depends on the size of your installation and on the models or voices that you are adding or removing. You can monitor the status of the pod to ensure that the upgrade is progressing.
+
+    The size of your cluster might lack the resources for your old and new deployment runtimes to run simultaneously. If the new runtime pods report insufficient CPU or memory, you can delete the old pods to free up resources.
+
+    Deleting old pods causes the service to be unavailable until the new pods start running.
+    {: important}
+
+Once all of the new pods are in the `Running` state and healthy, the upgrade is complete. You can begin to use any new models or voices you enabled.
 
 ## Managing user access
 {: #speech-cluster-user-access-12}
@@ -170,6 +237,7 @@ You can disable this behavior by checking the following option:
 
 Checking this option also removes sensitive information from container logs. For information about anonymizing data, see [Anonymizing logs and audio data](/docs/text-to-speech-data?topic=text-to-speech-data-speech-override-12#speech-override-anonymize-12).
 
+<!-- COMMENT OUT FOR APRIL 2021 1.2.1 ADDITION OF MODIFYING MODELS/VOICES.
 ## Installing ad hoc models and voices
 {: #speech-cluster-model-install-adhoc-12}
 
@@ -187,6 +255,7 @@ For example, suppose a new broadband model for the Czech language is made availa
 
 -   [Installing {{site.data.keyword.speechtotextshort}} models](/docs/speech-to-text-data?topic=speech-to-text-data-speech-override-12#speech-override-stt-models-12)
 -   [Installing {{site.data.keyword.texttospeechshort}} voices](/docs/speech-to-text-data?topic=speech-to-text-data-speech-override-12#speech-override-tts-voices-12)
+-->
 
 <!-- COMMENT OUT FOR INITIAL 1.1.4 RELEASE.
 ## Deploying a patch
