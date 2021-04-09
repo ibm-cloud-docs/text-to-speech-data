@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-03-24"
+lastupdated: "2021-04-09"
 
 subcollection: text-to-speech-data
 
@@ -37,6 +37,9 @@ The following versions of {{site.data.keyword.texttospeechdatafull}} for {{site.
 
 ## Version 1.2.1 (26 March 2021)
 {: #v121}
+
+As of 9 April 2021, the service lets you add or remove installed models or voices for version 1.2 or 1.2.1 of the Speech services. For more information, see [Modifying the installed models and voices](/docs/text-to-speech-data?topic=text-to-speech-data-speech-cluster-12#speech-cluster-models-voices-12).
+{: note}
 
 {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} version 1.2.1 is now available. Versions 1.2 and 1.2.1 use the same version 1.2 documentation and installation instructions. Version 1.2.1 includes the following changes:
 
@@ -78,7 +81,7 @@ The following versions of {{site.data.keyword.texttospeechdatafull}} for {{site.
     -   [Using the override file](/docs/text-to-speech-data?topic=text-to-speech-data-speech-override-12)
 
     You can download a complete version of the [speech-override.yaml](https://watson-developer-cloud.github.io/doc-tutorial-downloads/speech-to-text/cpd-version-12/speech-override.yaml){: external} file. The complete version includes all of the detailed elements described in [Using the override file](/docs/text-to-speech-data?topic=text-to-speech-data-speech-override-12).
--   The entitled registry from which the service pulls images for the PostgreSQL datastore has changed. The registry location changed from `cp.icr.io/cp/watson-speech` to `cp.icr.io/cp/cpd`. This change is transparent to users.
+-   The entitled registry path from which the service pulls images for the PostgreSQL datastore has changed. The registry location changed from `cp.icr.io/cp/watson-speech` to `cp.icr.io/cp/cpd`. This change is transparent to users.
 -   A step was added to the procedure for uninstalling the Speech services to clean up all of the resources from the installation. For more information, see [Uninstalling {{site.data.keyword.watson}} {{site.data.keyword.texttospeechshort}}](https://www.ibm.com/support/knowledgecenter/SSQNUZ_3.5.0/svc-text/tts-svc-uninstall.html){: external}.
 
 ## Version 1.2 (9 December 2020)
