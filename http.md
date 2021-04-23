@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-04-22"
+lastupdated: "2021-04-23"
 
 subcollection: text-to-speech-data
 
@@ -177,16 +177,28 @@ The following examples pass input in the body of the `POST /v1/synthesize` metho
 ### Example input with XML control characters
 {: #xmlExamples}
 
-The following example sends a sentence to the `POST /v1/synthesize` method. The example properly escapes the embedded XML characters.
+The following examples send two sentences to the `POST /v1/synthesize` method. The examples properly escape the embedded XML characters.
 
 ```
 "What have I learned?" he asked. "Everything!"
 ```
 {: codeblock}
 
-```javascript
-{
-  "text": "&quot;What have I learned?&quot; he asked. &quot;Everything!&quot;"
-}
-```
-{: codeblock}
+-   Plain text input:
+
+    ```javascript
+    {
+      "text": "&quot;What have I learned?&quot; he asked. &quot;Everything!&quot;"
+    }
+    ```
+    {: codeblock}
+
+-   SSML input:
+
+    ```javascript
+    {
+      "text": "<s>&quot;What have I learned?&quot; he asked.
+        &quot;<prodody rate=\"50\">Everything!</prosody>&quot;</s>"
+    }
+    ```
+    {: codeblock}
