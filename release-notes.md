@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-04-12"
+lastupdated: "2021-05-04"
 
 subcollection: text-to-speech-data
 
@@ -33,7 +33,7 @@ The following versions of {{site.data.keyword.texttospeechdatafull}} for {{site.
 
 {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} has the following known limitation:
 
--   When you specify the `audio/ogg;codecs=opus` audio format, you can optionally specify a sampling rate other than the default 48,000 Hz. However, while the service accepts `48000`, `24000`, `16000`, `12000`, or `8000` as a valid sampling rate, it currently disregards a specified value and always returns the audio with a sampling rate of 48 kHz.
+-   **30 August 2019:** When you specify the `audio/ogg;codecs=opus` audio format, you can optionally specify a sampling rate other than the default 48,000 Hz. However, while the service accepts `48000`, `24000`, `16000`, `12000`, or `8000` as a valid sampling rate, it currently disregards a specified value and always returns the audio with a sampling rate of 48 kHz.
 
 ## Version 1.2.1 (26 March 2021)
 {: #v121}
@@ -137,23 +137,21 @@ The release includes the following changes:
 -   The service now supports the `digits` attribute of the SSML `<say-as>` element with its Japanese voice. For more information, see [The say-as element](/docs/text-to-speech-data?topic=text-to-speech-data-elements#say-as_element).
 -   The backup and restore procedures are greatly simplified. They now back up data from the datastores, so you no longer need to re-create the operations you have run. For more information, see [Backing up and restoring your data](/docs/text-to-speech-data?topic=text-to-speech-data-speech-backup).
 
-## Older versions
-{: #older}
-
--   [Version 1.1.3 (28 February 2020)](#v113)
--   [Version 1.1.2 (27 November 2019)](#v112)
--   [Version 1.0.1 (30 August 2019)](#v101)
--   [Version 1.0.0 (28 June 2019)](#v100)
-
-### Version 1.1.3 (28 February 2020)
+## Version 1.1.3 (28 February 2020)
 {: #v113}
 
 {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} version 1.1.3 is now available.
 
-### Version 1.1.2 (27 November 2019)
+## Version 1.1.2 (27 November 2019)
 {: #v112}
 
 {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}} version 1.1.2 is now available.
+
+## Older versions
+{: #older}
+
+-   [Version 1.0.1 (30 August 2019)](#v101)
+-   [Version 1.0.0 (28 June 2019)](#v100)
 
 ### Version 1.0.1 (30 August 2019)
 {: #v101}
