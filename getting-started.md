@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2020
-lastupdated: "2020-11-23"
+  years: 2019, 2021
+lastupdated: "2021-05-05"
 
 keywords: text to speech data,IBM cloud pak for data,getting started,tutorial,synthesize audio,speech synthesis
 
@@ -44,8 +44,8 @@ completion-time: 10m
 
 To use {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}, you must first complete the following steps:
 
-1.  Provision an instance of {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}. For more information about provisioning, see [Installing {{site.data.keyword.ibmwatson_notm}} {{site.data.keyword.texttospeechshort}} version 1.1.4](/docs/text-to-speech-data?topic=text-to-speech-data-speech-install).
-1.  From the {{site.data.keyword.icp4dfull_notm}} web client menu, choose **My Instances**.
+1.  Provision an instance of {{site.data.keyword.texttospeechshort}} for {{site.data.keyword.icp4dfull_notm}}. For more information about provisioning, see [Installing {{site.data.keyword.watson}} {{site.data.keyword.texttospeechshort}} version 1.2](/docs/text-to-speech-data?topic=text-to-speech-data-speech-install-12).
+1.  From the {{site.data.keyword.cpd_short}} web client menu, choose **My Instances**.
 1.  Click the {{site.data.keyword.texttospeechshort}} instance to open the overview page. Copy the `{token}` and `{URL}` credential values.
 
 ### Using the curl examples
