@@ -104,7 +104,6 @@ curl -X GET \
 ```
 {: pre}
 
-
 ```javascript
 {
   "voices": [
@@ -180,7 +179,6 @@ curl -X GET \
 "{url}/v1/voices/en-US_LisaV3Voice?customization_id=64f4807f-a5f1-5867-924f-7bba1a84fe97"
 ```
 {: pre}
-
 
 ```javascript
 {
