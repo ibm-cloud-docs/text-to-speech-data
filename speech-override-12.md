@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-04-12"
+lastupdated: "2021-05-24"
 
 subcollection: text-to-speech-data
 
@@ -48,7 +48,7 @@ global:
     pullSecret: "{Registry_pull_secret}"
 
   datastores:
-   minio:
+    minio:
       serviceAccountName: "ibm-minio-operator"
       #Sizing
       deploymentType: Development #Development or Production
